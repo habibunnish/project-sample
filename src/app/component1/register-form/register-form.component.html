@@ -1,0 +1,10 @@
+<form  [formGroup]="dynamicForm" (ngSubmit)="saveForm()" novalidate>
+    <div class="field" *ngFor="let field of formFields" [ngSwitch]="field.type">
+        <label >Address{{field.label}}</label>
+        <textarea *ngSwitchCase="'textarea'" formControlName="{{field.name}}"></textarea>
+        <input type="text" *ngSwitchCase="'text'" formControlName="{{field.name}}">
+    </div>
+
+
+    <button class="btn btn-danger" type="submit">Submit</button>
+</form>

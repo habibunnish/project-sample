@@ -1,0 +1,43 @@
+
+.navigation{
+    display: flex;
+    flex-wrap: nowrap;
+    gap:40px;
+    margin:3px;
+    color: rgb(230, 48, 63);
+    font-size: 20px;
+    font-weight: bold;
+    background-image: linear-gradient(black, pink, );
+}
+.navigation a{
+    text-decoration: none;
+    display: block;
+    padding: 3;
+    color: orangered;
+    justify-items: right;
+  
+    
+}
+.navigation a:hover{
+    background: yellowgreen;
+
+}
+img{
+ 
+    border:5px solid black;
+    border-radius: 50px;
+    width:70px;
+    padding: 2px;
+    max-width: 100%;
+    height:60px;
+    margin-left: 10px;
+    margin-right: 70px;
+    display: block;
+    
+}
+.one{
+    flex-grow: 1;
+    padding: 20px;
+    
+  
+}
