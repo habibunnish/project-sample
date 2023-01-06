@@ -1,0 +1,28 @@
+.flex-container{
+   
+    display: flex;
+    justify-content: center; 
+    // justify-content: space-evenly; 
+    font-size:larger;
+}
+
+.flex-item{
+    padding:40px;
+    margin:200px;
+    border:7px solid black;
+    border-left-color: red;
+    width:3000px;
+    flex-direction: row;
+    margin-top: 20px;
+
+}
+.room{ 
+   width: 150%;
+    height: 650px;
+}
+.gap-9{
+    gap:2.25rem;
+}
+.items-center{
+    align-items: center;
+}

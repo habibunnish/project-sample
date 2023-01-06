@@ -5,8 +5,13 @@
 .gap-9{
     gap:2.25rem;
 }
-.items-center{
+.abc{
+    display: flex;
     align-items: center;
+}
+.cd{
+   display:grid ;
+   grid-column: 3;
 }
 .parking{
     border:5px solid blue;
@@ -20,12 +25,5 @@
     margin-left: 20px;
     margin-right: 70px;
     display: block;
-}
-.paraParking{
-    margin-left: 100px;
-    margin-bottom: 50px;
-   
-
-   
 }
 

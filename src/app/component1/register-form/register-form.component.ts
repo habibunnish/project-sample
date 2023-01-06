@@ -1,37 +1,38 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { FormFileds, FormFiledsJSON } from '../form-field';
-import { RegisterService } from '../register.service';
+import { Component} from '@angular/core';
+import { FormArray, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register-form',
   templateUrl: './register-form.component.html',
   styleUrls: ['./register-form.component.scss']
 })
-export class RegisterFormComponent implements OnInit{
-  formFields:FormFiledsJSON[]=[]
-  dynamicForm=this.fb.group({});
+export class RegisterFormComponent {
   
-  constructor(private registerService:RegisterService , private fb:FormBuilder) {}
+  profileForm = this.fb.group({
+    firstName: ['', Validators.required],
+    lastName: [''],
+    address: this.fb.group({
+      street: [''],
+      city: [''],
+      state: [''],
+      zip: ['']
+    }),
 
-  ngOnInit(){
-    this.getDynamicFormFields();
-  }
-  getDynamicFormFields(){
-    this.registerService.getFormFileds().subscribe(
-      (response:FormFileds)=>{
-      this.formFields=response.data;
-      this.setDynamicForm(response.data);
+  });
+
+  constructor(private fb: FormBuilder) { }
+
+  updateProfile() {
+    this.profileForm.patchValue({
+      firstName: 'Nancy',
+      address: {
+        street: '123 Drew Street'
       }
-    )
+    });
   }
-  setDynamicForm(controls:FormFiledsJSON[]){
-    for(const control of controls){
-      this.dynamicForm.addControl(control.name, this.fb.control(control.value))
-    }
 
-  }
-  saveForm(){
-    console.log(this.dynamicForm.value);
+ onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.profileForm.value);
   }
 }

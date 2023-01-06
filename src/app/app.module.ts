@@ -8,13 +8,21 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './component1/home-page/home-page.component';
 import { RegisterFormComponent } from './component1/register-form/register-form.component';
 import { LoginFormComponent } from './component1/login-form/login-form.component';
+import { HttpClientComponent } from './component1/http-client/http-client.component';
+import { BookingPageComponent } from './component2/booking-page/booking-page.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     RegisterFormComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    HttpClientComponent,
+    BookingPageComponent,
+ 
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,9 @@ import { LoginFormComponent } from './component1/login-form/login-form.component
     FormsModule,
     HttpClientModule,
     NgbModule,
+   
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -3,10 +3,14 @@
    <img src="../assets/IMAGES/logo.jpeg" >
    </div>
    <li class="one"><a routerLink="home-page" >HomePage</a></li>
-   <li class="one"><a routerLink="app">List of Hotels</a></li>
+   <li class="one"><a routerLink="booking-page">Book-Here</a></li>
    <li class="one"><a>Help & Support</a></li>
-   <li class="one"><a routerLink="login-form">Login</a></li>
-   <li class="one"><a routerLink="register-form">Register</a></li>
-  
+   <li class="one dropdown">profile.
+   <ul class="dropdown-content" >
+   <li class="dropdown"><a   routerLink="login-form">Login</a></li>
+   <li class="dropdown"><a   routerLink="register-form">Register</a></li>
+   <li class="dropdown"><a   routerLink="http-client">USER DETAIL</a></li>
+  </ul>
+</li>
 </ul>
 <router-outlet></router-outlet>

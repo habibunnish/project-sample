@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import { HttpClientComponent } from '../http-client/http-client.component';
+import { LoginService } from '../login.service';
+
 
 @Component({
   selector: 'app-login-form',
@@ -6,7 +9,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent {
-   submit(login:any){
+
+  msgTrue=false;
+firstname: string ='';
+ password: any;
+email: any;
+
+  constructor(private loginService:LoginService){}
+  addNewContact(){
+    const newFormData={
+      firstname:this.firstname,
+      password:this.password,
+      email:this.email,
+      // "id":2
+    };
+    console.log('testing');
+    this.loginService.addNewContactUser(newFormData).subscribe(data=>{
+      console.log(data);
+      this.msgTrue=true;
+    })
+  }
+
+  
+  submit(login:any){
     console.log("form submitted" )
   }
 }

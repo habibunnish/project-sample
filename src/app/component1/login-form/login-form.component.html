@@ -2,8 +2,8 @@
 <div align="left" class="container mb-3">
     <form #login="ngForm" (ngSubmit)="submit(login)">
         <div class="form-group">
-            <label for="fname">First Name </label>
-            <input required itype="text" name="fname" class="form-control" ngModel>
+            <label for="firstname">Firstname </label>
+            <input required type="text" name="firstname" [(ngModel)]="firstname"  class="form-control" ngModel>
 
             <!-- <div *ngIf="name.touched && name.invalid" class="alert alert-danger">invalid
                 <p *ngIf="name.errors ?.['minlength']"> very short name minimum leter required is 4  </p>
@@ -13,8 +13,8 @@
         </div>
         <pre></pre>
         <div class="form-group">
-            <label for="password">PASSWORD</label>
-            <input type="text" #name="ngModel" name="password" required
+            <label for="password">Password</label>
+            <input type="text" #name="ngModel" name="password"  [(ngModel)]="password" required
                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$" class="form-control"
                 ngModel>
 
@@ -26,9 +26,9 @@
         <pre></pre>
         <div class="form-group">
             <label for="email">Email </label>
-            <input type="email" name="email" required class="form-control" ngModel>
+            <input type="email" name="email" [(ngModel)]="email" required class="form-control" ngModel>
         </div>
-        <button [disabled]="login.invalid" class="btn btn-danger" type="submit"> Submit</button>
+        <button [disabled]="login.invalid" class="btn btn-danger" type="submit" (click)="addNewContact()"> Submit</button>
         
     </form>
 
