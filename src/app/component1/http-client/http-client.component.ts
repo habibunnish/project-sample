@@ -7,6 +7,12 @@ import { LoginService } from '../login.service';
   styleUrls: ['./http-client.component.scss']
 })
 export class HttpClientComponent {
+  // firstname: any;
+  // lastname: any;
+  // street: any;
+  // city: any;
+  // state: any;
+  // zipcode: any;
   constructor(private loginService:LoginService){}
   LoginList:any;
   msgTrue=false;
@@ -26,7 +32,6 @@ export class HttpClientComponent {
       email:'santosi@123',
       // "id":2
     };
-    console.log('testing');
     this.loginService.addNewContactUser(newFormData).subscribe(data=>{
       console.log(data);
       this.msgTrue=true;

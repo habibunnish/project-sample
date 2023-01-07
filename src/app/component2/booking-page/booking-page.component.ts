@@ -7,6 +7,9 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./booking-page.component.scss']
 })
 export class BookingPageComponent {
+buy() {
+throw new Error('Method not implemented.');
+}
   constructor(config:NgbCarouselConfig){
     config.interval=4000;
     config.wrap=true;

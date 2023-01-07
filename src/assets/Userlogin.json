@@ -11,24 +11,18 @@
       "password": "san%321",
       "email": "santosi@123",
       "id": 2
-    },
+    }
+  ],
+  "userRegister":[
     {
-      "firstname": "Santosh",
-      "password": "san%321",
-      "email": "santosi@123",
-      "id": 3
-    },
-    {
-      "firstname": "BUBBLY",
-      "password": "Habic@123",
-      "email": "habicute111@gmail.com",
-      "id": 4
-    },
-    {
-      "firstname": "Santosh",
-      "password": "san%321",
-      "email": "santosi@123",
-      "id": 5
+      "firstname":"santoshi",
+      "lastname":"M",
+      "street":"Koyembed",
+      "city":"chennai",
+      "state":"tamilnadu",
+      "zipcode":"600019",
+      "id":1
+
     }
   ]
 }

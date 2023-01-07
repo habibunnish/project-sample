@@ -1,28 +1,64 @@
+.walpaper{
+
+    background-image: url(/assets/IMAGES/walpaper.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content:"float_right";
+
+}
 .flex-container{
-   
     display: flex;
-    justify-content: center; 
-    // justify-content: space-evenly; 
     font-size:larger;
+    padding: 100px;
+    width:100%;
+    justify-content: space-evenly; 
 }
 
-.flex-item{
-    padding:40px;
-    margin:200px;
-    border:7px solid black;
+.first{
+    flex-direction:column ;
+    padding:10px;
+    margin: bottom 7px;
+    border:40px solid yellow;
     border-left-color: red;
-    width:3000px;
-    flex-direction: row;
-    margin-top: 20px;
+    border-right-color: red;
+    width: 500px;
+   height: 500px;
 
 }
 .room{ 
-   width: 150%;
-    height: 650px;
+   width: 300px;
+    height: 300px;
 }
-.gap-9{
-    gap:2.25rem;
+
+.second {
+   flex-direction: column;
+    padding:10px;
+    margin-bottom: 7px;
+    border:40px solid pink;
+    border-left-color: red;
+    border-right-color: red;
+    width:500px;
+    height: 500px;
 }
-.items-center{
-    align-items: center;
+.third{
+    flex-direction: column;
+    padding:10px;
+    margin-bottom: 7px;
+    border:40px solid blue;
+    border-left-color: red;
+    border-right-color: red;
+    width:500px;
+    height: 500px;
 }
+.four{
+    flex-direction: column;
+    padding:10px;
+    margin-bottom: 7px;
+    border:40px solid green;
+    border-left-color: red;
+    border-right-color: red;
+    width:500px;
+    height: 500px;
+}
+

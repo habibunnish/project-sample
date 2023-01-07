@@ -1,5 +1,4 @@
 import { Component} from '@angular/core';
-import { HttpClientComponent } from '../http-client/http-client.component';
 import { LoginService } from '../login.service';
 
 
@@ -11,9 +10,9 @@ import { LoginService } from '../login.service';
 export class LoginFormComponent {
 
   msgTrue=false;
-firstname: string ='';
- password: any;
-email: any;
+  firstname: string ='';
+  password: any;
+  email: any;
 
   constructor(private loginService:LoginService){}
   addNewContact(){
@@ -23,7 +22,6 @@ email: any;
       email:this.email,
       // "id":2
     };
-    console.log('testing');
     this.loginService.addNewContactUser(newFormData).subscribe(data=>{
       console.log(data);
       this.msgTrue=true;

@@ -13,11 +13,18 @@ export class LoginService {
     httpHeaders.append('content-type' , 'application/json');
     return this.httpClient.get('http://localhost:3000/userLogin', {headers:httpHeaders});
   }
+  //login
   addNewContactUser(createResource:any){
     const httpHeaders=new HttpHeaders()
     httpHeaders.append('content-type' , 'application/json');
     return this.httpClient.post('http://localhost:3000/userLogin/', createResource, {headers:httpHeaders});
   }
 
+  //register
+  addNewUserRegisterDetails(registerResource:any){
+    const httpHeaders=new HttpHeaders()
+    httpHeaders.append('content-type' ,'application/json');
+    return this.httpClient.post('http://localhost:3000/userRegister/',registerResource ,{headers:httpHeaders});
+  }
   
 }
