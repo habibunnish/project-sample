@@ -1,11 +1,12 @@
 <div class="wall">
-    <h1> Login Form</h1>
+    <!-- <h1> Login Form</h1> -->
     <div class="loginform">
+        <h1> Login Form</h1>
         <div align="left" class="container mb-3">
             <form #login="ngForm" (ngSubmit)="submit(login)">
                 <div class="form-group"><br>
                     <label for="firstname">Firstname </label>
-                    <input required type="text" name="firstname" [(ngModel)]="firstname" class="form-control" ngModel>
+                    <input required type="text" class="focus"  onfocus="focusing(this)" name="firstname" [(ngModel)]="firstname" class="form-control" ngModel>
 
                     <!-- <div *ngIf="name.touched && name.invalid" class="alert alert-danger">invalid
                 <p *ngIf="name.errors ?.['minlength']"> very short name minimum leter required is 4  </p>
@@ -31,8 +32,10 @@
                     <label for="email">Email </label>
                     <input type="email" name="email" [(ngModel)]="email" required class="form-control" ngModel>
                 </div><br>
-                <button [disabled]="login.invalid" class="btn btn-danger" type="submit" (click)="addNewContact()">
+                <button [disabled]="login.invalid" (click)="saveData()" class="new" type="submit" (click)="addNewContact()">
                     Submit</button>
+                    
+                <button class="newuser" (click)="onsubmit()">NewUserRegister</button>
             </form>
         </div>
     </div>

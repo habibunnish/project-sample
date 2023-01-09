@@ -44,6 +44,7 @@ firstname: any;
   //   });
   // }
 
+  //post
   addNewUserRegister(){
     const registerFormData={
      firstname:this.firstname,

@@ -1,29 +1,23 @@
-.walpaper{
 
-    background-image: url(/assets/IMAGES/walpaper.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-content:"float_right";
-
-}
 .flex-container{
     display: flex;
+    flex-wrap: wrap;
     font-size:larger;
     padding: 100px;
-    width:100%;
+    width:fit-content;
     justify-content: space-evenly; 
 }
 
 .first{
     flex-direction:column ;
     padding:10px;
-    margin: bottom 7px;
-    border:40px solid yellow;
-    border-left-color: red;
-    border-right-color: red;
-    width: 500px;
-   height: 500px;
+    border:40px solid gray;
+    border-left-color: black;
+    border-right-color: black;
+    width: 400px;
+    height: 400px;
+    
+  
 
 }
 .room{ 
@@ -34,31 +28,28 @@
 .second {
    flex-direction: column;
     padding:10px;
-    margin-bottom: 7px;
     border:40px solid pink;
     border-left-color: red;
     border-right-color: red;
-    width:500px;
-    height: 500px;
+    width:400px;
+    height: 400px;
 }
 .third{
     flex-direction: column;
     padding:10px;
-    margin-bottom: 7px;
-    border:40px solid blue;
-    border-left-color: red;
-    border-right-color: red;
-    width:500px;
-    height: 500px;
+    border:40px solid gray;
+    border-left-color: black;
+    border-right-color:black;
+    width:400px;
+    height: 400px;
 }
 .four{
     flex-direction: column;
     padding:10px;
-    margin-bottom: 7px;
-    border:40px solid green;
+    border:40px solid pink;
     border-left-color: red;
     border-right-color: red;
-    width:500px;
-    height: 500px;
+    width:400px;
+    height: 400px;
 }
 
