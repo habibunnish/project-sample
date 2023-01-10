@@ -3,8 +3,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule,} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { AngularFileUploaderModule } from 'angular-file-uploader';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './component1/home-page/home-page.component';
 import { RegisterFormComponent } from './component1/register-form/register-form.component';
@@ -16,7 +16,8 @@ import { GoaLocationComponent } from './component2/goa-location/goa-location.com
 import { BanguluruLocationComponent } from './component2/banguluru-location/banguluru-location.component';
 import { JammuLocationComponent } from './component2/jammu-location/jammu-location.component';
 import { ConfirmPageComponent } from './component2/confirm-page/confirm-page.component';
-import { AdminPostingComponent } from './component3/admin-posting/admin-posting.component';
+import { GoaConfirmPageComponent } from './component2/goa-confirm-page/goa-confirm-page.component';
+import { AddProductComponent } from './component3/add-product/add-product.component';
 
 
 
@@ -34,7 +35,9 @@ import { AdminPostingComponent } from './component3/admin-posting/admin-posting.
     BanguluruLocationComponent,
     JammuLocationComponent,
     ConfirmPageComponent,
-    AdminPostingComponent,
+
+    GoaConfirmPageComponent,
+    AddProductComponent,
  
   ],
   imports: [
@@ -44,7 +47,9 @@ import { AdminPostingComponent } from './component3/admin-posting/admin-posting.
     FormsModule,
     HttpClientModule,
     NgbModule,
-    AngularFileUploaderModule,
+
+
+  
    
   ],
 

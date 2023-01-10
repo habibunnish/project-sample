@@ -11,19 +11,50 @@
       "password": "san%321",
       "email": "santosi@123",
       "id": 2
-    }
-  ],
-  "userRegister":[
+    },
     {
-      "firstname":"santoshi",
-      "lastname":"M",
-      "street":"Koyembed",
-      "city":"chennai",
-      "state":"tamilnadu",
-      "zipcode":"600019",
-      "id":1
-
+      "firstname": "Santosh",
+      "password": "san%321",
+      "email": "santosi@123",
+      "id": 3
     }
   ],
-  "uploadFile":[]
+  "userRegister": [
+    {
+      "firstname": "santoshi",
+      "lastname": "M",
+      "street": "Koyembed",
+      "city": "chennai",
+      "state": "tamilnadu",
+      "zipcode": "600019",
+      "id": 1
+    }
+  ],
+  "product": [
+    {
+      "ProductTittle": "The Aulakh  Beach view",
+      "Location": "Goa",
+      "Price": "3500",
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "ProductTittle": "Radha home hotel sarovar",
+      "Location": "Bang",
+      "Price": "3000",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "ProductTittle": "Radha hometel sarovar hotel",
+      "Location": "Banguluru",
+      "Price": "3800",
+      "Image": "Banguluru 1",
+      "id": 5
+    }
+  ]
 }

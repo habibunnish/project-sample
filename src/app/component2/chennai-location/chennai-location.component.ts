@@ -7,9 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./chennai-location.component.scss']
 })
 export class ChennaiLocationComponent {
+
   constructor(private router:Router){}
-  login() {
-    this.router.navigate(['login-form'])
-}
+  confirmpage() {
+    this.router.navigate(['confirm-page']);
+  }
 
 }

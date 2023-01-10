@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 export class GoaLocationComponent {
   constructor(private router:Router){}
  
- login() {
-    this.router.navigate(['login-form'])
+ goaconfirmpage() {
+    this.router.navigate(['goa-confirm-page'])
 }
 
 }

@@ -8,17 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./booking-page.component.scss']
 })
 export class BookingPageComponent {
-
-
-
-
-constructor(config:NgbCarouselConfig , private router:Router){
+  constructor(config:NgbCarouselConfig , private router:Router){
     config.interval=4000;
     config.wrap=true;
-    // config.keyboard=false;
     config.pauseOnHover=false;
    }
-   chennai() {
+   chennais() {
     this.router.navigate(['chennai-location']);
   }
    goa() {

@@ -7,9 +7,11 @@ import { RegisterFormComponent } from './component1/register-form/register-form.
 import { BanguluruLocationComponent } from './component2/banguluru-location/banguluru-location.component';
 import { BookingPageComponent } from './component2/booking-page/booking-page.component';
 import { ChennaiLocationComponent } from './component2/chennai-location/chennai-location.component';
+import { ConfirmPageComponent } from './component2/confirm-page/confirm-page.component';
+import { GoaConfirmPageComponent } from './component2/goa-confirm-page/goa-confirm-page.component';
 import { GoaLocationComponent } from './component2/goa-location/goa-location.component';
 import { JammuLocationComponent } from './component2/jammu-location/jammu-location.component';
-import { AdminPostingComponent } from './component3/admin-posting/admin-posting.component';
+import { AddProductComponent } from './component3/add-product/add-product.component';
 
 const routes: Routes = [
   {path:'home-page',component:HomePageComponent},
@@ -21,7 +23,9 @@ const routes: Routes = [
   {path:'goa-location',component:GoaLocationComponent},
   {path:'banguluru-location',component:BanguluruLocationComponent},
   {path:'jammu-location',component:JammuLocationComponent},
-  {path:'admin-posting',component:AdminPostingComponent},
+  {path:'add-product',component:AddProductComponent},
+  {path:'confirm-page',component:ConfirmPageComponent},
+  {path:'goa-confirm-page',component:GoaConfirmPageComponent},
   
 ];
 

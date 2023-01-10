@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminPostingComponent } from './admin-posting.component';
+import { GoaConfirmPageComponent } from './goa-confirm-page.component';
 
-describe('AdminPostingComponent', () => {
-  let component: AdminPostingComponent;
-  let fixture: ComponentFixture<AdminPostingComponent>;
+describe('GoaConfirmPageComponent', () => {
+  let component: GoaConfirmPageComponent;
+  let fixture: ComponentFixture<GoaConfirmPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminPostingComponent ]
+      declarations: [ GoaConfirmPageComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AdminPostingComponent);
+    fixture = TestBed.createComponent(GoaConfirmPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { ThisReceiver } from '@angular/compiler';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup ,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
 
@@ -8,7 +10,21 @@ import { LoginService } from '../login.service';
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss']
 })
-export class LoginFormComponent {
+export class LoginFormComponent implements OnInit{
+  type:string="password";
+
+  loginForm!:FormGroup;
+  // istext:boolean=false;
+  // eyeIcon:string="fa-eye-slash";
+    
+  ngOnInit(){
+    this.loginForm=this.fb.group({
+      firstname:['',Validators.required],
+      password:['',Validators.required],
+      email:['',Validators.required]
+    })
+  }
+
   logindata:any;
   msgTrue = false;
   firstname: string = '';
@@ -17,7 +33,7 @@ export class LoginFormComponent {
 
 
   //post
-  constructor(private loginService: LoginService, private router: Router) { }
+  constructor(private loginService: LoginService, private fb:FormBuilder,private router: Router ) { }
   addNewContact() {
     const newFormData = {
       firstname: this.firstname,
@@ -32,13 +48,26 @@ export class LoginFormComponent {
   }
 
 
-  submit(login: any) {
-      console.log("form submitted")
+  submit() {
+    console.log("form submitted successfully")
+    console.log(this.validateAllFormFields(this.loginForm));
+  // console.log("invalid form")
   }
 
  //sending to register
   onsubmit() {
     this.router.navigate(['register-form'])
+  }
+
+  private validateAllFormFields(formGroup:FormGroup){
+    Object.keys(formGroup.controls).forEach(field=>{
+      const control=formGroup.get(field);
+      if(control instanceof FormControl){
+        control.markAsTouched({onlySelf:true});
+      }else if(control instanceof FormGroup){
+        this.validateAllFormFields(control)
+      }
+    })
   }
 
   
@@ -52,11 +81,20 @@ export class LoginFormComponent {
 
    };
    localStorage.setItem('userData',JSON.stringify(userData));
+   
   //  const data=localStorage.getItem('userData');
   //  console.log('data:' ,JSON.parse(data))
-  }
-focusing(element: any){
-  console.log('focusing this')
-}
 
+
+  }
+
+nextpage() {
+ this.router.navigate(['booking-page'])
+  }
+
+  hideshowpass() {
+    // this.istext=!this.istext;
+    // this.istext?this.eyeIcon="fa-eye":this.eyeIcon="fa-eye-slash";
+    // this.istext?this.type="text":this.type="password";
+  }
 }
