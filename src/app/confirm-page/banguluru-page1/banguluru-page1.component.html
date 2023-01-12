@@ -4,13 +4,13 @@
 </div>
 <div class="parent">
     <div class="childone">
-        <img src="assets/IMAGES/goa2.jpg">
+        <img src="assets/IMAGES/banguluru2.1.jpg">
     </div>
     <div class="childs">
-        <img (click)="first('this is event')" class="childtwo" src="assets/IMAGES/home2.jpeg">
-        <img class="childthree" src="assets/IMAGES/goa2.jpg">
-        <img class="childfour" src="assets/IMAGES/goa3.jpg">
-        <img class="childfive" src="assets/IMAGES/goa4.jpg">
+        <img (click)="first('this is event')" class="childtwo" src="assets/IMAGES/banguluru2.2.jpg">
+        <img class="childthree" src="assets/IMAGES/banguluru2.3.jpg">
+        <img class="childfour" src="assets/IMAGES/banguluru2.4.jpg">
+        <img class="childfive" src="assets/IMAGES/banguluru2.5.jpg">
     </div>
 </div>
 <P class="coupletitle"><b>COUPLE FRIENDLY</b></P>
@@ -38,9 +38,10 @@
     <p>Your Booking Summary</p>
     <p>select your slot</p>
     <div>
-        <input name="rate" type="radio"> {{1230|currency:'INR'}}<br>
-        <input name="rate" type="radio">{{1630|currency:'INR'}}<br>
-        <input name="rate" type="radio">{{2630|currency:'INR'}}<br>
+        <input name="rate" type="radio"> {{1230|currency:'INR'}}&nbsp; FOR 3HRs<br>
+        <input name="rate" type="radio">{{1630|currency:'INR'}} &nbsp;  FOR 6 HRs<br>
+        <input name="rate" type="radio">{{2630|currency:'INR'}}&nbsp;  FOR 12 HR<br>
+        <input name="rate" type="radio">{{3000|currency:'INR'}} &nbsp;  FOR ONE DAY
     </div>
     <div>
         <button (click)="reserve()" class="reserve">Reserve now</button>

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-confirm-page',
-  templateUrl: './confirm-page.component.html',
-  styleUrls: ['./confirm-page.component.scss']
+  selector: 'app-chennai-page1',
+  templateUrl: './chennai-page1.component.html',
+  styleUrls: ['./chennai-page1.component.scss']
 })
-export class ConfirmPageComponent {
+export class ChennaiPage1Component {
   constructor(private router:Router){}
 reserve() {
 alert('congratulation you have booked successfully');
@@ -14,8 +14,7 @@ alert('congratulation you have booked successfully');
 first(evt: any){
   console.warn(evt);
 }
-goaconfirmpage(){
-  this.router.navigate(['goa-confirm-page'])
+GoToBookingPage(){
+  this.router.navigate(['chennai-location'])
 }
-
 }

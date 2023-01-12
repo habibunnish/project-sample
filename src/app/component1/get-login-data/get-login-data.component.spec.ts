@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HttpClientComponent } from './http-client.component';
+import { GetLoginDataComponent } from './get-login-data.component';
 
-describe('HttpClientComponent', () => {
-  let component: HttpClientComponent;
-  let fixture: ComponentFixture<HttpClientComponent>;
+describe('GetLoginDataComponent', () => {
+  let component: GetLoginDataComponent;
+  let fixture: ComponentFixture<GetLoginDataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HttpClientComponent ]
+      declarations: [ GetLoginDataComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HttpClientComponent);
+    fixture = TestBed.createComponent(GetLoginDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

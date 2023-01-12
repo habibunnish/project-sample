@@ -9,8 +9,11 @@ import { Router } from '@angular/router';
 export class BanguluruLocationComponent {
 
   constructor(private router:Router){}
-  login() {
-    this.router.navigate(['login-form'])
-}
+  banguluruconfirm1() {
+    this.router.navigate(['banguluru-confirm-page'])
+   }
+   banguluruconfirm2(){
+    this.router.navigate(['banguluru-page1'])
+   }
 
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from 'src/app/services/guards/auth.service';
 
 @Component({
   selector: 'app-home-page',
@@ -15,4 +17,5 @@ export class HomePageComponent  implements OnInit{
   config.pauseOnHover=false;
  }
   ngOnInit(): void { }
+ 
 }

@@ -30,11 +30,14 @@
                     <label for="email">Email </label>
                     <input formControlName="email" type="email" name="email" [(ngModel)]="email" required class="form-control" ngModel>
                 </div><br>
-                <button [disabled]="loginForm.invalid" (click)="submit()" (click)="nextpage()" (click)="saveData()" class="new" type="submit" (click)="addNewContact()">
+                <button [disabled]="loginForm.invalid" (click)="submit()" class="new" (click)="nextpage()" (click)="saveData()" type="submit" (click)="addNewContact()">
                     Submit</button>
-                    
+        
                 <button class="newuser" (click)="onsubmit()">NewUserRegister</button>
             </form>
         </div>
     </div>
 </div>
+
+<!-- <button >{{getdata()}}habi</button> -->
+<!-- <p>{{getdata()}}</p> -->

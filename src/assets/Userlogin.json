@@ -7,15 +7,15 @@
       "id": 1
     },
     {
-      "firstname": "Santosh",
-      "password": "san%321",
-      "email": "santosi@123",
+      "firstname": "Akash",
+      "password": "Nisha@123",
+      "email": "akashsingh1306@gmail",
       "id": 2
     },
     {
-      "firstname": "Santosh",
-      "password": "san%321",
-      "email": "santosi@123",
+      "firstname": "Akash",
+      "password": "Nisha@123",
+      "email": "akashsingh1306@gmail",
       "id": 3
     }
   ],
@@ -28,33 +28,33 @@
       "state": "tamilnadu",
       "zipcode": "600019",
       "id": 1
+    },
+    {
+      "firstname": "Akash",
+      "lastname": "Singh",
+      "street": "cross-road",
+      "city": "Chennai",
+      "state": "Tamilnadu",
+      "zipcode": "600018",
+      "id": 2
     }
   ],
   "product": [
     {
-      "ProductTittle": "The Aulakh  Beach view",
-      "Location": "Goa",
-      "Price": "3500",
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "ProductTittle": "Radha home hotel sarovar",
-      "Location": "Bang",
+      "ProductTittle": "the china town",
+      "Location": "Delhi",
       "Price": "3000",
+      "Image": "bangaluru",
+      "file": "bangaluru.jpg",
       "id": 3
     },
     {
-      "id": 4
-    },
-    {
-      "ProductTittle": "Radha hometel sarovar hotel",
-      "Location": "Banguluru",
-      "Price": "3800",
-      "Image": "Banguluru 1",
-      "id": 5
+      "ProductTittle": "Hotel Prism",
+      "Location": "Jammu",
+      "Price": "4800",
+      "Image": "jammu",
+      "file": "jammu2.jpg",
+      "id": 7
     }
   ]
 }

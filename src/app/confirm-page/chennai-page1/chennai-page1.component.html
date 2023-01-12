@@ -1,0 +1,50 @@
+<P class="backpagegoa"  (click)="GoToBookingPage()"> Back to BookingPage click me:</P>
+<div class="heading">
+    <h1>Pride Hotel Chennai</h1>
+    <p class="def">THE PRIDE NATURE HOTEL CHENNAI</p>
+</div>
+<div class="parent">
+    <div class="childone">
+        <img src="assets/IMAGES/chennai2.1.jpg">
+    </div>
+    <div class="childs">
+        <img (click)="first('this is event')" class="childtwo" src="assets/IMAGES/chennai2.2.jpg">
+        <img class="childthree" src="assets/IMAGES/chennai2.3.jpg">
+        <img class="childfour" src="assets/IMAGES/chennai2.4.jpg">
+        <img class="childfive" src="assets/IMAGES/chennai2.5.jpg">
+    </div>
+</div>
+<P class="coupletitle"><b>COUPLE FRIENDLY</b></P>
+<P class="couple">we provide couple friendly rooms for both unmarried and married with our completely secure and safe
+    bookings </P>
+<br>
+<p class="localtitle"><b>LOCAL ID ACCEPTED</b></p>
+<p class="local">we accepts same city guests with hastle free check-in</p>
+<br>
+<p class="customer"><b>Customer Rating</b></p>
+<p class="customertitle">🌟️ 4.2</p>
+<br>
+<div class="hotel">
+    <p><b>Hotel Policy</b></p>
+    <p class="hoteltitle">✔️ Guests can check in using any one of the following original ID proofs - Passport, Adhaar
+        Card, Driving Licence, Voter ID</p>
+    <p class="hoteltitle">✔️ Couples over 18 years of age are welcome on Local/Outstation ID</p>
+    <p class="hoteltitle">✔️ Softcopy of ID proofs not accepted.</p>
+    <p class="hoteltitle">✔️ In couple stay both partners need to produce valid photo identification proof at the time
+        of check-in.</p>
+    <p class="hoteltitle">✔️ The hotel reserves the right of admission and Brevistay will not be responsible for any
+        check-in denied by the hotel due to the aforesaid reason.</p>
+</div><br>
+<div class="container">
+    <p>Your Booking Summary</p>
+    <p>select your slot</p>
+    <div>
+        <input name="rate" type="radio"> {{1230|currency:'INR'}} &nbsp; FOR 3HRs<br>
+        <input name="rate" type="radio">{{1630|currency:'INR'}} &nbsp;  FOR 6 HRs<br>
+        <input name="rate" type="radio">{{2630|currency:'INR'}} &nbsp;  FOR 12 HR<br>
+        <input name="rate" type="radio">{{3000|currency:'INR'}} &nbsp;  FOR ONE DAY
+    </div>
+    <div>
+        <button (click)="reserve()" class="reserve">Reserve now</button>
+    </div>
+</div>

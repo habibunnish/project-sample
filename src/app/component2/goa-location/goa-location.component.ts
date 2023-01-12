@@ -9,8 +9,11 @@ import { Router } from '@angular/router';
 export class GoaLocationComponent {
   constructor(private router:Router){}
  
- goaconfirmpage() {
+ goaconfirmpage1() {
     this.router.navigate(['goa-confirm-page'])
+}
+goaconfirmpage2(){
+  this.router.navigate(['goa-page1'])
 }
 
 }

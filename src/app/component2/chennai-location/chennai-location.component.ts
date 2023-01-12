@@ -9,8 +9,11 @@ import { Router } from '@angular/router';
 export class ChennaiLocationComponent {
 
   constructor(private router:Router){}
-  confirmpage() {
+  confirmpage1() {
     this.router.navigate(['confirm-page']);
+  }
+  confirmpage2(){
+    this.router.navigate(['chennai-page1'])
   }
 
 }

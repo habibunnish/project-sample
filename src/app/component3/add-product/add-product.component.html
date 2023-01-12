@@ -1,25 +1,33 @@
-<div>
-    <div>
+
+<div class="wall"> 
+    <div class="loginform">
+        <h1 style="text-align:center; margin-bottom: 40px;">WELCOME ADD NEW PRODUCT</h1>
         <form>
-            <label for="ProductTitle">ProductTitle</label>
+            <label for="ProductTitle">ProductTitle</label><br>
             <input type="text" name="productTitle" placeholder="ProductTittle" [(ngModel)]="ProductTitle">
             <pre></pre>
 
-            <label for="Location">Location</label>
+            <label for="Location">Location</label><br>
             <input type="text" name="location" placeholder="Location" [(ngModel)]="Location">
             <pre></pre>
 
-            <label for="Price">Price</label>
+            <label for="Price">Price</label><br>
             <input type="text" name="price" placeholder="Price" [(ngModel)]="Price">
             <PRE></PRE>
 
-            <label for="Image">Image</label>
-            <input type="text"  name="image" (change)="getName(name.value)" [(ngModel)]="Image" #name /><br>
+            <label for="Image">Image Name</label><br>
+            <input type="text"  placeholder="imagename" name="image" [(ngModel)]="Image"  #name /><br>
+            <pre></pre> 
+
+           <input type="file" (change)="getFile($event)" /><br>
             <pre></pre>
-            <input type="file" (change)="getFile($event)" /><br>
-            <pre></pre>
-            <button (click)="submitData()" type="button" value="Upload file" (click)="addProduct()">ADD-PRODUCT</button> 
-            <button (click)=" UpdateProduct(1)">Updating Product id(2) </button>
+          
+            <button class="add" (click)="addProduct()" type="button" value="Upload file" >ADD-PRODUCT</button> 
+            <span style="display: inline-block;width:40px"></span>
+            <button  class="updating" (click)=" UpdateProduct(3)">Updating Product id(3) </button>
+            <span style="display: inline-block; width:20px"></span>
+            <button class="add" (click)="checkdata()">CheckData</button>
+        
         </form>
     </div>
 </div>

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AdminService } from '../admin.service';
 
 @Component({
@@ -8,15 +9,14 @@ import { AdminService } from '../admin.service';
   styleUrls: ['./add-product.component.scss']
 })
 export class AddProductComponent {
-  name:string='';
+
   file:any;
-  
   ProductTitle: any;
   Location: any;
   Price: any;
   Image: any;
 
-  constructor(  private adminService:AdminService ,private http:HttpClient){}
+  constructor(  private adminService:AdminService ,private http:HttpClient,private router:Router){}
 
   //post
   addProduct(){
@@ -24,38 +24,41 @@ export class AddProductComponent {
       ProductTittle:this.ProductTitle,
       Location:this.Location,
       Price:this.Price,
-      Image:this.Image
+      Image:this.Image,
+      file:this.file.name
     };
     this.adminService.addProductDetails(newData).subscribe(data=>{
       console.log(data);
+      alert('product added successfully');
+     
     })
   }
 
   //put
      UpdateProduct(contactId:any){
-      const newData={ ProductTittle:"the china town",  Location:"Delhi", Price:"3000"}
+      const newData={ ProductTittle:"the china town",  Location:"Delhi", Price:"3000" ,Image:'bangaluru',file:"bangaluru.jpg"}
       this.adminService.UpdateProduct(contactId ,newData).subscribe(data=>{
         console.log(data);
+        alert('product edited successfully')
        
       })
    }
+
  //fileuploading
-    getName(name: string) {
-      this.name=name;
-     
-    }
+ 
     getFile(event:any) {
-      this.file=event.target.files[0];
-      console.log('file',this.file);
+      this.file = event.target.files[0];
+      console.log('file',this.file.name);
     }
     submitData(){
       let formData=new FormData();
-      formData.set("name",this.name);
       formData.set("file",this.file);
 
       this.http.post('http://localhost:3000/product',formData).subscribe(res=>{
         console.log(res);
       })
     }
-
+    checkdata(){
+      this.router.navigate(['get-product']);
+    }
 }

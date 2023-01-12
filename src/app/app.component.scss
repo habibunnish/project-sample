@@ -8,13 +8,14 @@
     color: rgb(230, 48, 63);
     font-size: 20px;
     font-weight: bold;
+  
     background-image: linear-gradient(black, pink, );
 }
 .navigation a{
     text-decoration: none;
     display: block;
     padding: 3;
-    color: orangered;
+    color: whitesmoke;
     justify-items: right;
   
     
@@ -39,11 +40,12 @@ img{
 .one{
     flex-grow: 1;
     padding: 20px;
+    color: whitesmoke;
 }
 .dropdown-content{
     display:none;
     position:absolute;
-    background-color:yellow;
+    background-color:white;
     min-width:30px;
     box-shadow: 0px 8px 16px rgba(0,0,0,2);
     padding:12px;

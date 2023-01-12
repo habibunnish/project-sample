@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import {  FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginService } from '../login.service';
 
 @Component({
@@ -32,7 +33,7 @@ firstname: any;
 
 
 
-  constructor(private fb: FormBuilder , private loginService:LoginService) { }
+  constructor(private fb: FormBuilder , private loginService:LoginService,private router:Router) { }
  
 
   // updateProfile() {
@@ -64,5 +65,8 @@ firstname: any;
  onSubmit() {
     // TODO: Use EventEmitter with form value
     console.warn(this.profileForm.value);
+    alert("you have successfully register please login to see Hotel-Rooms 🏨️🛌️")
+    this.router.navigate(['login-form']);
+
   }
 }

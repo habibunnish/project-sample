@@ -12,11 +12,8 @@ import { LoginService } from '../login.service';
 })
 export class LoginFormComponent implements OnInit{
   type:string="password";
-
   loginForm!:FormGroup;
-  // istext:boolean=false;
-  // eyeIcon:string="fa-eye-slash";
-    
+
   ngOnInit(){
     this.loginForm=this.fb.group({
       firstname:['',Validators.required],
@@ -30,16 +27,13 @@ export class LoginFormComponent implements OnInit{
   firstname: string = '';
   password: any;
   email: any;
-
-
-  //post
+   //post
   constructor(private loginService: LoginService, private fb:FormBuilder,private router: Router ) { }
   addNewContact() {
     const newFormData = {
       firstname: this.firstname,
       password: this.password,
       email: this.email,
-      // "id":2
     };
     this.loginService.addNewContactUser(newFormData).subscribe(data => {
       console.log(data);
@@ -49,9 +43,8 @@ export class LoginFormComponent implements OnInit{
 
 
   submit() {
-    console.log("form submitted successfully")
     console.log(this.validateAllFormFields(this.loginForm));
-  // console.log("invalid form")
+    this.router.navigate(['booking-page'])
   }
 
  //sending to register
@@ -74,23 +67,21 @@ export class LoginFormComponent implements OnInit{
    //storing oon local storage login data
   saveData() {
    const userData={
-    firstname:this.firstname,
+
     password:this.password,
     email:this.email,
     // id:''
-
    };
-   localStorage.setItem('userData',JSON.stringify(userData));
-   
-  //  const data=localStorage.getItem('userData');
-  //  console.log('data:' ,JSON.parse(data))
-
-
+   sessionStorage.setItem('userData',JSON.stringify(userData))
   }
-
-nextpage() {
- this.router.navigate(['booking-page'])
+  getdata(){
+      return sessionStorage.getItem('userdata');
   }
+nextpage(){
+  this.router.navigate(['booking-page'])
+}
+
+
 
   hideshowpass() {
     // this.istext=!this.istext;
