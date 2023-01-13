@@ -2,12 +2,14 @@
   <div style="flex-grow: 1;">
      <img src="assets/IMAGES/logo.jpeg" >
   </div>
-   <li class="one"><a routerLink="home-page" >HOMEPAGE</a></li>
+   <li class="one" (click)="Homepage()"><a routerLink="home-page" >HOMEPAGE</a></li>
    <li class="one" (click)="BOOKPAGE()"><a routerLink="booking-page">CHECK ROOMS</a></li>
    <li class="one"><a>Help & Support</a></li>
    <li class="one" (click)="onLoginClick()"> Login</li>
    <li class="one" (click)="onLogoutClick()">Logout</li>
    <li class="one"><a routerLink="get-product">Admin-DataBase</a></li>
+   <!-- <li class="one" (click)="product()"><a routerLink="products">product</a></li> -->
+   <li class="one" (click)="cart()"><a routerLink="add-to-cart">cart</a></li>
 
    <!-- <li class="one dropdown">admin-Login.
      <ul class="dropdown-content" >

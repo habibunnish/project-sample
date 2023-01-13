@@ -1,0 +1,29 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th  scope="col">PRODUCTTITTLE</th>
+      <th  scope="col">LOCATION</th>
+      <th  scope="col">PRICE</th>
+      <th  scope="col">IMAGE</th>
+      <th  scope="col">FILE</th>
+      <th class="addproduct"><button class="btn btn-primary" (click)="add()">ADD-PRODUCT</button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <TR *ngFor="let product of ProductList ">
+      <TD>{{product.ProductTittle}}</TD>
+      <TD>{{product.Location}}</TD>
+      <TD>{{product.Price}}</TD>
+      <td>{{product.Image}}</td>
+      <!-- <TD><img style="width:30px" src="{{product.Image}}" alt="IMAGE"></TD> -->
+      <TD><img style="width:200px" src="/assets/IMAGES/{{product.file}}" alt="IMAGE"></TD>
+      <!-- <TD>{{product.file}}</TD> -->
+      <td>    
+        <button class="btn btn-info" (click)="edit()">EDIT-PRODUCT</button>
+        <span style="display: inline-block;width:40px;margin-right: 20px;"></span>
+        <button class="margin-right: 30px"   class="btn btn-danger mx-3" (click)="deletedata(product)">DELETE-PRODUCT</button>
+      </td>
+    </TR>
+  </tbody>
+</table>
+

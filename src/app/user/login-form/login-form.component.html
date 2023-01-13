@@ -1,0 +1,42 @@
+<div class="wall">
+    <!-- <h1> Login Form</h1> -->
+    <div class="loginform">
+        <h1> Login Form</h1>
+        <div align="left" class="container mb-3">
+            <form [formGroup]="loginForm" >
+                <div class="form-group"><br>
+                    <label for="firstname">Firstname </label>
+                    <input formControlName="firstname" required type="text" class="focus"   name="firstname" [(ngModel)]="firstname" class="form-control" >
+
+                    <div *ngIf="loginForm.touched && loginForm.invalid" class="alert alert-danger">invalid  very short name minimum leter required is 4
+                      <p *ngIf="loginForm.errors ?.['minlength']"></p>
+                    </div>
+
+                </div>
+                <pre></pre>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input  [type]="type"  formControlName="password" name="password" [(ngModel)]="password" required
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$"
+                        class="form-control" >
+                      
+
+                    <p *ngIf="loginForm.touched && loginForm.invalid"  class="alert alert-danger">invalid pattern required use small case , uppercase and one special character to</p>
+                        <p *ngIf="loginForm.errors ?.['pattern']"> </p>
+                  
+                </div>
+                <pre></pre>
+                <div class="form-group">
+                    <label for="email">Email </label>
+                    <input formControlName="email" type="email" name="email" [(ngModel)]="email" required class="form-control" >
+                </div><br>
+                <button [disabled]="loginForm.invalid" (click)="submit()" class="btn btn-danger" (click)="nextpage()" (click)="saveData()" type="submit" (click)="addNewContact()">
+                    Submit</button>
+                    <span style="display: inline-block;width:200px"></span>
+                <button class="btn btn-danger" (click)="onsubmit()">NewUserRegister</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+>

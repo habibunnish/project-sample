@@ -19,8 +19,17 @@ export class AppComponent {
     this.router.navigate(['home-page']);
     alert("you have been successfully logged out");
   }
+  cart(){
+    this.router.navigate(['add-to-cart']);
+  }
 
   BOOKPAGE(){
     alert("🏨️ you need to login first if you are a existed user else please register to check room 🏨️")
+  }
+  Homepage(){
+    alert("🏨️ you need to login first if you are a existed user else please register to check room 🏨️")
+  }
+  product(){
+    console.log('product')
   }
 }

@@ -17,6 +17,12 @@
       "password": "Nisha@123",
       "email": "akashsingh1306@gmail",
       "id": 3
+    },
+    {
+      "firstname": "Akash",
+      "password": "Habi@123",
+      "email": "habicute111@gmail.com",
+      "id": 4
     }
   ],
   "userRegister": [
@@ -41,20 +47,20 @@
   ],
   "product": [
     {
-      "ProductTittle": "the china town",
-      "Location": "Delhi",
-      "Price": "3000",
-      "Image": "bangaluru",
-      "file": "bangaluru.jpg",
-      "id": 3
+      "ProductTittle": "new",
+      "Location": "Chennai",
+      "Price": "2800",
+      "Image": "Banguluru 1",
+      "file": "goa2.4.jpg",
+      "id": 8
     },
     {
-      "ProductTittle": "Hotel Prism",
-      "Location": "Jammu",
-      "Price": "4800",
+      "ProductTittle": "Rohini hotel palace",
+      "Location": "jammu",
+      "Price": "3000",
       "Image": "jammu",
-      "file": "jammu2.jpg",
-      "id": 7
+      "file": "jammu4.jpg",
+      "id": 10
     }
   ]
 }

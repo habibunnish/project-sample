@@ -1,0 +1,41 @@
+<ng-container *ngIf="true">
+       <div class="container">
+          <div class="card-table">
+            <div class="cart-product">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th  scope="col">id</th>
+                            <th  scope="col">PRODUCT TITTLE</th>
+                            <th  scope="col">LOCATION</th>
+                            <th  scope="col">PRICE</th>
+                            <th scope="col">IMAGE</th>
+                            <TH  scope="col">FILE</TH>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr *ngFor="let product of ProductList ">
+                                <td>{{product.id}}</td>
+                                <TD>{{product.ProductTittle}}</TD>
+                                <TD>{{product.Location}}</TD>
+                                <TD>{{product.Price}}</TD>
+                                <td>{{product.Image}}</td>
+                                <!-- <TD><img style="width:30px" src="{{product.Image}}" alt="IMAGE"></TD> -->
+                                <TD><img style="width:200px" src="/assets/IMAGES/{{product.file}}" alt="IMAGE"></TD>
+
+                               <td>
+                                <button class="btn btn-primary" >BuyNow</button>
+                                <span style="display:inline-block ; width:30px"></span>
+                                <button class="btn btn-danger" (click)="delete(product)">delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+       </div>
+</ng-container>
+<pre></pre>
+<!-- /home/asplap3273/Desktop/project/projectnew/src/assets/IMAGES/chennai1.5.jpg -->
+
+
