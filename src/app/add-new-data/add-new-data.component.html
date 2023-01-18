@@ -1,5 +1,6 @@
 <div class="wall"> 
     <div class="loginform" >
+
         <form >
             <label for="ProductTitle">Tittle</label><br>
             <input type="text" name="productTitle" placeholder="ProductTittle"[(ngModel)]="adddatas1.tittle" >
@@ -16,10 +17,10 @@
            <input type="file" (change)="getFile($event)"   accept="png/jpg"  /><br>
             <pre></pre>
           
-            <button class="add" (click)="submit(adddatas1)" type="button" value="Upload file" >ADD-PRODUCT</button> 
-            <!-- <span style="display: inline-block;width:40px"></span>
-            <button class="checkpage" ((click)="checkpage()")>checkpage</button>
-            <button  class="updating" (click)=" UpdateProduct(3)">Updating Product id(3) </button> -->
+            <button class="btn btn-primary" (click)="adding(adddatas1)" type="button" value="Upload file" >ADD-PRODUCT</button> 
+            <span style="display: inline-block;width:40px"></span>
+            <button class="btn btn-primary" (click)=" putting(8)">Updating Product id(6) </button>
+            <!-- <button class="checkpage" ((click)="checkpage()")>checkpage</button> -->
         </form>
     </div>
 </div>

@@ -24,7 +24,17 @@ export class BookingService {
       return this.httpClient.post('http://localhost:3000/productdatachennai',createResource ,{headers:httpHeaders});
       
     }
-    
+    //put
+    putproductchennai(contactId:string,UpdatedBody:any){
+      return this.httpClient.put('http:/localhost:3000/productdatachennai'+contactId,UpdatedBody);
+    }
+    //delete
+    deleteproductchennai(id:number){
+      return this.httpClient.delete('http://localhost:3000/productdatachennai/'+id)
+      .pipe(map((res:any)=>{
+        return res;
+      }))
+    }
    
  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   

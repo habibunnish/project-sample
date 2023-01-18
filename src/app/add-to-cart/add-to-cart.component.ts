@@ -9,9 +9,11 @@ import { UserBookedHistoryService } from '../services/guards/user-booked-history
   styleUrls: ['./add-to-cart.component.scss']
 })
 export class AddToCartComponent implements OnInit{
+ 
   public product: any ;
-  Email:any
+ 
   ProductTitle: any;
+  Email:any;
   Location: any;
   Price: any;
   Image: any;
@@ -26,11 +28,21 @@ export class AddToCartComponent implements OnInit{
         alert('product added successfully');
        
       })
+    if(localStorage.getItem('userData')!=null){
+      var email = JSON.parse(localStorage.getItem('userData') || '{}');
+      item.email=email.email;
+      console.log('getting email');
+    }
+
      }
-     book(item:any){
+   book(item:any){
       alert("are you sure u want to book now press ok to book this room ");
       this.addProduct(item);
-    }
+      // this.addtocartdis(item);
+     
+     }
+   
+
   ngOnInit(){
     this.getproduct();
   }
@@ -50,5 +62,5 @@ export class AddToCartComponent implements OnInit{
   goback(){
     this.router.navigate(['home-page'])
   }
-  
+ 
 }

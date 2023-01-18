@@ -34,7 +34,7 @@ import { HowItWorkComponent } from './how-it-work/how-it-work.component';
     BanguluruLocationComponent,
     JammuLocationComponent,
     RoyapuramComponent,
-    HowItWorkComponent
+    HowItWorkComponent,
   ]
 })
 export class BookingWorkModule { }

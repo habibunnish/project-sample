@@ -8,6 +8,7 @@
                         <tr>
                             <th scope="col">id</th>
                             <th scope="col">TITTLE</th>
+                            <th scope="col">EMAIL</th>
                             <th scope="col">LOCATION</th>
                             <th scope="col">PRICE</th>
                             <th scope="col">IMAGE</th>
@@ -16,8 +17,8 @@
                     <tbody>
                         <tr *ngFor="let item of product ; let i =index">
                             <td>{{i+1}}</td>
-                    
                             <TD>{{item.tittle}}</TD>
+                            <td>{{item.email}}</td>
                             <TD>{{item.location}}</TD>
                             <TD>{{item.price}}</TD>
                             <TD><img style="width:200px" src="/assets/IMAGES/{{item.image}}" alt="IMAGE"></TD>

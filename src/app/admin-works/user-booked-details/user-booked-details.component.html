@@ -2,8 +2,8 @@
     <thead>
       <tr>
         <th  scope="col">id</th>
-        <th  scope="col">Email</th>
-        <th scope="col">PRODUCTTITTLE</th>
+        <th  scope="col">EMAIL</th>
+        <th  scope="col">PRODUCTTITTLE</th>
         <th  scope="col">LOCATION</th>
         <th  scope="col">PRICE</th>
         <th  scope="col">IMAGE</th>
@@ -12,9 +12,9 @@
       </tr>
     </thead>
     <tbody>
-      <TR *ngFor="let item of Product ;let i =index ">
+      <TR *ngFor="let item of Productuser ;let i =index ">
         <td>{{i+1}}</td>
-        <td>{{item.email}}</td>
+       <td>{{item.email}}</td>
         <TD>{{item.tittle}}</TD>
         <TD>{{item.location}}</TD>
         <TD>{{item.price}}</TD>

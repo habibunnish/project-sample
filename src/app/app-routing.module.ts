@@ -20,7 +20,7 @@ import { UserBookedDetailsComponent } from './admin-works/user-booked-details/us
 import { AddNewDataComponent } from './add-new-data/add-new-data.component';
 
 const routes: Routes = [
-  {path:'home-page',component:HomePageComponent},
+  {path:'home-page',component:HomePageComponent,canActivate:[AuthGuardService]},
   {path:'booking-page',component:BookingPageComponent},
   {path:'login-form',component:LoginFormComponent,},
   {path:'register-form',component:RegisterFormComponent},

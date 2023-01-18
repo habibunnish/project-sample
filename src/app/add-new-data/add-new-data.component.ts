@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { BookingService } from '../services/guards/booking.service';
@@ -15,26 +16,21 @@ class adddatas1{
   selector: 'app-add-new-data',
   templateUrl: './add-new-data.component.html',
   styleUrls: ['./add-new-data.component.scss'],
-  providers:[adddatas1],
+  providers:[adddatas1]
 
 })
 export class AddNewDataComponent implements OnInit{
   file: any;
+
   constructor( private http: HttpClient, private router: Router, private bookingService: BookingService,public adddatas1:adddatas1) { }
 
  
   ngOnInit(){}
 
-  submit(adddatas1:any){
-  console.log(localStorage.getItem('userData'))
+  adding(adddatas1:any){
     adddatas1.image=this.file.name;
-  
-    if(localStorage.getItem('userData')!=null){
-      var email = JSON.parse(localStorage.getItem('userData') || '{}');
-      adddatas1.email=email.email;
-    }
     this.addnewproduct(adddatas1);
-    // this.addnewproductbangaluru(adddatas1);
+    alert('product added successfully');
   }
 
   //post
@@ -44,24 +40,29 @@ export class AddNewDataComponent implements OnInit{
     this.bookingService.addProductsDetails(adddatas1).subscribe(res=>{
     console.log(res);
     })
+    this.bookingService.addProductsDetailsbangluru(adddatas1).subscribe(res=>{
+      console.log(res);
+    })
+    this.bookingService.addProductsDetailsroyapuram(adddatas1).subscribe(res=>{
+      console.log(res);
+    })
+    this.bookingService.addProductsDetailsjammu(adddatas1).subscribe(res=>{
+      console.log(res);
+    })
    }
-  //  addnewproductbangaluru(adddatas1:any){
-  //   this.bookingService.addProductsDetailsbangluru(adddatas1).subscribe(res=>{
-  //     console.log(res);
-  //   })
-  //  }
+   putting(contactId:any){
+    // adddatas1.image=this.file.name;
+    this.UpdateputProduct(contactId);
+   }
+   //put
+   UpdateputProduct(contactId:any,){
+    const newdatas={location:"tambaram"}
+      this.bookingService.putproductchennai(contactId,newdatas).subscribe(data=>{
+        console.log(data);
+        alert('product edited successfully')
+      })
+   }
 
-   
-
-  // //put
-  // UpdateProduct(contactId: any) {
-  //   const newData = { ProductTittle: "the china town", Location: "Delhi", Price: "3000", Image: 'bangaluru', file: "bangaluru.jpg" }
-  //   this.adminService.UpdateProduct(contactId, newData).subscribe(data => {
-  //     console.log(data);
-  //     alert('product edited successfully')
-
-  //   })
-  // }
 
   //fileuploading
 
@@ -81,7 +82,5 @@ export class AddNewDataComponent implements OnInit{
   checkdata() {
     this.router.navigate(['get-product']);
   }
-  // checkpage(){
-  //   this.router.navigate
-  // }
+ 
 }

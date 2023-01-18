@@ -11,6 +11,150 @@
       "password": "Bubbly@123",
       "email": "nishababe1306@gmail.com",
       "id": 2
+    },
+    {
+      "firstname": "habi",
+      "password": "Bubbly@9823",
+      "email": "santoshi111@gmail.com",
+      "id": 3
+    },
+    {
+      "firstname": "BUBBLY",
+      "password": "Anjali@1212",
+      "email": "arthimeghanathan@12gmail",
+      "id": 4
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "arthi@123",
+      "id": 5
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "arthi@123",
+      "id": 6
+    },
+    {
+      "firstname": "habibunnisha",
+      "password": "Habi@5555",
+      "email": "arthi@123",
+      "id": 7
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "arthi@123",
+      "id": 8
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "arthi@123",
+      "id": 9
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "arthi@123",
+      "id": 10
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "arthi@123",
+      "id": 11
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "habicute111@gmail.com",
+      "id": 12
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "Habibubbly@123",
+      "id": 13
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "Anjali@1122gmail.com",
+      "id": 14
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "san@333",
+      "id": 15
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "san@333",
+      "id": 16
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "Anjali@1122gmail.com",
+      "id": 17
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "Bubbbly@123",
+      "id": 18
+    },
+    {
+      "firstname": "Santosh",
+      "password": "Santoshkumar@8734",
+      "email": "santosh@3456",
+      "id": 19
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "nisha.afroz@aspiresys.com",
+      "id": 20
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "habicute111@gmail.com",
+      "id": 21
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "nisha.afroz@aspiresys.com",
+      "id": 22
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "nisha.afroz@aspiresys.com",
+      "id": 23
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "nishababe1306@gmail.com",
+      "id": 24
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "nishababe1306@gmail.com",
+      "id": 25
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "nishababe1306@gmail.com",
+      "id": 26
     }
   ],
   "userRegister": [
@@ -32,75 +176,204 @@
       "Image": "chennai1",
       "file": "chennai2.1.jpg",
       "id": 1
+    },
+    {
+      "ProductTittle": "new",
+      "Location": "chennai",
+      "Price": "2488",
+      "Image": "chennai",
+      "file": "chennai1.5.jpg",
+      "id": 2
     }
   ],
   "productdatachennai": [
     {
-      "tittle": "new era",
-      "location": "chennai",
-      "price": "3445",
-      "image": "goa2.4.jpg",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 1
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 6
     },
     {
-      "tittle": "PRIDE HOTEL CHENNAI",
-      "location": "KILPAUK",
-      "price": "3853",
-      "image": "chennai2.5.jpg",
-      "email": "nishababe1306@gmail.com",
-      "id": 2
+      "tittle": "CHANDRAN HYLINE",
+      "location": "PERUMBAKKAM",
+      "price": "3600",
+      "image": "chennai3.jpg",
+      "id": 8
     },
     {
-      "tittle": "PRIDE HOTEL CHENNAI",
-      "location": "KILPAUK",
-      "price": "3853",
-      "image": "chennai2.5.jpg",
-      "email": "nishababe1306@gmail.com",
-      "id": 3
+      "tittle": "NEW GREEN GALAXY",
+      "location": "CHEPAUK",
+      "price": "2600",
+      "image": "chennai5.jpg",
+      "id": 9
+    },
+    {
+      "tittle": "ADMIRE SUITE",
+      "location": "TRIPLICANE",
+      "price": "3900",
+      "image": "chennai6.jpg",
+      "id": 10
+    },
+    {
+      "tittle": "TOWN SPACE APARTMENT HOTEL",
+      "location": "PORUR",
+      "price": "1900",
+      "image": "chennai7.jpg",
+      "id": 11
     }
   ],
   "productdatabangaluru": [
     {
-      "tittle": "HYATT CENTRIC-MG ROAD",
-      "location": "HALASURU-BANGALURU LOCATION",
-      "price": 4130,
-      "image": "banguluru1.jpg",
-      "id": 1
-    },
-    {
-      "tittle": "PRIDE HOTEL CHENNAI",
-      "location": "KILPAUK",
-      "price": "3853",
-      "image": "chennai2.5.jpg",
-      "email": "nishababe1306@gmail.com",
+      "tittle": "EMERALD INN",
+      "location": "SAKINAKA ANDHERI",
+      "price": "4000",
+      "image": "bang1.jpg",
       "id": 2
     },
     {
-      "tittle": "PRIDE HOTEL CHENNAI",
-      "location": "KILPAUK",
-      "price": "3853",
-      "image": "chennai2.5.jpg",
-      "email": "nishababe1306@gmail.com",
+      "tittle": "HOTEL ROYAL  GRAND",
+      "location": "JOGESHWARI",
+      "price": "3200",
+      "image": "bang2.jpg",
       "id": 3
+    },
+    {
+      "tittle": "HOTEL GOLDEN PARK",
+      "location": "MORAL ",
+      "price": "2590",
+      "image": "bang3.jpg",
+      "id": 4
+    },
+    {
+      "tittle": "HOTEL HILL PARK",
+      "location": "KURLA WESI",
+      "price": "2574",
+      "image": "bang4.jpg",
+      "id": 5
+    },
+    {
+      "tittle": "HOTEL ROYCE EXECUTIVE",
+      "location": "MAHALAXMI ROAD NEAR",
+      "price": "2799",
+      "image": "bang7.jpg",
+      "id": 6
+    },
+    {
+      "tittle": "HOTEL ORIENTER ASTER",
+      "location": "CHAKALA GALI",
+      "price": "3999",
+      "image": "bang5.jpg",
+      "id": 7
+    },
+    {
+      "tittle": "CHANDRAN HYLINE",
+      "location": "tambaram",
+      "price": "1000",
+      "image": "goa9.jpg",
+      "id": 8
     }
   ],
   "royapuram": [
     {
-      "tittle": "CLARKS INN BANGALORE ",
-      "location": "KEMPEGOWDA INTERNATIONAL AIRPORT ROAD -BANGALURU LOCATION",
-      "price": 4000,
-      "image": "goa1.jpg",
-      "id": 1
+      "tittle": "HOTEL CLASSIC GRANDE",
+      "location": "CAMP ROAD",
+      "price": "4000",
+      "image": "goa5.jpg",
+      "id": 2
+    },
+    {
+      "tittle": "HOTEL SAHRA",
+      "location": "SHIVAJI NAGAR",
+      "price": "4200",
+      "image": "goa6.jpg",
+      "id": 3
+    },
+    {
+      "tittle": "LIV INN ROOM HOTELS",
+      "location": "TIGRI GOL CHAKKAR",
+      "price": "3920",
+      "image": "goa7.jpg",
+      "id": 4
+    },
+    {
+      "tittle": "HERA NANADANI HOTEL",
+      "location": "ECOTECH",
+      "price": "3790",
+      "image": "goa8.jpg",
+      "id": 5
+    },
+    {
+      "tittle": "OM RESIDENCY",
+      "location": "RAZA JALAPUR",
+      "price": "4790",
+      "image": "goa9.jpg",
+      "id": 6
+    },
+    {
+      "tittle": "ACE ICONIC HOTEL",
+      "location": "ANSAL GOLF LINE ROAD",
+      "price": "2990",
+      "image": "goa10.jpg",
+      "id": 7
+    },
+    {
+      "tittle": "CHANDRAN HYLINE",
+      "location": "tambaram",
+      "price": "1000",
+      "image": "goa9.jpg",
+      "id": 8
     }
   ],
   "jammu": [
     {
-      "tittle": "HOTEL MAYUKHA",
-      "location": "KUKATPALLY-JAMMU LOCATION",
-      "price": 1679,
-      "image": "jammu1.jpg",
-      "id": 1
+      "tittle": "SHELDON INTERNATIONAL",
+      "location": "VIP NAGAR",
+      "price": "4600",
+      "image": "kash1.jpg",
+      "id": 2
+    },
+    {
+      "tittle": "ROYAL CROWN",
+      "location": "DUM DUM ",
+      "price": "4900",
+      "image": "kash2.jpg",
+      "id": 3
+    },
+    {
+      "tittle": "HOTEL DIAMOND NEW",
+      "location": "PARK CIRCUS NEAR",
+      "price": "4300",
+      "image": "kash3.jpg",
+      "id": 4
+    },
+    {
+      "tittle": "GLASSOTEL  HOTEL",
+      "location": "PARK CIRCUS",
+      "price": "4500",
+      "image": "kash4.jpg",
+      "id": 5
+    },
+    {
+      "tittle": "GOKUL REGENCY",
+      "location": "HUSSAINPUR",
+      "price": "4800",
+      "image": "kash5.jpg",
+      "id": 6
+    },
+    {
+      "tittle": "MAYFAIR TOWER",
+      "location": "HUSSAINPUR",
+      "price": "4560",
+      "image": "kash6.jpg",
+      "id": 7
+    },
+    {
+      "tittle": "CHANDRAN HYLINE",
+      "location": "tambaram",
+      "price": "1000",
+      "image": "goa9.jpg",
+      "id": 8
     }
   ],
   "userbookeddetails": [
@@ -109,8 +382,63 @@
       "location": "chennai",
       "price": "3445",
       "image": "goa2.4.jpg",
-      "email": "nisha.afroz@aspiresys.com",
+      "email": "abc@123",
       "id": 1
+    },
+    {
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 2
+    },
+    {
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 3
+    },
+    {
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 4
+    },
+    {
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 5
+    },
+    {
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 6
+    },
+    {
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 7
+    },
+    {
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 8
+    },
+    {
+      "tittle": "HERO RESIDENCY ROOM HOTEL",
+      "location": "SIRUSERI",
+      "price": "2580",
+      "id": 9
     }
   ]
 }
