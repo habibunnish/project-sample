@@ -21,18 +21,33 @@ export class GetProductComponent implements OnInit{
       this.ProductList = data
     })
   }
+  getallproduct(){
+    this.adminService.getProduct().subscribe(res=>{
+      this.ProductList=res;
+    })
+  }
+
   //delete product
    deletedata(data:any){
-    console.log("ggjgfggh")
+    console.log("delete data() calling ",data.id)
    this.adminService.deleteProduct(data.id).subscribe(res=>{
-    alert(" product deleted successfully");
-      })
+    this.getallproduct();
+   })
+   alert("deleted this details");
    }
+
 
   add(){
     this.router.navigate(['add-product']);
   }
   edit(){
     this.router.navigate(['add-product']);
+  }
+  userbooked(){
+    this.router.navigate(['user-booked-details'])
+  }
+  gotoaddnewpage(){
+    console.log('addnew data page');
+    this.router.navigate(['add-new-data']);
   }
 }

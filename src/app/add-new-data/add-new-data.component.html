@@ -1,0 +1,26 @@
+<div class="wall"> 
+    <div class="loginform" >
+        <form >
+            <label for="ProductTitle">Tittle</label><br>
+            <input type="text" name="productTitle" placeholder="ProductTittle"[(ngModel)]="adddatas1.tittle" >
+            <pre></pre>
+
+            <label for="Location">Location</label><br>
+            <input type="text" name="location" placeholder="Location" [(ngModel)]="adddatas1.location">
+            <pre></pre>
+
+            <label for="Price">Price</label><br>
+            <input type="text" name="price" placeholder="Price" [(ngModel)]="adddatas1.price">
+            <PRE></PRE>
+
+           <input type="file" (change)="getFile($event)"   accept="png/jpg"  /><br>
+            <pre></pre>
+          
+            <button class="add" (click)="submit(adddatas1)" type="button" value="Upload file" >ADD-PRODUCT</button> 
+            <!-- <span style="display: inline-block;width:40px"></span>
+            <button class="checkpage" ((click)="checkpage()")>checkpage</button>
+            <button  class="updating" (click)=" UpdateProduct(3)">Updating Product id(3) </button> -->
+        </form>
+    </div>
+</div>
+

@@ -1,23 +1,28 @@
 <ul class="navigation">
-  <div style="flex-grow: 1;">
-     <img src="assets/IMAGES/logo.jpeg" >
+  <div style="flex-grow: 1">
+    <img (click)="adminpage()" src="assets/IMAGES/logo.jpeg" />
+    <p *ngIf="showme" routerLink="get-product">admin-page</p>
   </div>
-   <li class="one" (click)="Homepage()"><a routerLink="home-page" >HOMEPAGE</a></li>
-   <li class="one" (click)="BOOKPAGE()"><a routerLink="booking-page">CHECK ROOMS</a></li>
-   <li class="one"><a>Help & Support</a></li>
-   <li class="one" (click)="onLoginClick()"> Login</li>
-   <li class="one" (click)="onLogoutClick()">Logout</li>
-   <li class="one"><a routerLink="get-product">Admin-DataBase</a></li>
-   <!-- <li class="one" (click)="product()"><a routerLink="products">product</a></li> -->
-   <li class="one" (click)="cart()"><a routerLink="add-to-cart">cart</a></li>
+  <li class="one" (click)="Homepage()"><a routerLink="home-page">HOMEPAGE</a></li>
+  <li class="one" (click)="helppage()"><a routerLink="how-it-work">Help & Support</a></li>
+  <li class="one" (click)="Click()"><a routerLink="login-form">LOGIN</a></li>
+  <li class="one" (click)="logoutClick()"><a routerLink="home-page">LOGOUT</a></li>
+  <li class="two"><div>
+      <img
+        routerLink="add-to-cart"
+        src="assets/IMAGES/cartlogo.png"
+        class="number"/>
+   </div>
+ </li>{{ totalitem }}
+</ul>
+<h1 style="text-align: center; color: blue">WELCOME TO ROOMSTAY.COM</h1>
 
-   <!-- <li class="one dropdown">admin-Login.
+<router-outlet></router-outlet>
+
+<!-- <li class="one dropdown">admin-Login.
      <ul class="dropdown-content" >
        <li class="dropdown"><a style="color:black"  routerLink="add-product">AddProduct</a></li>
        <li class="dropdown"><a style="color:black"   routerLink="get-product">getProduct</a></li>
        <li class="dropdown"><a   routerLink="http-client">USER DETAIL</a></li>
      </ul>
    </li> -->
-
-</ul>
-<router-outlet></router-outlet>

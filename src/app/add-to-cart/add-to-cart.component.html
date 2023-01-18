@@ -1,41 +1,49 @@
-<ng-container *ngIf="true">
-       <div class="container">
-          <div class="card-table">
+
+<ng-container *ngIf="product.length !=0">
+    <div class="container">
+        <div class="card-table">
             <div class="cart-product">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th  scope="col">id</th>
-                            <th  scope="col">PRODUCT TITTLE</th>
-                            <th  scope="col">LOCATION</th>
-                            <th  scope="col">PRICE</th>
+                            <th scope="col">id</th>
+                            <th scope="col">TITTLE</th>
+                            <th scope="col">LOCATION</th>
+                            <th scope="col">PRICE</th>
                             <th scope="col">IMAGE</th>
-                            <TH  scope="col">FILE</TH>
                         </tr>
                     </thead>
                     <tbody>
-                            <tr *ngFor="let product of ProductList ">
-                                <td>{{product.id}}</td>
-                                <TD>{{product.ProductTittle}}</TD>
-                                <TD>{{product.Location}}</TD>
-                                <TD>{{product.Price}}</TD>
-                                <td>{{product.Image}}</td>
-                                <!-- <TD><img style="width:30px" src="{{product.Image}}" alt="IMAGE"></TD> -->
-                                <TD><img style="width:200px" src="/assets/IMAGES/{{product.file}}" alt="IMAGE"></TD>
-
-                               <td>
-                                <button class="btn btn-primary" >BuyNow</button>
+                        <tr *ngFor="let item of product ; let i =index">
+                            <td>{{i+1}}</td>
+                    
+                            <TD>{{item.tittle}}</TD>
+                            <TD>{{item.location}}</TD>
+                            <TD>{{item.price}}</TD>
+                            <TD><img style="width:200px" src="/assets/IMAGES/{{item.image}}" alt="IMAGE"></TD>
+                            <td>
+                                <button class="btn btn-primary" (click)="book(item)">BuyNow</button>
                                 <span style="display:inline-block ; width:30px"></span>
-                                <button class="btn btn-danger" (click)="delete(product)">delete</button>
+                                <button class="btn btn-danger" (click)="delete(item)">delete</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-          </div>
-       </div>
+        </div>
+    </div>
 </ng-container>
-<pre></pre>
-<!-- /home/asplap3273/Desktop/project/projectnew/src/assets/IMAGES/chennai1.5.jpg -->
 
-
+<ng-container *ngIf="product.length==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">MY CART</h5>
+        </div>
+        <div class="center">
+            <img src="assets/IMAGES/cart.jpg" alt="cart">
+            <h4>your cart is empty </h4>
+            <h6>add item to it now</h6>
+            <button class="btn btn-primary" (click)="goback()">SHOP NOW</button>
+        </div>
+    </div>
+</ng-container>

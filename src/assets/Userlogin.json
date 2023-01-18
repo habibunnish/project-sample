@@ -7,34 +7,13 @@
       "id": 1
     },
     {
-      "firstname": "Akash",
-      "password": "Nisha@123",
-      "email": "akashsingh1306@gmail",
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "nishababe1306@gmail.com",
       "id": 2
-    },
-    {
-      "firstname": "Akash",
-      "password": "Nisha@123",
-      "email": "akashsingh1306@gmail",
-      "id": 3
-    },
-    {
-      "firstname": "Akash",
-      "password": "Habi@123",
-      "email": "habicute111@gmail.com",
-      "id": 4
     }
   ],
   "userRegister": [
-    {
-      "firstname": "santoshi",
-      "lastname": "M",
-      "street": "Koyembed",
-      "city": "chennai",
-      "state": "tamilnadu",
-      "zipcode": "600019",
-      "id": 1
-    },
     {
       "firstname": "Akash",
       "lastname": "Singh",
@@ -42,25 +21,96 @@
       "city": "Chennai",
       "state": "Tamilnadu",
       "zipcode": "600018",
-      "id": 2
+      "id": 1
     }
   ],
   "product": [
     {
-      "ProductTittle": "new",
-      "Location": "Chennai",
-      "Price": "2800",
-      "Image": "Banguluru 1",
-      "file": "goa2.4.jpg",
-      "id": 8
+      "ProductTittle": "pride",
+      "Location": "delhi",
+      "Price": "3000",
+      "Image": "chennai1",
+      "file": "chennai2.1.jpg",
+      "id": 1
+    }
+  ],
+  "productdatachennai": [
+    {
+      "tittle": "new era",
+      "location": "chennai",
+      "price": "3445",
+      "image": "goa2.4.jpg",
+      "email": "nisha.afroz@aspiresys.com",
+      "id": 1
     },
     {
-      "ProductTittle": "Rohini hotel palace",
-      "Location": "jammu",
-      "Price": "3000",
-      "Image": "jammu",
-      "file": "jammu4.jpg",
-      "id": 10
+      "tittle": "PRIDE HOTEL CHENNAI",
+      "location": "KILPAUK",
+      "price": "3853",
+      "image": "chennai2.5.jpg",
+      "email": "nishababe1306@gmail.com",
+      "id": 2
+    },
+    {
+      "tittle": "PRIDE HOTEL CHENNAI",
+      "location": "KILPAUK",
+      "price": "3853",
+      "image": "chennai2.5.jpg",
+      "email": "nishababe1306@gmail.com",
+      "id": 3
+    }
+  ],
+  "productdatabangaluru": [
+    {
+      "tittle": "HYATT CENTRIC-MG ROAD",
+      "location": "HALASURU-BANGALURU LOCATION",
+      "price": 4130,
+      "image": "banguluru1.jpg",
+      "id": 1
+    },
+    {
+      "tittle": "PRIDE HOTEL CHENNAI",
+      "location": "KILPAUK",
+      "price": "3853",
+      "image": "chennai2.5.jpg",
+      "email": "nishababe1306@gmail.com",
+      "id": 2
+    },
+    {
+      "tittle": "PRIDE HOTEL CHENNAI",
+      "location": "KILPAUK",
+      "price": "3853",
+      "image": "chennai2.5.jpg",
+      "email": "nishababe1306@gmail.com",
+      "id": 3
+    }
+  ],
+  "royapuram": [
+    {
+      "tittle": "CLARKS INN BANGALORE ",
+      "location": "KEMPEGOWDA INTERNATIONAL AIRPORT ROAD -BANGALURU LOCATION",
+      "price": 4000,
+      "image": "goa1.jpg",
+      "id": 1
+    }
+  ],
+  "jammu": [
+    {
+      "tittle": "HOTEL MAYUKHA",
+      "location": "KUKATPALLY-JAMMU LOCATION",
+      "price": 1679,
+      "image": "jammu1.jpg",
+      "id": 1
+    }
+  ],
+  "userbookeddetails": [
+    {
+      "tittle": "new era",
+      "location": "chennai",
+      "price": "3445",
+      "image": "goa2.4.jpg",
+      "email": "nisha.afroz@aspiresys.com",
+      "id": 1
     }
   ]
 }

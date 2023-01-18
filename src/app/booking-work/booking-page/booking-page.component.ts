@@ -18,7 +18,7 @@ export class BookingPageComponent {
     this.router.navigate(['chennai-location']);
   }
    goa() {
-    this.router.navigate(['goa-location']);
+    this.router.navigate(['royapuram']);
     }
     banguluru() {
       this.router.navigate(['banguluru-location']);

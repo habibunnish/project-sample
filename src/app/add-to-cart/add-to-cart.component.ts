@@ -1,37 +1,54 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminService } from '../services/guards/admin.service';
+import { Router } from '@angular/router';
 import { CartService } from '../services/guards/cart.service';
+import { UserBookedHistoryService } from '../services/guards/user-booked-history.service';
 
 @Component({
   selector: 'app-add-to-cart',
   templateUrl: './add-to-cart.component.html',
   styleUrls: ['./add-to-cart.component.scss']
 })
-export class AddToCartComponent implements OnInit {
-  public ProductList: any =[];
-  constructor(private cartService:CartService,private adminService:AdminService){}
-  //post
-  add(){
-    console.log("fghjkl");
-    this.ProductList= this.cartService.getProducts().subscribe(data=>{
-    this.ProductList=data;
-    console.log(data);
-    })
+export class AddToCartComponent implements OnInit{
+  public product: any ;
+  Email:any
+  ProductTitle: any;
+  Location: any;
+  Price: any;
+  Image: any;
+  file: any;
+  constructor(private cartService:CartService,private router:Router,private UserBooked:UserBookedHistoryService){}
+    //post
+    addProduct(item:any){
+      item.id=null;
+      console.log('print',item);
+       this.UserBooked.UserBookedData(item).subscribe(data=>{
+        console.log(data);
+        alert('product added successfully');
+       
+      })
+     }
+     book(item:any){
+      alert("are you sure u want to book now press ok to book this room ");
+      this.addProduct(item);
+    }
+  ngOnInit(){
+    this.getproduct();
   }
 
-  getProduct(){
-    this.adminService.getCart().subscribe(data=>{
-      this.ProductList=data;
-      console.log(this.ProductList)
-    })
+  getproduct(){
+    console.log("getproduct()")
+    this.cartService.getProducts().subscribe(res=>{
+    this.product=res;
+    console.log(this.product);
+     })
   }
-  delete(data:any){
-    console.log("ggjgfggh")
-   this.adminService.deleteProduct(data.id).subscribe(res=>{
-    alert(" product deleted successfully");
-      })
+
+  delete(item:any){
+    console.log("deleteproduct",item.id);
+    this.cartService.removecartItem(item);
+   }
+  goback(){
+    this.router.navigate(['home-page'])
   }
-  ngOnInit(): void {
-    this.getProduct();
-  }
+  
 }

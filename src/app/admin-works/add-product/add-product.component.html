@@ -19,7 +19,7 @@
             <input type="text"  placeholder="imagename" name="image" [(ngModel)]="Image"  #name /><br>
             <pre></pre> 
 
-           <input type="file" (change)="getFile($event)" /><br>
+           <input type="file" (change)="getFile($event)" accept="png/jpg" /><br>
             <pre></pre>
           
             <button class="add" (click)="addProduct()" type="button" value="Upload file" >ADD-PRODUCT</button> 

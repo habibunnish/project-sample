@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {  HttpClientModule } from '@angular/common/http';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import { AuthGuardService } from '../services/guards/auth-guard.service';
+import { AuthService } from '../services/guards/auth.service';
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     NgbModule,
     HttpClientModule,
   ],
-  exports:[LoginFormComponent,RegisterFormComponent]
+  exports:[LoginFormComponent,RegisterFormComponent],
+  providers: [AuthService ,AuthGuardService],
 })
 export class UserModule { }

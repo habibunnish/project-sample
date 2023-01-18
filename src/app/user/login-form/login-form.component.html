@@ -30,7 +30,7 @@
                     <label for="email">Email </label>
                     <input formControlName="email" type="email" name="email" [(ngModel)]="email" required class="form-control" >
                 </div><br>
-                <button [disabled]="loginForm.invalid" (click)="submit()" class="btn btn-danger" (click)="nextpage()" (click)="saveData()" type="submit" (click)="addNewContact()">
+                <button [disabled]="loginForm.invalid" (click)="submit()" class="btn btn-danger"  type="submit">
                     Submit</button>
                     <span style="display: inline-block;width:200px"></span>
                 <button class="btn btn-danger" (click)="onsubmit()">NewUserRegister</button>

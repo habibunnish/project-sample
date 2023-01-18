@@ -13,7 +13,6 @@ import { LoginService } from '../../services/guards/login.service';
 export class LoginFormComponent implements OnInit{
   type:string="password";
   loginForm!:FormGroup;
-
   ngOnInit(){
     this.loginForm=this.fb.group({
       firstname:['',Validators.required],
@@ -30,6 +29,7 @@ export class LoginFormComponent implements OnInit{
    //post
   constructor(private loginService: LoginService, private fb:FormBuilder,private router: Router ) { }
   addNewContact() {
+    console.log("adding");
     const newFormData = {
       firstname: this.firstname,
       password: this.password,
@@ -37,19 +37,15 @@ export class LoginFormComponent implements OnInit{
     };
     this.loginService.addNewContactUser(newFormData).subscribe(data => {
       console.log(data);
+      this.router.navigate(['home-page'])
       this.msgTrue = true;
     })
   }
 
 
   submit() {
-    console.log(this.validateAllFormFields(this.loginForm));
-    this.router.navigate(['booking-page'])
-  }
-
- //sending to register
-  onsubmit() {
-    this.router.navigate(['register-form'])
+      this.saveData();
+      this.addNewContact();
   }
 
   private validateAllFormFields(formGroup:FormGroup){
@@ -62,22 +58,20 @@ export class LoginFormComponent implements OnInit{
       }
     })
   }
+   //sending to register
+   onsubmit() {
+    console.log("on submit");
+    this.router.navigate(['register-form'])
+  }
 
-  
-   //storing oon local storage login data
+  //storing oon local storage login data
   saveData() {
-   const userData={
-
+    console.log('localstoragw');
+    const userData={
     password:this.password,
     email:this.email,
    };
-   sessionStorage.setItem('userData',JSON.stringify(userData))
+   localStorage.setItem('userData',JSON.stringify(userData))
+  
   }
-  getdata(){
-      return sessionStorage.getItem('userdata');
-  }
-nextpage(){
-  this.router.navigate(['booking-page'])
-}
-
 }

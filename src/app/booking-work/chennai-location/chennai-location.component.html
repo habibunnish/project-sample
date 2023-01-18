@@ -1,61 +1,17 @@
-<div class="parent">
-    <div class="child">
-        <img class="childimgone" src="assets/IMAGES/chennai1.5.jpg">
-        <div class="sub-child">
-             <div><img class="childimgone1" src="assets/IMAGES/chennai1.jpg"></div>
-             <div> <img class="childimgone2" src="assets/IMAGES/chennai1.4.jpg"></div>
-             <div> <img class="childimgone3" src="assets/IMAGES/chennai1.5.jpg"></div>
-             <div><img class="childimgone4" src="assets/IMAGES/chennai1.jpg"></div>
-        </div>
-   
-    <div class="chennaioneDetailparent">
-        <h1>Pride Hotel Chennai</h1>
-        <p class="location">Kilpauk Location</p>
-       <div>
-          <p class="para">Couple friendly , &nbsp; local Id Accepted</p>
-        </div>
-           <div>Amenities services we provide<br>
-              <img  class="parking"  src="assets/IMAGES/parking (1).png">
-              <div class="ac"><img src="assets/IMAGES/ac.png"></div>
-              <div><img class="water" src="assets/IMAGES/water.png"></div>
-              <div><img class="foods" src="assets/IMAGES/foods.png"></div>
-           </div> 
-              <div>
-                <button class="booking" (click)="confirmpage1()">BOOK NOW</button>
-                <span style="display:inline-block;width:30px"></span>
-                <button class="btn btn-primary">Add to cart</button>
+<button (click)="GoBack()" class="btn btn-primary">bACK-TO-BOOKINGPAGE</button>
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of bookingList">
+            <div class="card col-md-4">
+                <img   src="/assets/IMAGES/{{item.image}}" alt="first image">
+              
+                <h5>{{item.tittle}}</h5>
+                <p>{{item.location}}</p>
+                <p><strong>PRICE : </strong>$ {{item.price}}</p>
+                <button class="btn btn-primary" (click)="addto(item)">ADD TO CART</button>
+                <hr>
             </div>
-        </div>
-    </div>   
-</div>
-<pre></pre>
-<div class="parent">
-    <div class="child">
-        <img class="childimgone" src="assets/IMAGES/chennai2.1.jpg">
-        <div class="sub-child">
-             <div><img class="childimgone1" src="assets/IMAGES/chennai2.2.jpg"></div>
-             <div> <img class="childimgone2" src="assets/IMAGES/chennai2.3.jpg"></div>
-             <div> <img class="childimgone3" src="assets/IMAGES/chennai2.4.jpg"></div>
-             <div><img class="childimgone4" src="assets/IMAGES/chennai2.5.jpg"></div>
-        </div>
-   
-    <div class="chennaioneDetailparent">
-        <h1>WIDLOR BOUTIQUE HOTEL</h1>
-        <p class="location">KANDIVALI WEST LOCATION</p>
-       <div>
-          <p class="para">Couple friendly , &nbsp; local Id Accepted</p>
-        </div>
-           <div>Amenities services we provide<br>
-              <img  class="parking"  src="assets/IMAGES/parking (1).png">
-              <div class="ac"><img src="assets/IMAGES/ac.png"></div>
-              <div><img class="water" src="assets/IMAGES/water.png"></div>
-              <div><img class="foods" src="assets/IMAGES/foods.png"></div>
-           </div> 
-              <div>
-                <button class="booking" (click)="confirmpage2()">BOOK NOW</button>
-                <span style="display:inline-block;width:30px"></span>
-                <button class="btn btn-primary">Add to cart</button>
-            </div>
-        </div>
-    </div>   
+        </ng-container>
+    </div>
 </div>
