@@ -16,6 +16,7 @@ city: any;
 street: any;
 lastname: any;
 firstname: any;
+email:any;
 
 
   profileForm = this.fb.group({
@@ -25,7 +26,8 @@ firstname: any;
       street: [''],
       city: [''],
       state: [''],
-      zip: ['']
+      zip: [''],
+      email:['']
     }),
 
   });
@@ -54,6 +56,7 @@ firstname: any;
      city:this.city,
      state:this.state,
      zipcode:this.zipcode,
+     email:this.email,
    };
    console.log('hi')
  this.loginService.addNewUserRegisterDetails(registerFormData).subscribe((data)=>{

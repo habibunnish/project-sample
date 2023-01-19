@@ -55,106 +55,82 @@
       "id": 9
     },
     {
-      "firstname": "bubbly",
+      "firstname": "ANISHA",
       "password": "Bubbly@123",
-      "email": "arthi@123",
+      "email": "nisha.afroz@aspiresys.com",
       "id": 10
     },
     {
-      "firstname": "bubbly",
+      "firstname": "ANISHA",
       "password": "Bubbly@123",
-      "email": "arthi@123",
+      "email": "nisha.afroz@aspiresys.com",
       "id": 11
     },
     {
       "firstname": "bubbly",
       "password": "Bubbly@123",
-      "email": "habicute111@gmail.com",
+      "email": "Bubbbly@123",
       "id": 12
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "Habibubbly@123",
-      "id": 13
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "Anjali@1122gmail.com",
-      "id": 14
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "san@333",
-      "id": 15
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "san@333",
-      "id": 16
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "Anjali@1122gmail.com",
-      "id": 17
     },
     {
       "firstname": "bubbly",
       "password": "Bubbly@123",
       "email": "Bubbbly@123",
-      "id": 18
+      "id": 13
     },
     {
-      "firstname": "Santosh",
-      "password": "Santoshkumar@8734",
-      "email": "santosh@3456",
-      "id": 19
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "Bubbbly@123",
+      "id": 14
+    },
+    {
+      "firstname": "bubbly",
+      "password": "Bubbly@123",
+      "email": "Bubbbly@123",
+      "id": 15
     },
     {
       "firstname": "ANISHA",
       "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 20
+      "email": "Bubbbly@123",
+      "id": 16
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "Bubbbly@123",
+      "id": 17
+    },
+    {
+      "firstname": "habibunnisha",
+      "password": "Habi@5555",
+      "email": "nishababe1306@gmail.com",
+      "id": 18
     },
     {
       "firstname": "ANISHA",
       "password": "Bubbly@123",
       "email": "habicute111@gmail.com",
+      "id": 19
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "habicute111@gmail.com",
+      "id": 20
+    },
+    {
+      "firstname": "ANISHA",
+      "password": "Bubbly@123",
+      "email": "nisha.afroz@aspiresys.com",
       "id": 21
     },
     {
-      "firstname": "bubbly",
+      "firstname": "ANISHA",
       "password": "Bubbly@123",
       "email": "nisha.afroz@aspiresys.com",
       "id": 22
-    },
-    {
-      "firstname": "bubbly",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 23
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nishababe1306@gmail.com",
-      "id": 24
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nishababe1306@gmail.com",
-      "id": 25
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nishababe1306@gmail.com",
-      "id": 26
     }
   ],
   "userRegister": [
@@ -166,24 +142,50 @@
       "state": "Tamilnadu",
       "zipcode": "600018",
       "id": 1
+    },
+    {
+      "firstname": "habi",
+      "lastname": "a",
+      "street": "siruser",
+      "city": "chennai",
+      "state": "tamilnadu",
+      "zipcode": "27821",
+      "email": "habicute111@gmail.com",
+      "id": 2
     }
   ],
   "product": [
     {
-      "ProductTittle": "pride",
-      "Location": "delhi",
-      "Price": "3000",
-      "Image": "chennai1",
-      "file": "chennai2.1.jpg",
-      "id": 1
+      "tittle": "",
+      "location": "",
+      "price": "",
+      "image": "",
+      "email": "",
+      "id": 3
     },
     {
-      "ProductTittle": "new",
-      "Location": "chennai",
-      "Price": "2488",
-      "Image": "chennai",
-      "file": "chennai1.5.jpg",
-      "id": 2
+      "tittle": "",
+      "location": "",
+      "price": "",
+      "image": "",
+      "email": "",
+      "id": 6
+    },
+    {
+      "tittle": "THE MAGIC HOTEL",
+      "location": "PALLAVANTHANGAL",
+      "price": "2500",
+      "image": "goa2.4.jpg",
+      "email": "",
+      "id": 7
+    },
+    {
+      "tittle": "HOTEL ADMIRE",
+      "location": "THALAMBUR CHENNAI",
+      "price": "3900",
+      "image": "bang3.jpg",
+      "email": "",
+      "id": 8
     }
   ],
   "productdatachennai": [
@@ -221,6 +223,44 @@
       "price": "1900",
       "image": "chennai7.jpg",
       "id": 11
+    },
+    {
+      "tittle": "THE ARINA HALL",
+      "location": "KODAMBAKKAM CHENNAI",
+      "price": "3090",
+      "image": "kash3.jpg",
+      "id": 12
+    },
+    {
+      "tittle": "THE GREAT PALACE DIAMOND HOTEL",
+      "location": "ANNA SALAI CHENNAI",
+      "price": "4000",
+      "image": "goa9.jpg",
+      "id": 13
+    },
+    {
+      "tittle": "THE ARINA HALL",
+      "location": "KODAMBAKKAM CHENNAI",
+      "price": "3090",
+      "image": "goa9.jpg",
+      "email": "",
+      "id": 14
+    },
+    {
+      "tittle": "THE MAGIC HOTEL",
+      "location": "PALLAVANTHANGAL",
+      "price": "2500",
+      "image": "goa2.4.jpg",
+      "email": "",
+      "id": 15
+    },
+    {
+      "tittle": "HOTEL ADMIRE",
+      "location": "THALAMBUR CHENNAI",
+      "price": "3900",
+      "image": "bang3.jpg",
+      "email": "",
+      "id": 16
     }
   ],
   "productdatabangaluru": [
@@ -272,6 +312,13 @@
       "price": "1000",
       "image": "goa9.jpg",
       "id": 8
+    },
+    {
+      "tittle": "YADAV SAPNA HOTEL",
+      "location": "PURANI BAJAR BANGALORE",
+      "price": "3001",
+      "image": "bang8.jpg",
+      "id": 9
     }
   ],
   "royapuram": [
@@ -439,6 +486,13 @@
       "location": "SIRUSERI",
       "price": "2580",
       "id": 9
+    },
+    {
+      "tittle": "ACE ICONIC HOTEL",
+      "location": "ANSAL GOLF LINE ROAD",
+      "price": "2990",
+      "image": "goa10.jpg",
+      "id": 10
     }
   ]
 }

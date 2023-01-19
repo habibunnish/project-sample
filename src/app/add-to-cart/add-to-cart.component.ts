@@ -28,18 +28,16 @@ export class AddToCartComponent implements OnInit{
         alert('product added successfully');
        
       })
-    if(localStorage.getItem('userData')!=null){
-      var email = JSON.parse(localStorage.getItem('userData') || '{}');
-      item.email=email.email;
-      console.log('getting email');
-    }
+    // if(localStorage.getItem('userData')!=null){
+    //   var email = JSON.parse(localStorage.getItem('userData') || '{}');
+    //   item.email=email.email;
+    //   console.log('getting email');
+    // }
 
-     }
+      }
    book(item:any){
       alert("are you sure u want to book now press ok to book this room ");
       this.addProduct(item);
-      // this.addtocartdis(item);
-     
      }
    
 

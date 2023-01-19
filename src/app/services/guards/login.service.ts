@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoginService {
+  getuser() {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(private httpClient:HttpClient) { }
 //getlogin
@@ -26,5 +29,17 @@ export class LoginService {
     httpHeaders.append('content-type' ,'application/json');
     return this.httpClient.post('http://localhost:3000/userRegister/',registerResource ,{headers:httpHeaders});
   }
+  // loginget=()=>{
+  //   if(this.getuser()){
+  //     return true
+  //   }
+  //   else{
+  //     return false;
+  //   }
+  //   getuser=()=>{
+  //    return localStorage.getItem('email')
+  //   }
+  // }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  
 }

@@ -1,4 +1,5 @@
 
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup ,Validators} from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,6 +12,7 @@ import { LoginService } from '../../services/guards/login.service';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit{
+
   type:string="password";
   loginForm!:FormGroup;
   ngOnInit(){
@@ -27,7 +29,7 @@ export class LoginFormComponent implements OnInit{
   password: any;
   email: any;
    //post
-  constructor(private loginService: LoginService, private fb:FormBuilder,private router: Router ) { }
+  constructor(private loginService: LoginService, private fb:FormBuilder,private router: Router,private http:HttpClient ) { }
   addNewContact() {
     console.log("adding");
     const newFormData = {
@@ -66,6 +68,10 @@ export class LoginFormComponent implements OnInit{
 
   //storing oon local storage login data
   saveData() {
+    // this.http.get('http://localhost:3000/userRegister').subscribe(res=>{
+    //  console.log(res);
+    // //  const user=((res.email===this.loginForm.value.email))
+    // })
     console.log('localstoragw');
     const userData={
     password:this.password,

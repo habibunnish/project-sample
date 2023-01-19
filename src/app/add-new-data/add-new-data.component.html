@@ -3,23 +3,23 @@
 
         <form >
             <label for="ProductTitle">Tittle</label><br>
-            <input type="text" name="productTitle" placeholder="ProductTittle"[(ngModel)]="adddatas1.tittle" >
+            <input type="text" name="productTitle" placeholder="ProductTittle"[(ngModel)]="roomdetails.tittle" >
             <pre></pre>
 
             <label for="Location">Location</label><br>
-            <input type="text" name="location" placeholder="Location" [(ngModel)]="adddatas1.location">
+            <input type="text" name="location" placeholder="Location" [(ngModel)]="roomdetails.location">
             <pre></pre>
 
             <label for="Price">Price</label><br>
-            <input type="text" name="price" placeholder="Price" [(ngModel)]="adddatas1.price">
+            <input type="text" name="price" placeholder="Price" [(ngModel)]="roomdetails.price">
             <PRE></PRE>
 
            <input type="file" (change)="getFile($event)"   accept="png/jpg"  /><br>
             <pre></pre>
           
-            <button class="btn btn-primary" (click)="adding(adddatas1)" type="button" value="Upload file" >ADD-PRODUCT</button> 
+            <button class="btn btn-primary" (click)="adding(roomdetails)" type="button" value="Upload file" >ADD-PRODUCT</button> 
             <span style="display: inline-block;width:40px"></span>
-            <button class="btn btn-primary" (click)=" putting(8)">Updating Product id(6) </button>
+            <button class="btn btn-primary" (click)=" putting()">Updating Product  </button>
             <!-- <button class="checkpage" ((click)="checkpage()")>checkpage</button> -->
         </form>
     </div>

@@ -20,6 +20,10 @@
   
       <label for="zipcode">Zip Code: </label><br>
       <input id="zipcode"type="text" [(ngModel)]="zipcode" formControlName="zip"><br>
+
+      <label for="zipcode">email: </label><br>
+      <input id="email"type="text" [(ngModel)]="email" formControlName="email"><br>
+
     </div><br>
     <p>Complete the form to enable button.</p>
     <button type="submit" class="submit"   (click)="addNewUserRegister()" [disabled]="!profileForm.valid">Submit</button>

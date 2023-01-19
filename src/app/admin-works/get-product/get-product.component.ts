@@ -37,17 +37,17 @@ export class GetProductComponent implements OnInit{
    }
 
 
-  add(){
-    this.router.navigate(['add-product']);
-  }
-  edit(){
-    this.router.navigate(['add-product']);
+  // add(){
+  //   this.router.navigate(['add-product/'+0]);
+  // }
+  edit(id:any){
+    this.router.navigate(['add-new-data/'+id]);
   }
   userbooked(){
     this.router.navigate(['user-booked-details'])
   }
   gotoaddnewpage(){
     console.log('addnew data page');
-    this.router.navigate(['add-new-data']);
+    this.router.navigate(['add-new-data/'+0]);
   }
 }
