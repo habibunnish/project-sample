@@ -1,52 +1,57 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from './services/guards/auth.service';
+import { Observable } from 'rxjs';
+import { AuthService} from './services/guards/AuthsService';
 import { CartService } from './services/guards/cart.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(private authService:AuthService,private router:Router,private cartService:CartService){}
-  title = 'projectnew';
-  showme:boolean=false;
-  public totalitem:number=0;
-
-  ngOnInit(){
-    this.cartService.getProducts().subscribe(res=>{
-      this.totalitem=res.length
-      console.log(res)
-    })
-  }
-  adminpage(){
-    this.showme=!this.showme;
-  }
+  logouts:any;
+  isLoggedInside$!: Observable<boolean>; 
   
-  //login
-  Click(){
-    this.authService.login();
-    this.router.navigate(['login-form'])
+  constructor(
+    private authsService: AuthService,
+    private router: Router,
+    private cartService: CartService,
+
+  ) {  }
+ 
+   
+  showme: boolean = false;
+  totalitem: number = 0;  
+
+  ngOnInit() {
+    this.cartService.getProducts().subscribe((res) => {
+      this.totalitem = res.length;
+      console.log(res);
+    });
+
+    this.isLoggedInside$=this.authsService.isUserloggedIn
+  
+    this.logoutClick();
   }
-  //logout
-  logoutClick(){
-    this.authService.logout();
-    this.router.navigate(['home-page']);
-    alert("you sure want to  log out");
+  adminpage() {
+    this.showme = !this.showme;
   }
-  cart(){
+ 
+  logoutClick() {
+    this.authsService.logout();
+    this.router.navigate(['login-form']);
+  }
+  cart() {
     this.router.navigate(['add-to-cart']);
   }
-  Homepage(){
+   Homepage() {
     alert(`🏨️ you need to login first if you are a existed user 
-    else please register to check room 🏨️`)
+    else please register to check room 🏨️`);
+    this.router.navigate(['login-form']);
   }
-  helppage(){
-    console.log("helppage");
+  helppage() {
+    console.log('helppage');
     this.router.navigate(['how-it-work']);
   }
- 
- 
 }

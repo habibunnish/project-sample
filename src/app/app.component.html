@@ -3,26 +3,28 @@
     <img (click)="adminpage()" src="assets/IMAGES/logo.jpeg" />
     <p *ngIf="showme" routerLink="get-product">admin-page</p>
   </div>
-  <li class="one" (click)="Homepage()"><a routerLink="home-page">HOMEPAGE</a></li>
-  <li class="one" (click)="helppage()"><a routerLink="how-it-work">Help & Support</a></li>
-  <li class="one" (click)="Click()"><a routerLink="login-form">LOGIN</a></li>
-  <li class="one" (click)="logoutClick()"><a routerLink="home-page">LOGOUT</a></li>
-  <li class="two"><div>
+  <li class="one" (click)="Homepage()">
+    <a>HOMEPAGE</a>
+  </li>
+  <li class="one" (click)="helppage()">
+    <a routerLink="how-it-work">Help & Support</a>
+  </li>
+  <li class="one" *ngIf="isLoggedInside$ | async as isLoggedInside "  (click)="logoutClick()">
+    <a routerLink="home-page">LOGOUT</a>
+  </li>
+  <li class="two">
+    <div>
       <img
         routerLink="add-to-cart"
         src="assets/IMAGES/cartlogo.png"
         class="number"/>
-   </div>
- </li>{{ totalitem }}
+    </div>
+  </li>
+  {{
+    totalitem
+  }}
 </ul>
 <h1 style="text-align: center; color: blue">WELCOME TO ROOMSTAY.COM</h1>
 
 <router-outlet></router-outlet>
 
-<!-- <li class="one dropdown">admin-Login.
-     <ul class="dropdown-content" >
-       <li class="dropdown"><a style="color:black"  routerLink="add-product">AddProduct</a></li>
-       <li class="dropdown"><a style="color:black"   routerLink="get-product">getProduct</a></li>
-       <li class="dropdown"><a   routerLink="http-client">USER DETAIL</a></li>
-     </ul>
-   </li> -->

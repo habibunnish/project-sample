@@ -4,18 +4,16 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {  HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RegisterFormComponent } from './register-form/register-form.component';
-import { AuthGuardService } from '../services/guards/auth-guard.service';
-import { AuthService } from '../services/guards/auth.service';
+import { AuthService } from '../services/guards/AuthsService';
+import { AuthsGuardsService } from '../services/guards/auths-guards.service';
+
+
 
 
 @NgModule({
-  declarations: [
-   LoginFormComponent,
-   RegisterFormComponent
-  ],
-
+  declarations: [LoginFormComponent, RegisterFormComponent],
 
   imports: [
     ReactiveFormsModule,
@@ -24,7 +22,7 @@ import { AuthService } from '../services/guards/auth.service';
     NgbModule,
     HttpClientModule,
   ],
-  exports:[LoginFormComponent,RegisterFormComponent],
-  providers: [AuthService ,AuthGuardService],
+  exports: [LoginFormComponent, RegisterFormComponent],
+  providers: [AuthService,AuthsGuardsService ],
 })
-export class UserModule { }
+export class UserModule {}

@@ -1,47 +1,17 @@
 <button (click)="GoBack()" class="btn btn-primary">bACK-TO-BOOKINGPAGE</button>
 <div class="container">
-    <div class="row">
-        <ng-container *ngFor="let item of bookingList">
-            <div class="card col-md-4">
-                <img   src="/assets/IMAGES/{{item.image}}" alt="first image">
-              
-                <h5>{{item.tittle}}</h5>
-                <p>{{item.location}}</p>
-                <p><strong>PRICE : </strong>$ {{item.price}}</p>
-                <button class="btn btn-primary" (click)="addto(item)">ADD TO CART</button>
-              
-            </div>
-        </ng-container>
-    </div>
+  <div class="row">
+    <ng-container *ngFor="let item of bookingList">
+      <div class="card col-md-4">
+        <img src="/assets/IMAGES/{{ item.image }}" alt="first image" />
+
+        <h5>{{ item.tittle }}</h5>
+        <p>{{ item.location }}</p>
+        <p><strong>PRICE : </strong>$ {{ item.price }}</p>
+        <button class="btn btn-primary" (click)="addto(item)">
+          ADD TO CART
+        </button>
+      </div>
+    </ng-container>
+  </div>
 </div>
-<!-- <div class="parent">
-    <div class="child">
-        <img class="childimgone" src="assets/IMAGES/jammu1.jpg">
-        <div class="sub-child">
-             <div><img class="childimgone1" src="assets/IMAGES/jammu2.jpg"></div>
-             <div> <img class="childimgone2" src="assets/IMAGES/jammu3.jpg"></div>
-             <div> <img class="childimgone3" src="assets/IMAGES/jammu4.jpg"></div>
-             <div><img class="childimgone4" src="assets/IMAGES/jammu5.jpg"></div>
-        </div>
-   
-    <div class="chennaioneDetailparent">
-        <h1>The Byke Nature Villas</h1>
-        <p class="location">Baldeyan Location</p>
-       <div>
-          <p class="para">Couple friendly , &nbsp; local Id Accepted ,&nbsp; Pay At Hotel</p>
-        </div>
-           <div>Amenities services we provide<br>
-              <img class="parking"  src="assets/IMAGES/parking (1).png">
-              <div class="ac"><img src="assets/IMAGES/ac.png"></div>
-              <div><img class="water" src="assets/IMAGES/water.png"></div>
-              <div><img class="foods" src="assets/IMAGES/foods.png"></div>
-           </div> 
-              <div>
-              
-                <button class="booking" (click)="login()">BOOK NOW</button>
-                <span style="display:inline-block;width:30px"></span>
-                <button class="btn btn-primary">Add to cart</button>
-            </div>
-        </div>
-    </div>   
-</div> -->

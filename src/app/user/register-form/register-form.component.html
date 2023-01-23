@@ -1,76 +1,108 @@
 <div class="container">
-<form class="registration-form" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <label for="firstname">First Name: </label><br>
-    <input id="firstname"  [(ngModel)]="firstname" type="text" formControlName="firstName" required><br>
-  
-    <label for="lastname">Last Name: </label><br>
-    <input id="lastname" [(ngModel)]="lastname" type="text" formControlName="lastName"><br>
-  
-    <div formGroupName="address"><br>
+  <form
+    class="registration-form"
+    [formGroup]="profileForm"
+    (ngSubmit)="onSubmit()">
+    <label for="firstname">First Name: </label><br />
+    <input
+      id="firstname"
+      [(ngModel)]="firstname"
+      type="text"
+      formControlName="firstName"
+      required /><br />
+
+    <label for="lastname">Last Name: </label><br />
+    <input
+      id="lastname"
+      [(ngModel)]="lastname"
+      type="text"
+      formControlName="lastName"/><br />
+
+    <div formGroupName="address">
+      <br />
       <h2>Address</h2>
-  
-      <label for="street">Street: </label><br>
-      <input id="street"[(ngModel)]="street"  type="text" formControlName="street"><br>
-  
-      <label for="city">City: </label><br>
-      <input id="city" [(ngModel)]="city" type="text" formControlName="city"><br>
-  
-      <label for="state">State: </label><br>
-      <input id="state" [(ngModel)]="state" type="text" formControlName="state"><br>
-  
-      <label for="zipcode">Zip Code: </label><br>
-      <input id="zipcode"type="text" [(ngModel)]="zipcode" formControlName="zip"><br>
 
-      <label for="zipcode">email: </label><br>
-      <input id="email"type="text" [(ngModel)]="email" formControlName="email"><br>
+      <label for="street">Street: </label><br />
+      <input
+        id="street"
+        [(ngModel)]="street"
+        type="text"
+        formControlName="street" /><br />
 
-    </div><br>
+      <label for="city">City: </label><br />
+      <input
+        id="city"
+        [(ngModel)]="city"
+        type="text"
+        formControlName="city"/><br />
+
+      <label for="state">State: </label><br />
+      <input
+        id="state"
+        [(ngModel)]="state"
+        type="text"
+        formControlName="state"/><br />
+
+      <label for="zipcode">Zip Code: </label><br />
+      <input
+        id="zipcode"
+        type="text"
+        [(ngModel)]="zipcode"
+        formControlName="zip"/><br />
+
+      <label for="zipcode">email: </label><br />
+      <input
+        id="email"
+        type="text"
+        [(ngModel)]="email"
+        formControlName="email"/><br />
+    </div>
+    <br />
     <p>Complete the form to enable button.</p>
-    <button type="submit" class="submit"   (click)="addNewUserRegister()" [disabled]="!profileForm.valid">Submit</button>
+    <button
+      type="submit"
+      class="submit"
+      (click)="addNewUserRegister()"
+      [disabled]="!profileForm.valid" >
+      Submit
+    </button>
   </form>
-  </div>
-  <div class="colorss">
-    <h1>What Ever You Try To Do Make Sure It Makes You Happy Explore Yourself 😌️ </h1>
-  </div>
-  
-  <h2><b>BENEFIT YOU WILL GET HERE  </b></h2>
-<div class="facility">
-  
-    <div class="cdonechild">
-      <img src="assets/IMAGES/location.jpeg">
-      <div>
-        <b>Good location view</b>
-      </div>
-    </div>
-
-    <div class="cdtwochild">
-      <img src="assets/IMAGES/party.jpeg">
-      <div>
-        <b>Party Hall</b>
-      </div>
-    </div>
-  </div>
-  <div class="facility2">
-    <div class="cdthirdchild">
-      <img src="assets/IMAGES/hourly.jpeg">
-      <div>
-        <b> Hourly Basis roome</b>
-      </div>
-    </div>
-
-    <div class="cdfourchild">
-      <img src="assets/IMAGES/support.jpeg">
-      <div>
-        <b>Best Five Star service</b>
-      </div>
-    </div>
+</div>
+<div class="colorss">
+  <h1>
+    What Ever You Try To Do Make Sure It Makes You Happy Explore Yourself 😌️
+  </h1>
 </div>
 
-  
- 
-  
-  <!-- <p>Form Value: {{ profileForm.value | json }}</p>
-  
-  <p>Form Status: {{ profileForm.status }}</p> -->
-  
-  <!-- <button type="button" (click)="updateProfile()">Update Profile</button> -->
+<h2><b>BENEFIT YOU WILL GET HERE </b></h2>
+<div class="facility">
+  <div class="cdonechild">
+    <img src="assets/IMAGES/location.jpeg" />
+    <div>
+      <b>Good location view</b>
+    </div>
+  </div>
+
+  <div class="cdtwochild">
+    <img src="assets/IMAGES/party.jpeg" />
+    <div>
+      <b>Party Hall</b>
+    </div>
+  </div>
+</div>
+<div class="facility2">
+  <div class="cdthirdchild">
+    <img src="assets/IMAGES/hourly.jpeg" />
+    <div>
+      <b> Hourly Basis roome</b>
+    </div>
+  </div>
+
+  <div class="cdfourchild">
+    <img src="assets/IMAGES/support.jpeg" />
+    <div>
+      <b>Best Five Star service</b>
+    </div>
+  </div>
+</div>
+

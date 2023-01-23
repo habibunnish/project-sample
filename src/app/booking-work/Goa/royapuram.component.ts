@@ -6,26 +6,36 @@ import { CartService } from 'src/app/services/guards/cart.service';
 @Component({
   selector: 'app-royapuram',
   templateUrl: './royapuram.component.html',
-  styleUrls: ['./royapuram.component.scss']
+  styleUrls: ['./royapuram.component.scss'],
 })
 export class RoyapuramComponent {
-  constructor(private router:Router,private booking:BookingService,private cartService:CartService){}
+  constructor(
+    private router: Router,
+    private booking: BookingService,
+    private cartService: CartService
+  ) {}
 
-  public bookingList:any;
-  ngOnInit(){
-
-    this.booking.getProductroyapuram().subscribe(res=>{
-      this.bookingList=res;
+  public bookingList: any;
+  ngOnInit(item:any) {
+    this.booking.getProductroyapuram().subscribe((res) => {
+      this.bookingList = res;
 
       console.log(res);
-      })
-    }
-     addto(item:any){
-      console.log('adding')
-        this.cartService.addtoCartroyapuram(item);
-     }
-  
-    GoBack(){
-      this.router.navigate(['booking-page'])
-    }
+    })
+    
+  }
+  addto(item: any) {
+    console.log('adding');
+    // this.addingindatabase(item)
+    this.cartService.addtoCartroyapuram(item);
+  }
+  addingindatabase(item:any){
+    this.cartService.getaddcartDetailsOfAllLocation().subscribe(data=>{
+      console.log(data);
+    })
+  }
+
+  GoBack() {
+    this.router.navigate(['booking-page']);
+  }
 }

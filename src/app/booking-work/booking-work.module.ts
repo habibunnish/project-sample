@@ -10,7 +10,6 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { RoyapuramComponent } from './Goa/royapuram.component';
 import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 
-
 @NgModule({
   declarations: [
     BookingPageComponent,
@@ -21,20 +20,14 @@ import { HowItWorkComponent } from './how-it-work/how-it-work.component';
     RoyapuramComponent,
     HowItWorkComponent,
   ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule,
-    NgbModule,
-  
-  ],
-  exports:[
+  imports: [CommonModule, ReactiveFormsModule, FormsModule, NgbModule],
+  exports: [
     BookingPageComponent,
     ChennaiLocationComponent,
     BanguluruLocationComponent,
     JammuLocationComponent,
     RoyapuramComponent,
     HowItWorkComponent,
-  ]
+  ],
 })
-export class BookingWorkModule { }
+export class BookingWorkModule {}
