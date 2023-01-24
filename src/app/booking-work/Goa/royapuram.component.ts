@@ -16,21 +16,24 @@ export class RoyapuramComponent {
   ) {}
 
   public bookingList: any;
-  ngOnInit(item:any) {
+  ngOnInit() {
     this.booking.getProductroyapuram().subscribe((res) => {
       this.bookingList = res;
-
       console.log(res);
     })
     
   }
+  
   addto(item: any) {
     console.log('adding');
-    // this.addingindatabase(item)
+
+    this.addingindatabase(item);
+    console.log("addingin databse");
+
     this.cartService.addtoCartroyapuram(item);
   }
   addingindatabase(item:any){
-    this.cartService.getaddcartDetailsOfAllLocation().subscribe(data=>{
+    this.cartService.postaddcartDetailsOfAllLocation(item).subscribe(data=>{
       console.log(data);
     })
   }

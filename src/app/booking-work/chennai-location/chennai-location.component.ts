@@ -37,10 +37,15 @@ export class ChennaiLocationComponent implements OnInit {
       var email = JSON.parse(localStorage.getItem('userData') || '{}');
       adddatas1.email = email.email;
     }
+    this.addingindatabase(item)
     console.log('adding');
-    //this.cartService.addtoCarts(item);
-    console.log('cartdids');
     this.addtocartdis(item);
+    console.log('cartdids');
+  }
+  addingindatabase(item:any){
+    this.cartService.postaddcartDetailsOfAllLocation(item).subscribe(data=>{
+      console.log(data);
+    })
   }
 
   GoBack() {
@@ -57,7 +62,7 @@ export class ChennaiLocationComponent implements OnInit {
       let validate = false;
       this.cartdis.forEach((a: any) => {
         if (item.id === a.id && this.email === a.email) {
-          alert('alerady taken');
+          // alert('alerady taken');
           validate = true;
         }
       });

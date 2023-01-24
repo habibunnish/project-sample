@@ -28,7 +28,14 @@ export class BanguluruLocationComponent implements OnInit {
 
   addto(item: any) {
     console.log('adding');
+    this.addingindatabase(item);
     this.cartService.addtoCartbangaluru(item);
+    
+  }
+  addingindatabase(item:any){
+    this.cartService.postaddcartDetailsOfAllLocation(item).subscribe(data=>{
+      console.log(data);
+    })
   }
   
 

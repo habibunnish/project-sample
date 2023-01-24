@@ -10,10 +10,9 @@ import { UserModule } from './user/user.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminWorksModule } from './admin-works/admin-works.module';
 import { BookingWorkModule } from './booking-work/booking-work.module';
-
-import { AuthsGuardsService } from './services/guards/auths-guards.service';
-import { AuthService } from './services/guards/AuthsService';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthGuard } from './services/guards/auth.guard';
+import { AuthService } from './services/guards/auth.service';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
@@ -29,7 +28,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BookingWorkModule,
   ],
 
-  providers: [AuthsGuardsService,AuthService],
+  providers: [AuthGuard,AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

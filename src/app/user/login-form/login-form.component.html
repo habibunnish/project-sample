@@ -4,7 +4,7 @@
         <h1> Login Form</h1>
         <div align="left" class="container mb-3">
             <form [formGroup]="loginForm" >
-                <div class="form-group"><br>
+                <!-- <div class="form-group"><br>
                     <label for="firstname">Firstname </label>
                     <input formControlName="firstname" required type="text" class="focus"   name="firstname" [(ngModel)]="firstname" class="form-control" >
 
@@ -13,7 +13,7 @@
                     </div>
 
                 </div>
-                <pre></pre>
+                <pre></pre> -->
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input  [type]="type"  formControlName="password" name="password" [(ngModel)]="password" required
@@ -28,7 +28,7 @@
                 <pre></pre>
                 <div class="form-group">
                     <label for="email">Email </label>
-                    <input formControlName="email" type="email" name="email" [(ngModel)]="email" required class="form-control" >
+                    <input formControlName="email" type="email" name="email" [(ngModel)]="email" required   class="form-control" >
                 </div><br>
                 <button [disabled]="loginForm.invalid" (click)="submit()" class="btn btn-danger"  type="submit">
                     Submit</button>

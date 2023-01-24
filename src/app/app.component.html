@@ -3,26 +3,28 @@
     <img (click)="adminpage()" src="assets/IMAGES/logo.jpeg" />
     <p *ngIf="showme" routerLink="get-product">admin-page</p>
   </div>
-  <li class="one" (click)="Homepage()">
-    <a>HOMEPAGE</a>
+  <li class="one"  (click)="Homepage()">
+    <a routerLink="home-page">HOMEPAGE</a>
   </li>
-  <li class="one" (click)="helppage()">
-    <a routerLink="how-it-work">Help & Support</a>
+  <li class="one" *ngIf="loggedin()" (click)="hotel()">
+    <a routerLink="booking-page">HOTELS</a>
   </li>
-  <li class="one" *ngIf="isLoggedInside$ | async as isLoggedInside "  (click)="logoutClick()">
+  <LI class="one" *ngIf="!loggedin()"><A routerLink="login-form">login</A></LI>
+  <li class="one" *ngIf="loggedin()"  (click)="onlogout()">
     <a routerLink="home-page">LOGOUT</a>
   </li>
-  <li class="two">
-    <div>
+ <li class="two" *ngIf="loggedin()">
+    <div >
       <img
         routerLink="add-to-cart"
         src="assets/IMAGES/cartlogo.png"
-        class="number"/>
+        class="number"  />
     </div>
-  </li>
-  {{
+ </li>
+  <li *ngIf="loggedin()">{{
     totalitem
-  }}
+  }}</li>
+ 
 </ul>
 <h1 style="text-align: center; color: blue">WELCOME TO ROOMSTAY.COM</h1>
 

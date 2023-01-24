@@ -7,292 +7,14 @@
       "id": 1
     },
     {
-      "firstname": "bubbly",
       "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 2
+      "email": "arthi@123",
+      "id": 88
     },
     {
-      "firstname": "bubbly",
       "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 3
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 4
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 5
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 6
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 7
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 8
-    },
-    {
-      "firstname": "Akash",
-      "password": "Habi@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 9
-    },
-    {
-      "firstname": "Akash",
-      "password": "Habi@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 10
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 11
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 12
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 13
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 14
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 15
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 16
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 17
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 18
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 19
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 20
-    },
-    {
-      "firstname": "bubbly",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 21
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 22
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 23
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 24
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 25
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 26
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 27
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 28
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 29
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 30
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 31
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 32
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 33
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 34
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 35
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 36
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 37
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 38
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 39
-    },
-    {
-      "firstname": "Akash",
-      "password": "Habi@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 40
-    },
-    {
-      "firstname": "Akash",
-      "password": "Habi@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 41
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 42
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 43
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 44
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 45
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 46
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 47
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 48
-    },
-    {
-      "firstname": "ANISHA",
-      "password": "Bubbly@123",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 49
+      "email": "arthi@123",
+      "id": 89
     }
   ],
   "userRegister": [
@@ -315,6 +37,16 @@
       "zipcode": "600019",
       "email": "nisha.afroz@aspiresys.com",
       "id": 2
+    },
+    {
+      "firstname": "arthi",
+      "lastname": "a",
+      "street": "siruseri",
+      "city": "munger",
+      "state": "delhi",
+      "zipcode": "600021",
+      "email": "arthi@123",
+      "id": 3
     }
   ],
   "product": [
@@ -333,14 +65,6 @@
       "image": "bang3.jpg",
       "email": "",
       "id": 8
-    },
-    {
-      "id": 9,
-      "tittle": "bubbly",
-      "location": "bihar",
-      "price": "4567",
-      "image": "kash3.jpg",
-      "email": ""
     }
   ],
   "productdatachennai": [
@@ -596,105 +320,52 @@
   ],
   "userbookeddetails": [
     {
-      "tittle": "new era",
-      "location": "chennai",
-      "price": "3445",
-      "image": "goa2.4.jpg",
-      "email": "abc@123",
-      "id": 1
-    },
-    {
-      "tittle": "MAYFAIR TOWER",
-      "location": "HUSSAINPUR",
-      "price": "4560",
-      "image": "kash6.jpg",
-      "id": 2
-    },
-    {
-      "tittle": "LIV INN ROOM HOTELS",
-      "location": "TIGRI GOL CHAKKAR",
-      "price": "3920",
-      "image": "goa7.jpg",
-      "id": 3
-    },
-    {
-      "tittle": "OM RESIDENCY",
-      "location": "RAZA JALAPUR",
-      "price": "4790",
-      "image": "goa9.jpg",
-      "id": 4
-    },
-    {
-      "tittle": "HOTEL ROYAL  GRAND",
-      "location": "JOGESHWARI",
-      "price": "3200",
-      "image": "bang2.jpg",
-      "id": 5
-    },
-    {
-      "tittle": "EMERALD INN",
-      "location": "SAKINAKA ANDHERI",
-      "price": "4000",
-      "image": "bang1.jpg",
-      "id": 6
+      "tittle": "HERA NANADANI HOTEL",
+      "location": "ECOTECH",
+      "price": "3790",
+      "image": "goa8.jpg",
+      "id": 5,
+      "email": "arthi@123"
     },
     {
       "tittle": "HOTEL CLASSIC GRANDE",
       "location": "CAMP ROAD",
       "price": "4000",
       "image": "goa5.jpg",
-      "id": 7
+      "id": 2,
+      "email": "arthi@123"
     },
     {
-      "tittle": "NEW GREEN GALAXY",
-      "location": "CHEPAUK",
-      "price": "2600",
-      "image": "chennai5.jpg",
-      "id": 8
-    },
-    {
-      "tittle": "TOWN SPACE APARTMENT HOTEL",
-      "location": "PORUR",
-      "price": "1900",
-      "image": "chennai7.jpg",
-      "id": 9
-    },
-    {
-      "tittle": "HOTEL SAHRA",
-      "location": "SHIVAJI NAGAR",
-      "price": "4200",
-      "image": "goa6.jpg",
-      "id": 10
+      "tittle": "J2 SERVICE",
+      "location": "SIRISUERI",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "id": 6,
+      "email": "arthi@123"
     },
     {
       "tittle": "LIV INN ROOM HOTELS",
       "location": "TIGRI GOL CHAKKAR",
       "price": "3920",
       "image": "goa7.jpg",
-      "id": 11
-    },
-    {
-      "tittle": "HOTEL SAHRA",
-      "location": "SHIVAJI NAGAR",
-      "price": "4200",
-      "image": "goa6.jpg",
-      "id": 12
-    },
-    {
-      "tittle": "OM RESIDENCY",
-      "location": "RAZA JALAPUR",
-      "price": "4790",
-      "image": "goa9.jpg",
-      "id": 13
+      "id": 7,
+      "email": "arthi@123"
     }
   ],
   "cartstoreddatas": [
     {
-      "tittle": "HOTEL CLASSIC GRANDE",
-      "location": "CAMP ROAD",
-      "price": "4000",
-      "image": "goa5.jpg",
-      "id": 1
+      "tittle": "HOTEL SAHRA",
+      "location": "SHIVAJI NAGAR",
+      "price": "4200",
+      "image": "goa6.jpg",
+      "id": 3
+    },
+    {
+      "tittle": "LIV INN ROOM HOTELS",
+      "location": "TIGRI GOL CHAKKAR",
+      "price": "3920",
+      "image": "goa7.jpg",
+      "id": 4
     }
   ]
 }

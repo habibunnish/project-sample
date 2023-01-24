@@ -16,8 +16,9 @@ import { RoyapuramComponent } from './booking-work/Goa/royapuram.component';
 import { HowItWorkComponent } from './booking-work/how-it-work/how-it-work.component';
 import { UserBookedDetailsComponent } from './admin-works/user-booked-details/user-booked-details.component';
 import { AddNewDataComponent } from './admin-works/add-new-data/add-new-data.component';
-import { AuthsGuardsService } from './services/guards/auths-guards.service';
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthGuard } from './services/guards/auth.guard';
 
 
 const routes: Routes = [
@@ -25,9 +26,8 @@ const routes: Routes = [
   {
     path: 'home-page',
     component: HomePageComponent,
-    canActivate: [AuthsGuardsService],
   },
-  { path: 'booking-page', component: BookingPageComponent },
+  { path: 'booking-page', component: BookingPageComponent},
   { path: 'login-form', component: LoginFormComponent },
   { path: 'register-form', component: RegisterFormComponent },
   { path: 'chennai-location', component: ChennaiLocationComponent },
@@ -41,33 +41,29 @@ const routes: Routes = [
   { path: 'how-it-work', component: HowItWorkComponent },
   { path: 'add-new-data/:id', component: AddNewDataComponent },
   { path: 'user-booked-details', component: UserBookedDetailsComponent },
-  {
-    path: 'user',
-    // children:[
-    //   { path: 'login-form', component: LoginFormComponent },
-    //   { path: 'register-form', component: RegisterFormComponent },
-    // ],
-    loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
-  },
-  {
-    path: 'admin-works',
-    loadChildren: () =>
-      import('./admin-works/admin-works.module').then(
-        (m) => m.AdminWorksModule
-      ),
-  },
-  {
-    path: 'booking-work',
-    loadChildren: () =>
-      import('./booking-work/booking-work.module').then(
-        (m) => m.BookingWorkModule
-      ),
-  },
-  {path:'*',component:PageNotFoundComponent},
+  // {
+  //   path: 'user',
+  //   loadChildren: () => import('./user/user.module').then((m) => m.UserModule),
+  // },
+  // {
+  //   path: 'admin-works',
+  //   loadChildren: () =>
+  //     import('./admin-works/admin-works.module').then(
+  //       (m) => m.AdminWorksModule
+  //     ),
+  // },
+  // {
+  //   path: 'booking-work',
+  //   loadChildren: () =>
+  //     import('./booking-work/booking-work.module').then(
+  //       (m) => m.BookingWorkModule
+  //     ),
+  // },
+  // {path:'**',component:PageNotFoundComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

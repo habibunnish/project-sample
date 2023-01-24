@@ -9,27 +9,34 @@ import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-hi
 })
 export class UserBookedDetailsComponent implements OnInit {
   Productuser: any;
+  items:any;
   constructor(
     private cartService: CartService,
     private userbooked: UserBookedHistoryService
   ) {}
   ngOnInit() {
-    this.getproduct();
+    this.getalldetailsOfLocation();
   }
   //get
-  getproduct() {
-    console.log('getproduct ');
-    this.cartService.getProducts().subscribe((res) => {
-      this.Productuser = res;
-      console.log(this.Productuser);
-    });
+  getalldetailsOfLocation(){
+    this.cartService.getaddcartDetailsOfAllLocation().subscribe(data=>{
+      this.items=data;
+      console.log(this.items);
+      console.log(data);
+    })
   }
+ 
   //post
-  bookdata(item: any) {
-    console.log('booked data method calling');
-    this.userbooked.UserBookedData(item).subscribe((res) => {
-      this.Productuser = res;
-      console.log(this.Productuser);
-    });
-  }
+  // bookdata(item: any) {
+  //   console.log('booked data method calling');
+  //   // if (localStorage.getItem('userData') != null) {
+  //   //   var email = JSON.parse(localStorage.getItem('userData') || '{}');
+  //   //   item.email = email.email;
+  //   //   console.log('getting email');
+  //   // }
+  //   this.userbooked.UserBookedData(item).subscribe((res) => {
+  //     this.Productuser = res;
+  //     console.log(this.Productuser);
+  //   });
+  // }
 }

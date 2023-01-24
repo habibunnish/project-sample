@@ -1,4 +1,4 @@
-<ng-container *ngIf="product.length != 0">
+<ng-container *ngIf="items.length != 0">
   <div class="container">
     <div class="card-table">
       <div class="cart-product">
@@ -6,6 +6,7 @@
           <thead>
             <tr>
               <th scope="col">id</th>
+              <th scope="col">EMAIL</th>
               <th scope="col">TITTLE</th>
              
               <th scope="col">LOCATION</th>
@@ -14,10 +15,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let item of product; let i = index">
+            <tr *ngFor="let item of items; let i = index">
               <td>{{ i + 1 }}</td>
+              <td>{{item.email}}</td>
               <TD>{{ item.tittle }}</TD>
-            
+             
               <TD>{{ item.location }}</TD>
               <TD>{{ item.price }}</TD>
               <TD>
@@ -43,7 +45,7 @@
   </div>
 </ng-container>
 
-<ng-container *ngIf="product.length == 0">
+<ng-container *ngIf="items.length == 0">
   <div class="container">
     <div class="card">
       <h5 class="card-title">MY CART</h5>

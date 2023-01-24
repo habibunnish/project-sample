@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -21,14 +21,14 @@ export class CartService {
     console.log(this.cartItemList);
   }
 
-  removecartItem(product: any) {
-    this.cartItemList.map((a: any, index: any) => {
-      if (product.id === a.id) {
-        this.cartItemList.splice(index, 1);
-      }
-    });
-    this.productList.next(this.cartItemList);
-  }
+  // removecartItem(items: any) {
+  //   this.cartItemList.map((a: any, index: any) => {
+  //     if (items.id === a.id) {
+  //       this.cartItemList.splice(index, 1);
+  //     }
+  //   });
+  //   this.productList.next(this.cartItemList);
+  // }
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -53,6 +53,8 @@ export class CartService {
     this.cartItemList.push(item);
     this.productList.next(this.cartItemList);
   }
+ 
+
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -75,13 +77,28 @@ export class CartService {
     this.cartItemList.push(item);
     this.productList.next(this.cartItemList);
   }
-
+/////////////////////////////////////////////////////////////////////////////////////////////
   getaddcartDetailsOfAllLocation(){
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.get('http://localhost:3000/cartstoreddatas', {
+    return this.httpClient.get('http://localhost:3000/cartstoreddatas',{
       headers: httpHeaders,
     });
     
   }
+  postaddcartDetailsOfAllLocation(createResource:any){
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'application/json');
+    return this.httpClient.post('http://localhost:3000/cartstoreddatas', createResource,{
+      headers: httpHeaders,
+    });
+  }
+  deleteAllCartLocation(id: number) {
+    return this.httpClient.delete('http://localhost:3000/cartstoreddatas/' + id).pipe(
+      map((res: any) => {
+        return res;
+      })
+    );
+  }
+
 }

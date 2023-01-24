@@ -24,7 +24,7 @@ export class RegisterFormComponent {
       street: [''],
       city: [''],
       state: [''],
-      zip: [''],
+      zip: ['',Validators.pattern('[0-9]{6}')],
       email: [''],
     }),
   });

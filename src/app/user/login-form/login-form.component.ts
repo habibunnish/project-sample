@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -7,8 +7,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { AuthService } from 'src/app/services/guards/AuthsService';
 import { LoginService } from '../../services/guards/login.service';
 
 @Component({
@@ -17,24 +15,16 @@ import { LoginService } from '../../services/guards/login.service';
   styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent implements OnInit {
+
+ 
   type: string = 'password';
   loginForm!: FormGroup;
-  logouts:any;
-  showlogout:boolean=false;
-  isLoggedInside!: Observable<boolean>;
   ngOnInit() {
     this.loginForm = this.fb.group({
-      firstname: ['', Validators.required],
       password: ['', Validators.required],
       email: ['', Validators.required],
     });
-  
-   this.isLoggedInside=this.authsSErvice.isUserloggedIn;
   }
-
-  logindata: any;
-  msgTrue = false;
-  firstname: string = '';
   password: any;
   email: any;
   //post
@@ -43,19 +33,16 @@ export class LoginFormComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private http: HttpClient,
-    private authsSErvice:AuthService
   ) {}
   addNewContact() {
     console.log('adding');
     const newFormData = {
-      firstname: this.firstname,
       password: this.password,
       email: this.email,
     };
     this.loginService.addNewContactUser(newFormData).subscribe((data) => {
       console.log(data);
-      this.router.navigate(['home-page']);
-      this.msgTrue = true;
+      // this.router.navigate(['home-page']);
     });
   }
 
@@ -67,14 +54,10 @@ export class LoginFormComponent implements OnInit {
         for (let user of res) {
           if (user.email == this.loginForm.value.email) {
             this.saveData();
-            this.showlogout=true;
-          
-            console.log('printing');
-            this.addNewContact();
-            this.router.navigate(['home-page']);
+            // this.addNewContact();
+            this.router.navigate(['booking-page']);
           }
-        }
-        
+        }        
       });
   }
 

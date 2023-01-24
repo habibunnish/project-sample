@@ -9,7 +9,10 @@
       [(ngModel)]="firstname"
       type="text"
       formControlName="firstName"
-      required /><br />
+      required />
+      <div *ngIf="profileForm.touched && profileForm.invalid" class="alert alert-danger">invalid  very short name minimum leter required is 4
+        <p *ngIf="profileForm.errors ?.['minlength']"></p>
+      </div><br />
 
     <label for="lastname">Last Name: </label><br />
     <input
@@ -26,36 +29,41 @@
       <input
         id="street"
         [(ngModel)]="street"
-        type="text"
-        formControlName="street" /><br />
+        type="textarea"
+        formControlName="street" 
+        required />
+       <br />
 
       <label for="city">City: </label><br />
       <input
         id="city"
         [(ngModel)]="city"
         type="text"
-        formControlName="city"/><br />
+        formControlName="city" required/><br />
 
       <label for="state">State: </label><br />
       <input
         id="state"
         [(ngModel)]="state"
         type="text"
-        formControlName="state"/><br />
+        formControlName="state" required/><br />
 
       <label for="zipcode">Zip Code: </label><br />
       <input
         id="zipcode"
-        type="text"
+        type="tel"
         [(ngModel)]="zipcode"
-        formControlName="zip"/><br />
+        formControlName="zip" required  />
+        <p *ngIf="profileForm.touched && profileForm.invalid" class="alert alert-danger">invalid zipcode thats minimum number required is 6></p>
+        <br />
+
 
       <label for="zipcode">email: </label><br />
       <input
         id="email"
-        type="text"
+        type="email"
         [(ngModel)]="email"
-        formControlName="email"/><br />
+        formControlName="email" required /><br />
     </div>
     <br />
     <p>Complete the form to enable button.</p>

@@ -25,7 +25,13 @@ export class JammuLocationComponent {
   }
   addto(item: any) {
     console.log('adding');
+    this.addingindatabase(item)
     this.cartService.addtoCartsjammu(item);
+  }
+  addingindatabase(item:any){
+    this.cartService.postaddcartDetailsOfAllLocation(item).subscribe(data=>{
+      console.log(data);
+    })
   }
   GoBack() {
     this.router.navigate(['booking-page']);
