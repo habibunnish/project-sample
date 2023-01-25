@@ -61,16 +61,16 @@ export class LoginFormComponent implements OnInit {
       });
   }
 
-  private validateAllFormFields(formGroup: FormGroup) {
-    Object.keys(formGroup.controls).forEach((field) => {
-      const control = formGroup.get(field);
-      if (control instanceof FormControl) {
-        control.markAsTouched({ onlySelf: true });
-      } else if (control instanceof FormGroup) {
-        this.validateAllFormFields(control);
-      }
-    });
-  }
+ 
+  //   Object.keys(formGroup.controls).forEach((field) => {
+  //     const control = formGroup.get(field);
+  //     if (control instanceof FormControl) {
+  //       control.markAsTouched({ onlySelf: true });
+  //     } else if (control instanceof FormGroup) {
+  //       this.validateAllFormFields(control);
+  //     }
+  //   });
+  // }
   //sending to register
   onsubmit() {
     console.log('on submit');

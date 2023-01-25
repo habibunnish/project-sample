@@ -18,13 +18,14 @@ export class AppComponent implements OnInit {
 
   ) {  }
   showme: boolean = false;
-  totalitem: number = 0;  
+  totalitem: any;  
 
   ngOnInit() {
     this.cartService.getProducts().subscribe((res) => {
-      this.totalitem = res.length;
+      this.totalitem=res ;
       console.log(res);
     });
+    this.cartService.count()
   }
   adminpage() {
     this.showme = !this.showme;
@@ -42,7 +43,6 @@ export class AppComponent implements OnInit {
   }
   hotel() {
     console.log('helppage');
-    // this.authservice.userloggedin()
     this.router.navigate(['booking-page']);
   }
   loggedin(){

@@ -8,7 +8,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class CartService {
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
-
+  counts:any
+  filterarray:any;
   constructor(private httpClient: HttpClient) {}
   //getter
   getProducts() {
@@ -21,14 +22,14 @@ export class CartService {
     console.log(this.cartItemList);
   }
 
-  // removecartItem(items: any) {
-  //   this.cartItemList.map((a: any, index: any) => {
-  //     if (items.id === a.id) {
-  //       this.cartItemList.splice(index, 1);
-  //     }
-  //   });
-  //   this.productList.next(this.cartItemList);
-  // }
+  removecartItem(item: any) {
+    this.cartItemList.map((a: any, index: any) => {
+      if (item.id === a.id) {
+        this.cartItemList.splice(index, 1);
+      }
+    });
+    this.productList.next(this.cartItemList);
+  }
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -99,6 +100,17 @@ export class CartService {
         return res;
       })
     );
+  }
+  //////////////////////////////////////////////////////////////////////////////
+  count(){
+    console.log('abs')
+    this.getaddcartDetailsOfAllLocation().subscribe(res=>{
+      console.log(res,Array.isArray(res));
+      if(Array.isArray(res)){
+        this.counts=res.filter(s=>s.email==JSON.parse(localStorage.getItem('userData') || '{}').Email)
+          console.log(this.counts.length);
+      }
+    }) 
   }
 
 }

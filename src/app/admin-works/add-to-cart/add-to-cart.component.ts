@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { filter } from 'rxjs';
 import { CartService } from 'src/app/services/guards/cart.service';
 import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-history.service';
 
@@ -19,6 +20,7 @@ export class AddToCartComponent implements OnInit {
   Image: any;
   file: any;
   item: any;
+  counts:any;
   constructor(
     private cartService: CartService,
     private router: Router,
@@ -26,28 +28,37 @@ export class AddToCartComponent implements OnInit {
   ) {}
   //post
   addProduct(item: any) {
-    item.id = null;
+     delete item.id ;
+
     console.log('print', item);
     if (localStorage.getItem('userData') != null) {
       var email = JSON.parse(localStorage.getItem('userData') || '{}');
       item.email = email.email;
-      console.log('getting email');
+      console.log(this.item);
+      console.log("email")
+      this.UserBooked.UserBookedData(item).subscribe((data) => {
+        console.log(data);
+       
+        alert('product added successfully');
+      });
     }
-    this.UserBooked.UserBookedData(item).subscribe((data) => {
-      console.log(data);
+    // this.UserBooked.UserBookedData(item).subscribe((data) => {
+    //   console.log(data);
      
-      alert('product added successfully');
-    });
+    //   alert('product added successfully');
+    // });
    
   }
   book(item: any) {
     alert('are you sure u want to book now press ok to book this room ');
     this.addProduct(item);
+    this.router.navigate(['home-page'])
 
   }
 
   ngOnInit() {
    this.getalldetailsOfLocation();
+  
     
   }
 
@@ -73,4 +84,6 @@ export class AddToCartComponent implements OnInit {
   goback() {
     this.router.navigate(['home-page']);
   }
+
+  
 }

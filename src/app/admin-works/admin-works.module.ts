@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddProductComponent } from './add-product/add-product.component';
+
 import { GetProductComponent } from './get-product/get-product.component';
 import { GetLoginDataComponent } from './get-login-data/get-login-data.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -10,7 +10,7 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 @NgModule({
   declarations: [
-    AddProductComponent,
+    
     GetProductComponent,
     GetLoginDataComponent,
     UserBookedDetailsComponent,
@@ -20,11 +20,11 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
   exports: [
     GetLoginDataComponent,
-    AddProductComponent,
     GetProductComponent,
+    AddToCartComponent,
     UserBookedDetailsComponent,
     AddNewDataComponent,
-    AddToCartComponent,
+ 
   ],
 })
 export class AdminWorksModule {}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/guards/cart.service';
 import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-history.service';
 
@@ -12,7 +13,8 @@ export class UserBookedDetailsComponent implements OnInit {
   items:any;
   constructor(
     private cartService: CartService,
-    private userbooked: UserBookedHistoryService
+    private userbooked: UserBookedHistoryService,
+    private router:Router
   ) {}
   ngOnInit() {
     this.getalldetailsOfLocation();
@@ -39,4 +41,7 @@ export class UserBookedDetailsComponent implements OnInit {
   //     console.log(this.Productuser);
   //   });
   // }
+  goback(){
+    this.router.navigate(['get-product'])
+  }
 }

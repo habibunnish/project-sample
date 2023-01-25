@@ -29,8 +29,8 @@ export class RoyapuramComponent {
 
     this.addingindatabase(item);
     console.log("addingin databse");
-
-    this.cartService.addtoCartroyapuram(item);
+    alert("ITEMA ADDED SUCCESSFULLY");
+    // this.cartService.addtoCartroyapuram(item);
   }
   addingindatabase(item:any){
     this.cartService.postaddcartDetailsOfAllLocation(item).subscribe(data=>{

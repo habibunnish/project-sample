@@ -33,20 +33,21 @@ export class ChennaiLocationComponent implements OnInit {
     });
   }
   addto(item: any) {
-    if (localStorage.getItem('userData') != null) {
-      var email = JSON.parse(localStorage.getItem('userData') || '{}');
-      adddatas1.email = email.email;
-    }
+
     this.addingindatabase(item)
     console.log('adding');
     this.addtocartdis(item);
     console.log('cartdids');
+  //  this.cartService.count()
+   alert("ITEMA ADDED SUCCESSFULLY")
   }
   addingindatabase(item:any){
     this.cartService.postaddcartDetailsOfAllLocation(item).subscribe(data=>{
       console.log(data);
     })
+    alert("ITEMA ADDED SUCCESSFULLY")
   }
+ 
 
   GoBack() {
     this.router.navigate(['booking-page']);

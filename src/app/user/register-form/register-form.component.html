@@ -61,10 +61,11 @@
       <label for="zipcode">email: </label><br />
       <input
         id="email"
-        type="email"
+        type="text"
         [(ngModel)]="email"
-        formControlName="email" required /><br />
+        formControlName="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$" required /><br />
     </div>
+    <p *ngIf="profileForm.touched && profileForm.invalid" class="alert alert-danger">invalid email use small case, uppercase,special characters</p>
     <br />
     <p>Complete the form to enable button.</p>
     <button

@@ -1,9 +1,9 @@
+<button class="btn btn-primary" (click)="goback()">back to page</button>
 <table class="table">
   <thead>
     <tr>
       <th scope="col">id</th>
-      <th scope="col">EMAIL</th>
-      <th scope="col">PRODUCTTITTLE</th>
+     <th scope="col">PRODUCTTITTLE</th>
       <th scope="col">LOCATION</th>
       <th scope="col">PRICE</th>
       <th scope="col">IMAGE</th>
@@ -14,7 +14,6 @@
   <tbody>
     <TR *ngFor="let item of items; let i = index">
       <td>{{ i + 1 }}</td>
-      <td>{{ item.email }}</td>
       <TD>{{ item.tittle }}</TD>
       <TD>{{ item.location }}</TD>
       <TD>{{ item.price }}</TD>

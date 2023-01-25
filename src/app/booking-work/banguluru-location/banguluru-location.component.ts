@@ -9,6 +9,7 @@ import { CartService } from 'src/app/services/guards/cart.service';
   styleUrls: ['./banguluru-location.component.scss'],
 })
 export class BanguluruLocationComponent implements OnInit {
+  counts:any;
   constructor(
     private router: Router,
     private booking: BookingService,
@@ -27,10 +28,16 @@ export class BanguluruLocationComponent implements OnInit {
   }
 
   addto(item: any) {
+    delete item.id;
     console.log('adding');
     this.addingindatabase(item);
-    this.cartService.addtoCartbangaluru(item);
+    // this.cartService.count()
+    // this.cartService.addtoCartbangaluru(item);
+    alert("ITEMA ADDED SUCCESSFULLY");
     
+  }
+  increse(){
+    this.cartService.count()
   }
   addingindatabase(item:any){
     this.cartService.postaddcartDetailsOfAllLocation(item).subscribe(data=>{
@@ -45,4 +52,5 @@ export class BanguluruLocationComponent implements OnInit {
   GoBack() {
     this.router.navigate(['booking-page']);
   }
+  
 }
