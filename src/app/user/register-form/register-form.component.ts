@@ -9,6 +9,14 @@ import { LoginService } from '../../services/guards/login.service';
   styleUrls: ['./register-form.component.scss'],
 })
 export class RegisterFormComponent {
+
+
+
+
+
+
+
+
   zipcode: any;
   state: any;
   city: any;

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component,OnInit } from '@angular/core';
+import { Component,EventEmitter,Input,OnInit, Output } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -15,7 +15,15 @@ import { LoginService } from '../../services/guards/login.service';
   styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent implements OnInit {
+  @Input()
+  message:any='';
+  @Output()
+  childMessage=new EventEmitter()
 
+  onsubmit() {
+    console.log('on submit');
+   this.childMessage.emit( this.router.navigate(['register-form']));
+  }
  
   type: string = 'password';
   loginForm!: FormGroup;
@@ -72,10 +80,7 @@ export class LoginFormComponent implements OnInit {
   //   });
   // }
   //sending to register
-  onsubmit() {
-    console.log('on submit');
-    this.router.navigate(['register-form']);
-  }
+ 
 
   //storing oon local storage login data
   saveData() {

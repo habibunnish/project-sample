@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './services/guards/auth.service';
@@ -51,5 +52,9 @@ export class AppComponent implements OnInit {
   }
   onlogout(){
     localStorage.removeItem('userData');
+  }
+  BookDetailsNew(){
+    console.log('mainpage')
+    this.router.navigate(['main-page'])
   }
 }

@@ -13,9 +13,12 @@ import { BookingWorkModule } from './booking-work/booking-work.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './services/guards/auth.guard';
 import { AuthService } from './services/guards/auth.service';
+import { HomePageComponent } from './home-page/home-page.component';
+import { HowItWorkComponent } from './how-it-work/how-it-work.component';
+import { BookDetailsNewModule } from './book-details-new/book-details-new.module';
 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent],
+  declarations: [AppComponent,HomePageComponent,HowItWorkComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,6 +29,7 @@ import { AuthService } from './services/guards/auth.service';
     UserModule,
     AdminWorksModule,
     BookingWorkModule,
+    BookDetailsNewModule
   ],
 
   providers: [AuthGuard,AuthService],

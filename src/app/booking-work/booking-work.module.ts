@@ -6,9 +6,8 @@ import { BanguluruLocationComponent } from './banguluru-location/banguluru-locat
 import { JammuLocationComponent } from './jammu-location/jammu-location.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HomePageComponent } from './home-page/home-page.component';
 import { RoyapuramComponent } from './Goa/royapuram.component';
-import { HowItWorkComponent } from './how-it-work/how-it-work.component';
+
 
 @NgModule({
   declarations: [
@@ -16,9 +15,7 @@ import { HowItWorkComponent } from './how-it-work/how-it-work.component';
     ChennaiLocationComponent,
     BanguluruLocationComponent,
     JammuLocationComponent,
-    HomePageComponent,
     RoyapuramComponent,
-    HowItWorkComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule, FormsModule, NgbModule],
   exports: [
@@ -27,7 +24,7 @@ import { HowItWorkComponent } from './how-it-work/how-it-work.component';
     BanguluruLocationComponent,
     JammuLocationComponent,
     RoyapuramComponent,
-    HowItWorkComponent,
+   
   ],
 })
 export class BookingWorkModule {}

@@ -2,7 +2,7 @@
   <div class="loginform">
     <form>
       <label>CHOOSE LOCATION</label>
-      <select  >
+      <select >
         <option (click)="changed(c)" *ngFor="let c of locations"  [ngValue]='c.name'>{{c.name}} </option>
         
       </select>
