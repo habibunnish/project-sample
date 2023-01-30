@@ -1,73 +1,11 @@
 {
   "userLogin": [
     {
-      "firstname": "Habibunnisha",
-      "password": "habi@123",
-      "email": "Habicute111@gmail.com",
-      "id": 1
-    },
-    {
-      "password": "Bubbly@123",
-      "email": "arthi@123",
-      "id": 88
-    },
-    {
-      "password": "Bubbly@123",
-      "email": "arthi@123",
-      "id": 89
+      "email": "habi@123",
+      "password": "Habi@1234"
     }
   ],
   "userRegister": [
-    {
-      "firstname": "Akash",
-      "lastname": "Singh",
-      "street": "cross-road",
-      "city": "Chennai",
-      "state": "Tamilnadu",
-      "zipcode": "600018",
-      "email": "fghj@1234",
-      "id": 1
-    },
-    {
-      "firstname": "bubbly",
-      "lastname": "A",
-      "street": "periyar nagar thiruvottriyur",
-      "city": "chennai",
-      "state": "tamilnadu",
-      "zipcode": "600019",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 2
-    },
-    {
-      "firstname": "arthi",
-      "lastname": "a",
-      "street": "siruseri",
-      "city": "munger",
-      "state": "delhi",
-      "zipcode": "600021",
-      "email": "arthi@123",
-      "id": 3
-    },
-    {
-      "firstname": "habibunnisha",
-      "lastname": "A",
-      "street": "plot no 89/66 periyar nagar thiruvottriyur chennai-19",
-      "city": "chennai",
-      "state": "tamilnadu",
-      "zipcode": "600019",
-      "email": "habic@123gmail.com",
-      "id": 4
-    },
-    {
-      "firstname": "NISHA",
-      "lastname": "A",
-      "street": "SIRUSERI",
-      "city": "CHENNAI",
-      "state": "TAMILNADU",
-      "zipcode": "600019",
-      "email": "nisha.afroz@aspiresys.com",
-      "id": 5
-    },
     {
       "firstname": "habibunnisha",
       "lastname": "A",
@@ -76,7 +14,13 @@
       "state": "tamilnadu",
       "zipcode": "600019",
       "email": "habicute111@gmail.com",
-      "id": 6
+      "id": 9
+    }
+  ],
+  "adminLogin": [
+    {
+      "password": "Admin@123",
+      "email": "Admin@123"
     }
   ],
   "product": [
@@ -166,6 +110,14 @@
       "location": "Banguluru",
       "price": "2800",
       "image": "bang8.jpg",
+      "email": ""
+    },
+    {
+      "id": 19,
+      "tittle": "Radha hometel sarovar hotel",
+      "location": "Chennai",
+      "price": "3900",
+      "image": "banguluru2.3.jpg",
       "email": ""
     }
   ],

@@ -5,16 +5,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class LoginService {
-  getuser() {
-    throw new Error('Method not implemented.');
-  }
+  // getuser() {
+  //   throw new Error('Method not implemented.');
+  // }
 
   constructor(private httpClient: HttpClient) {}
   //getlogin
   getUserLogin() {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.get('http://localhost:3000/userLogin', {
+    return this.httpClient.get('http://localhost:3000/userLogin',{
       headers: httpHeaders,
     });
   }
@@ -60,4 +60,25 @@ export class LoginService {
   // }
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //admin login
+  adminLoginDetailsGet() {
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'application/json');
+    return this.httpClient.get(
+      'http://localhost:3000/adminLogin/',
+     
+      { headers: httpHeaders }
+    );
+  }
+  adminLoginDetailsPost(registerResource: any) {
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'application/json');
+    return this.httpClient.post(
+      'http://localhost:3000/adminLogin/',
+      registerResource,
+      { headers: httpHeaders }
+    );
+  }
+
+
 }

@@ -14,7 +14,15 @@ export class Location1Component implements OnInit ,AfterViewInit {
  
   @ViewChild(MainPageComponent) mainpage: any;
   // message:any;
+  location:any;
+  locations=[
+    {name:''},
+    {name:'chennai'},
+    {name:'goa'},
+    {name:'bangalore'},
+    {name:'jammu and kashmir'}
 
+  ]
 
   bookingList: any;
   constructor(private router:Router, 
@@ -23,26 +31,31 @@ export class Location1Component implements OnInit ,AfterViewInit {
   ){}
 
   ngOnInit() {
-    // this.booking.getProductroyapuram().subscribe((res) => {
-    //   this.bookingList = res;
-    //   console.log(res);
-    // });
-    // this.booking.getProductjammu().subscribe((res) => {
-    //   this.bookingList = res;
+    this.booking.getProductroyapuram().subscribe((res) => {
+      this.bookingList = res;
+      console.log(res);
+    });
+    this.booking.getProductjammu().subscribe((res) => {
+      this.bookingList = res;
 
-    //   console.log(res);
-    // });
-    // this.booking.getProductbangluru().subscribe((res) => {
-    //   this.bookingList = res;
-    //   console.log(res);
-    // });
-    // this.booking.getProducts().subscribe((res) => {
-    //   this.bookingList = res;
-    //   console.log(res);
-    // });
+      console.log(res);
+    });
+    this.booking.getProductbangluru().subscribe((res) => {
+      this.bookingList = res;
+      console.log(res);
+    });
+    this.booking.getProducts().subscribe((res) => {
+      this.bookingList = res;
+      console.log(res);
+    });
     
   
   }
+
+  changed(a:any){
+    console.log(a)
+    this.location=a.name;
+   }
   ngAfterViewInit() {
     this.bookingList=this.mainpage.chennai()
   }

@@ -1,19 +1,19 @@
 <ul class="navigation">
   <div style="flex-grow: 1">
-    <img (click)="adminpage()" src="assets/IMAGES/logo.jpeg" />
-    <p *ngIf="showme" routerLink="get-product">admin-page</p>
+    <img src="assets/IMAGES/logo.jpeg" />
   </div>
   <li class="one"  (click)="Homepage()">
     <a routerLink="home-page">HOMEPAGE</a>
   </li>
-  <li class="one" *ngIf="loggedin()" (click)="hotel()">
+  <li class="one" *ngIf="loggedin()"  (click)="BookDetailsNew()">Hotels</li>
+  <!-- <li class="one" *ngIf="loggedin()" (click)="hotel()">
     <a routerLink="booking-page">HOTELS</a>
-  </li>
+  </li> -->
   <LI class="one" *ngIf="!loggedin()"><A routerLink="login-form">login</A></LI>
   <li class="one" *ngIf="loggedin()"  (click)="onlogout()">
     <a routerLink="home-page">LOGOUT</a>
   </li>
- <li class="two" *ngIf="loggedin()">
+  <li class="two" *ngIf="loggedin()">
     <div >
       <img
         routerLink="add-to-cart"
@@ -21,7 +21,7 @@
         class="number"  />
     </div>
  </li>
-  <li class="one" (click)="BookDetailsNew()">NEW BOOKING</li>
+  
 
  
 </ul>

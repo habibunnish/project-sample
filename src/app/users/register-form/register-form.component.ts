@@ -11,12 +11,6 @@ import { LoginService } from '../../services/guards/login.service';
 export class RegisterFormComponent {
 
 
-
-
-
-
-
-
   zipcode: any;
   state: any;
   city: any;

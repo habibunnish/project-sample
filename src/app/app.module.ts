@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { UserModule } from './user/user.module';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminWorksModule } from './admin-works/admin-works.module';
 import { BookingWorkModule } from './booking-work/booking-work.module';
@@ -16,6 +16,7 @@ import { AuthService } from './services/guards/auth.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 import { BookDetailsNewModule } from './book-details-new/book-details-new.module';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [AppComponent,HomePageComponent,HowItWorkComponent, PageNotFoundComponent],
@@ -26,10 +27,10 @@ import { BookDetailsNewModule } from './book-details-new/book-details-new.module
     FormsModule,
     HttpClientModule,
     NgbModule,
-    UserModule,
     AdminWorksModule,
     BookingWorkModule,
-    BookDetailsNewModule
+    BookDetailsNewModule,
+    UsersModule
   ],
 
   providers: [AuthGuard,AuthService],

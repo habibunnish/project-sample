@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component,EventEmitter,Input,OnInit, Output } from '@angular/core';
 import {
   FormBuilder,
-  FormControl,
   FormGroup,
   Validators,
 } from '@angular/forms';
@@ -19,12 +18,16 @@ export class LoginFormComponent implements OnInit {
   message:any='';
   @Output()
   childMessage=new EventEmitter()
+  emails: any;
+  passwords: any;
+ 
+ 
 
   onsubmit() {
     console.log('on submit');
    this.childMessage.emit( this.router.navigate(['register-form']));
   }
- 
+  admin: any;
   type: string = 'password';
   loginForm!: FormGroup;
   ngOnInit() {
@@ -62,11 +65,13 @@ export class LoginFormComponent implements OnInit {
         for (let user of res) {
           if (user.email == this.loginForm.value.email) {
             this.saveData();
-            // this.addNewContact();
+           // this.addNewContact();
             this.router.navigate(['booking-page']);
           }
-        }        
+        }  
       });
+      this.adminlogin();
+      // this.adminsavedata();
   }
 
  
@@ -90,5 +95,30 @@ export class LoginFormComponent implements OnInit {
       email: this.email,
     };   
     localStorage.setItem('userData', JSON.stringify(userData));
+   
   }
+
+  adminlogin(){
+    this.loginService.adminLoginDetailsGet().subscribe((data)=>{
+      console.log(data);
+      this.admin=data;
+      for(let admindetails of this.admin){
+        if(admindetails.email==this.email && admindetails.password==this.password){
+         this.router.navigate(['get-product']);
+        }
+      }
+    });
+   }
+
+   adminsavedata(){
+    console.log('admin-localstorage');
+    const adminData=[
+    this.password=this.password,
+    this.email=this.email
+    ]
+    localStorage.setItem('adminData',JSON.stringify(adminData))
+   }
 }
+
+
+

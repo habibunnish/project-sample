@@ -12,6 +12,7 @@ import { CartService } from './services/guards/cart.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+
     constructor(
      private router: Router,
       private cartService: CartService,
@@ -28,9 +29,7 @@ export class AppComponent implements OnInit {
     });
     this.cartService.count()
   }
-  adminpage() {
-    this.showme = !this.showme;
-  }
+  
  
 
   cart() {
@@ -57,4 +56,11 @@ export class AppComponent implements OnInit {
     console.log('mainpage')
     this.router.navigate(['main-page'])
   }
+  adminloggedin(){
+    return localStorage.getItem('adminData');
+  }
+  onadminlogout(){
+    localStorage.removeItem('adminData');
+  }
+  
 }
