@@ -17,9 +17,13 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 import { BookDetailsNewModule } from './book-details-new/book-details-new.module';
 import { UsersModule } from './users/users.module';
+import { RegisterComponent } from './register/register.component';
+import { ForbiddenValidatorDirective } from './forbidden-name.directive';
+import { IdentityRevealedValidatorDirective } from './identity-revealed.directive';
+
 
 @NgModule({
-  declarations: [AppComponent,HomePageComponent,HowItWorkComponent, PageNotFoundComponent],
+  declarations: [AppComponent,HomePageComponent,HowItWorkComponent, PageNotFoundComponent, RegisterComponent, ForbiddenValidatorDirective, IdentityRevealedValidatorDirective],
   imports: [
     BrowserModule,
     AppRoutingModule,

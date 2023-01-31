@@ -44,9 +44,12 @@ export class AddNewDataComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.params['id'];
+    if(this.id!=0)
     this.GetEdits();
+    
   }
   GetEdits() {
+
     this.addnewdataService.getedit(this.id).subscribe((data) => {
       console.log(data);
       this.roomdetails = data;
@@ -60,6 +63,7 @@ export class AddNewDataComponent implements OnInit {
     this.addnewproduct(roomdetails);
     alert('product added successfully');
     this.addProduct(roomdetails);
+   
   }
 
   //post
@@ -70,6 +74,9 @@ export class AddNewDataComponent implements OnInit {
     if(this.location=='chennai'){
       this.bookingService.addProductsDetails(roomdetails).subscribe((res) => {
         console.log(res);
+        // this.bookingService.getProducts().subscribe((res)=>{
+        //   console.log(res);
+        // })
       });
     }else if(this.location=='bangalore'){
       this.bookingService.addProductsDetailsbangluru(roomdetails).subscribe(res=>{
@@ -85,6 +92,20 @@ export class AddNewDataComponent implements OnInit {
     });
     }
  }
+
+ //get
+//  getnewproductall(){
+//   console.log('getnewproduct')
+//   if(this.location=='chennai'){
+//     this.bookingService.getProducts().subscribe((res)=>{
+//       console.log(res);
+//     })
+//   }else if(this.location=='bangalore'){
+//     this.bookingService.getProductbangluru().subscribe((res)=>{
+//       console.log(res);
+//     })
+//   }
+//  }
  changed(a:any){
   console.log(a)
   this.location=a.name;
@@ -98,6 +119,7 @@ export class AddNewDataComponent implements OnInit {
       console.log(res);
       alert('product added successfully');
     });
+   
   }
 
   putting() {

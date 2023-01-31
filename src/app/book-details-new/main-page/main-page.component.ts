@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { AdminService } from 'src/app/services/guards/admin.service';
 import { BookingService } from 'src/app/services/guards/booking.service';
 
 @Component({
@@ -22,21 +23,16 @@ export class MainPageComponent  implements OnInit{
   // }
 
  
-  constructor(config: NgbCarouselConfig, private router: Router,private booking:BookingService) {
+  constructor(config: NgbCarouselConfig, private router: Router,private booking:BookingService,private admin:AdminService) {
     config.interval = 4000;
     config.wrap = true;
     config.pauseOnHover = false;
   }
   ngOnInit() {
- 
+    
   }
   chennai() {
-    this.router.navigate(['location1']);
-    this.booking.getProducts().subscribe((res) => {
-      this.bookingList = res;
-      console.log(res);
-    });
-
+    this.router.navigate(['location1'])
   }
   goa() {
     this.router.navigate(['location1']);

@@ -119,6 +119,62 @@
       "price": "3900",
       "image": "banguluru2.3.jpg",
       "email": ""
+    },
+    {
+      "id": 20,
+      "tittle": "new",
+      "location": "Chennai",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "email": ""
+    },
+    {
+      "id": 21,
+      "tittle": "new",
+      "location": "Chennai",
+      "price": "2800",
+      "image": "kash4.jpg",
+      "email": ""
+    },
+    {
+      "id": 22,
+      "tittle": "jjhguigyf",
+      "location": "Chennai",
+      "price": "3000",
+      "image": "kash3.jpg",
+      "email": ""
+    },
+    {
+      "id": 23,
+      "tittle": "new",
+      "location": "Chennai",
+      "price": "2800",
+      "image": "goa10.jpg",
+      "email": ""
+    },
+    {
+      "id": 24,
+      "tittle": "biryani",
+      "location": "Chennai",
+      "price": "3000",
+      "image": "kash4.jpg",
+      "email": ""
+    },
+    {
+      "id": 25,
+      "tittle": "new",
+      "location": "Chennai",
+      "price": "7900",
+      "image": "goa8.jpg",
+      "email": ""
+    },
+    {
+      "id": 26,
+      "tittle": "new",
+      "location": "Chennai",
+      "price": "3000",
+      "image": "kash3.jpg",
+      "email": ""
     }
   ],
   "productdatachennai": [

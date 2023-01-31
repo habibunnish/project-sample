@@ -1,0 +1,49 @@
+<div class="container">
+    <h1>Reactive form</h1>
+    <form [formGroup]="newForm" #formDir="ngForm" >
+        <div [hidden]="formDir.submitted">
+            <div class="cross-validation" [class.cross-validation-error]="newForm.errors ?.['identityRevealed'] && (newForm.touched ||newForm.dirty)">invalid
+                <div class="form-group">
+                    <label for="Firstname">FIRSTNAME</label><br>
+                    <input type="text" id="Firstname" class="form-group" formControlName="Firstname" required>
+                    <div *ngIf="Firstname.invalid &&(Firstname.dirty ||Firstname.touched)" class="alert alert-danger">
+                        <div *ngIf="Firstname.errors ?.['required']">FirstName is Required</div>
+                        <div *ngIf="Firstname.errors ?.['minlength']">Name must be at least 4 character long .</div>
+                        <div *ngIf="Firstname.errors ?.['forbiddenName']">Name cannot be abcd</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="LastName">LastName</label>
+                 <input type="text" id="LastName" class="form-control" formControlName="LastName" required>
+             </div>
+ 
+             <div class="form-group">
+                 <label for="Address">ADDRESS</label>
+                 <input type="text" id="Address" class="form-control" formControlName="Address">
+             </div>
+ 
+            <div class="form-group">
+             <label for="Gender">Gender </label>
+             <select id="Gender" class="form-control" formControlName="Gender" required>
+                 <option *ngFor="let g of Genders" [value]="g">{{g}}</option>
+             </select>
+             <div *ngIf="Gender.invalid && Gender.touched" class="alert alert-danger">
+                 <div *ngIf="Gender.errors ?.['required']">Gender is Required</div>
+             </div>
+            </div>
+            <label for="email">email: </label><br />
+            <input
+              id="email"
+              type="text" 
+              formControlName="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$" required /><br />
+
+            <p>Complete the form to enable the submit button</p>
+            <button type="submit" class="btn btn-default" [disabled]="newForm.invalid">Submit</button>
+            <button type="button" class="btn btn-default" (click)="formDir.resetForm({})">Reset</button>
+        </div>
+    </form>
+    <div class="submitted-message" *ngIf="formDir.submitted">
+        <button type="button" (click)="formDir.resetForm({})">ADD NEW DETAILS AGAIN</button>
+    </div>
+</div>

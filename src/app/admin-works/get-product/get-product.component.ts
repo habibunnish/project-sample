@@ -45,6 +45,6 @@ export class GetProductComponent implements OnInit {
     this.router.navigate(['add-new-data/' + 0]);
   }
   gotobooking(){
-    this.router.navigate(['booking-page']);
+    this.router.navigate(['location1']);
   }
 }

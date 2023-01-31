@@ -13,6 +13,7 @@ import { RoyapuramComponent } from './booking-work/Goa/royapuram.component';
 import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 import { UserBookedDetailsComponent } from './admin-works/user-booked-details/user-booked-details.component';
 import { AddNewDataComponent } from './admin-works/add-new-data/add-new-data.component';
+import { RegisterComponent } from './register/register.component';
 
 
 const routes: Routes = [
@@ -37,7 +38,8 @@ const routes: Routes = [
   },
   {path:'users',loadChildren:()=> import('./users/users.module').then(
     (m)=>m.UsersModule
-  )}
+  )},
+  {path:'register',component:RegisterComponent}
 ];
 
 @NgModule({

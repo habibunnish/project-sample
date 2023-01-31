@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { main } from '@popperjs/core';
+import { AdminService } from 'src/app/services/guards/admin.service';
 import { BookingService } from 'src/app/services/guards/booking.service';
 import { CartService } from 'src/app/services/guards/cart.service';
 import { MainPageComponent } from '../main-page/main-page.component';
@@ -12,10 +13,10 @@ import { MainPageComponent } from '../main-page/main-page.component';
 })
 export class Location1Component implements OnInit ,AfterViewInit {
  
-  @ViewChild(MainPageComponent) mainpage: any;
+  // @ViewChild(MainPageComponent) mainpage: any;
   // message:any;
-  location:any;
-  locations=[
+  // location:any;
+  duplicateLocationList=[
     {name:''},
     {name:'chennai'},
     {name:'goa'},
@@ -27,24 +28,25 @@ export class Location1Component implements OnInit ,AfterViewInit {
   bookingList: any;
   constructor(private router:Router, 
     private booking: BookingService,
-    private cartService: CartService
+    private cartService: CartService,
+    private admin:AdminService
   ){}
 
   ngOnInit() {
-    this.booking.getProductroyapuram().subscribe((res) => {
-      this.bookingList = res;
-      console.log(res);
-    });
-    this.booking.getProductjammu().subscribe((res) => {
-      this.bookingList = res;
+    // this.booking.getProductroyapuram().subscribe((res) => {
+    //   this.bookingList = res;
+    //   console.log(res);
+    // });
+    // this.booking.getProductjammu().subscribe((res) => {
+    //   this.bookingList = res;
 
-      console.log(res);
-    });
-    this.booking.getProductbangluru().subscribe((res) => {
-      this.bookingList = res;
-      console.log(res);
-    });
-    this.booking.getProducts().subscribe((res) => {
+    //   console.log(res);
+    // });
+    // this.booking.getProductbangluru().subscribe((res) => {
+    //   this.bookingList = res;
+    //   console.log(res);
+    // });
+    this.admin.getProduct().subscribe((res) => {
       this.bookingList = res;
       console.log(res);
     });
@@ -52,12 +54,12 @@ export class Location1Component implements OnInit ,AfterViewInit {
   
   }
 
-  changed(a:any){
-    console.log(a)
-    this.location=a.name;
-   }
+  // changed(a:any){
+  //   console.log(a)
+  //   this.location=a.name;
+  //  }
   ngAfterViewInit() {
-    this.bookingList=this.mainpage.chennai()
+    // this.bookingList=this.mainpage.chennai()
   }
 
   addto(item: any) {
