@@ -1,65 +1,42 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { main } from '@popperjs/core';
+import {  Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AdminService } from 'src/app/services/guards/admin.service';
-import { BookingService } from 'src/app/services/guards/booking.service';
 import { CartService } from 'src/app/services/guards/cart.service';
-import { MainPageComponent } from '../main-page/main-page.component';
+
 
 @Component({
   selector: 'app-location1',
   templateUrl: './location1.component.html',
   styleUrls: ['./location1.component.scss']
 })
-export class Location1Component implements OnInit ,AfterViewInit {
+export class Location1Component implements OnInit  {
  
-  // @ViewChild(MainPageComponent) mainpage: any;
-  // message:any;
-  // location:any;
-  duplicateLocationList=[
-    {name:''},
-    {name:'chennai'},
-    {name:'goa'},
-    {name:'bangalore'},
-    {name:'jammu and kashmir'}
-
-  ]
+  duplicateLocationList :any=[]
 
   bookingList: any;
-  constructor(private router:Router, 
-    private booking: BookingService,
+  state: any;
+
+  constructor(
+    private router:Router, 
     private cartService: CartService,
-    private admin:AdminService
+    private admin:AdminService,
+    private activatedRoute: ActivatedRoute
   ){}
 
   ngOnInit() {
-    // this.booking.getProductroyapuram().subscribe((res) => {
-    //   this.bookingList = res;
-    //   console.log(res);
-    // });
-    // this.booking.getProductjammu().subscribe((res) => {
-    //   this.bookingList = res;
+    this.state = this.activatedRoute.snapshot.params['state'];
 
-    //   console.log(res);
-    // });
-    // this.booking.getProductbangluru().subscribe((res) => {
-    //   this.bookingList = res;
-    //   console.log(res);
-    // });
     this.admin.getProduct().subscribe((res) => {
       this.bookingList = res;
-      console.log(res);
+    for(var i =0;i<this.bookingList.length;i++){
+      if(this.bookingList[i].location==this.state){
+        this.duplicateLocationList.push(this.bookingList[i])
+      }
+    }
+     console.log(res);
+      console.log(this.duplicateLocationList);
+      this.bookingList=this.duplicateLocationList;
     });
-    
-  
-  }
-
-  // changed(a:any){
-  //   console.log(a)
-  //   this.location=a.name;
-  //  }
-  ngAfterViewInit() {
-    // this.bookingList=this.mainpage.chennai()
   }
 
   addto(item: any) {
@@ -68,17 +45,13 @@ export class Location1Component implements OnInit ,AfterViewInit {
     console.log("addingin databse");
     alert("ITEMA ADDED SUCCESSFULLY");
     this.router.navigate(['add-to-cart'])
-    // this.cartService.addtoCartroyapuram(item);
   }
   addingindatabase(item:any){
     this.cartService.postaddcartDetailsOfAllLocation(item).subscribe(data=>{
       console.log(data);
     })
   }
-
   GoBack(){
     this.router.navigate(['main-page']);
   }
-
- 
 }

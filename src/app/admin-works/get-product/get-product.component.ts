@@ -1,4 +1,3 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminService } from '../../services/guards/admin.service';
@@ -45,6 +44,6 @@ export class GetProductComponent implements OnInit {
     this.router.navigate(['add-new-data/' + 0]);
   }
   gotobooking(){
-    this.router.navigate(['location1']);
+    this.router.navigate(['main-page']);
   }
 }

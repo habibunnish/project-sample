@@ -175,6 +175,14 @@
       "price": "3000",
       "image": "kash3.jpg",
       "email": ""
+    },
+    {
+      "id": 27,
+      "tittle": "SAROVAR MAGIC HOTEL",
+      "location": "goa",
+      "price": "4800",
+      "image": "goa6.jpg",
+      "email": ""
     }
   ],
   "productdatachennai": [
@@ -635,6 +643,14 @@
       "image": "goa6.jpg",
       "email": "nisha.afroz@aspiresys.com",
       "id": 28
+    },
+    {
+      "tittle": "Radha hometel sarovar hotel",
+      "location": "goa",
+      "price": "3000",
+      "image": "chennai7.jpg",
+      "email": "habicute111@gmail.com",
+      "id": 29
     }
   ],
   "cartstoreddatas": [
@@ -651,6 +667,14 @@
       "price": "3000",
       "image": "chennai2.jpg",
       "id": 6
+    },
+    {
+      "id": 10,
+      "tittle": "Radha hometel sarovar hotel",
+      "location": "goa",
+      "price": "3000",
+      "image": "chennai7.jpg",
+      "email": ""
     }
   ]
 }

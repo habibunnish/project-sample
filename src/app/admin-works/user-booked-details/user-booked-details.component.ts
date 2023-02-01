@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/guards/cart.service';
-import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-history.service';
+
 
 @Component({
   selector: 'app-user-booked-details',
@@ -13,7 +13,6 @@ export class UserBookedDetailsComponent implements OnInit {
   items:any;
   constructor(
     private cartService: CartService,
-    private userbooked: UserBookedHistoryService,
     private router:Router
   ) {}
   ngOnInit() {
@@ -28,19 +27,6 @@ export class UserBookedDetailsComponent implements OnInit {
     })
   }
  
-  //post
-  // bookdata(item: any) {
-  //   console.log('booked data method calling');
-  //   // if (localStorage.getItem('userData') != null) {
-  //   //   var email = JSON.parse(localStorage.getItem('userData') || '{}');
-  //   //   item.email = email.email;
-  //   //   console.log('getting email');
-  //   // }
-  //   this.userbooked.UserBookedData(item).subscribe((res) => {
-  //     this.Productuser = res;
-  //     console.log(this.Productuser);
-  //   });
-  // }
   goback(){
     this.router.navigate(['get-product'])
   }

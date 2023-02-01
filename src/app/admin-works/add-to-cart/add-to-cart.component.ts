@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { filter } from 'rxjs';
 import { CartService } from 'src/app/services/guards/cart.service';
 import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-history.service';
 
@@ -42,24 +41,19 @@ export class AddToCartComponent implements OnInit {
         alert('product added successfully');
       });
     }
-    // this.UserBooked.UserBookedData(item).subscribe((data) => {
-    //   console.log(data);
-     
-    //   alert('product added successfully');
-    // });
    
   }
   book(item: any) {
     alert('are you sure u want to book now press ok to book this room ');
     this.addProduct(item);
-    this.router.navigate(['home-page'])
-
+  }
+  gotobooking(){
+    this.router.navigate(['home-page']);
   }
 
   ngOnInit() {
    this.getalldetailsOfLocation();
-  
-    
+   console.log('getalldetailsoflocation')
   }
 
   getalldetailsOfLocation(){
@@ -77,9 +71,7 @@ export class AddToCartComponent implements OnInit {
       this.getalldetailsOfLocation();
       console.log(data);
     })
-   
-   
-  }
+   }
  
   goback() {
     this.router.navigate(['home-page']);

@@ -53,7 +53,6 @@ export class LoginFormComponent implements OnInit {
     };
     this.loginService.addNewContactUser(newFormData).subscribe((data) => {
       console.log(data);
-      // this.router.navigate(['home-page']);
     });
   }
 
@@ -65,28 +64,13 @@ export class LoginFormComponent implements OnInit {
         for (let user of res) {
           if (user.email == this.loginForm.value.email) {
             this.saveData();
-           // this.addNewContact();
-            this.router.navigate(['booking-page']);
+            this.router.navigate(['main-page']);
           }
         }  
       });
       this.adminlogin();
-      // this.adminsavedata();
+     
   }
-
- 
-  //   Object.keys(formGroup.controls).forEach((field) => {
-  //     const control = formGroup.get(field);
-  //     if (control instanceof FormControl) {
-  //       control.markAsTouched({ onlySelf: true });
-  //     } else if (control instanceof FormGroup) {
-  //       this.validateAllFormFields(control);
-  //     }
-  //   });
-  // }
-  //sending to register
- 
-
   //storing oon local storage login data
   saveData() {
     console.log('localstorage');
@@ -110,14 +94,14 @@ export class LoginFormComponent implements OnInit {
     });
    }
 
-   adminsavedata(){
-    console.log('admin-localstorage');
-    const adminData=[
-    this.password=this.password,
-    this.email=this.email
-    ]
-    localStorage.setItem('adminData',JSON.stringify(adminData))
-   }
+  //  adminsavedata(){
+  //   console.log('admin-localstorage');
+  //   const adminData=[
+  //   this.password=this.password,
+  //   this.email=this.email
+  //   ]
+  //   localStorage.setItem('adminData',JSON.stringify(adminData))
+  //  }
 }
 
 

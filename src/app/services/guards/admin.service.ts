@@ -11,6 +11,7 @@ export class AdminService {
   //getProduct
   getProduct() {
     const httpHeaders = new HttpHeaders();
+    
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.get('http://localhost:3000/product', {
       headers: httpHeaders,

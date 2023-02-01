@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/guards/login.service';
 
@@ -38,17 +38,6 @@ export class RegisterFormComponent {
     private router: Router
   ) {}
   
-
-  //   Object.keys(formGroup.controls).forEach((field) => {
-  //     const control = formGroup.get(field);
-  //     if (control instanceof FormControl) {
-  //       control.markAsTouched({ onlySelf: true });
-  //     } else if (control instanceof FormGroup) {
-  //       this.validateAllFormFields(control);
-  //     }
-  //   });
-  // }
-
   //post
   addNewUserRegister() {
     const registerFormData = {
@@ -70,7 +59,6 @@ export class RegisterFormComponent {
   }
 
   onSubmit() {
-    // TODO: Use EventEmitter with form value
     console.warn(this.profileForm.value);
     alert(
       'you have successfully register please login to see Hotel-Rooms 🏨️🛌️'
