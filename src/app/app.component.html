@@ -6,10 +6,7 @@
     <a routerLink="home-page">HOMEPAGE</a>
   </li>
   <li class="one" *ngIf="loggedin()"  (click)="BookDetailsNew()">HOTELS</li>
-  <!-- <li class="one" *ngIf="loggedin()" (click)="hotel()">
-    <a routerLink="booking-page">HOTELS</a>
-  </li> -->
-  <LI class="one" *ngIf="!loggedin()"><A routerLink="login-form">login</A></LI>
+  <LI class="one" *ngIf="!loggedin()"><A routerLink="login-form">LOGIN</A></LI>
   <li class="one" *ngIf="loggedin()"  (click)="onlogout()">
     <a routerLink="home-page">LOGOUT</a>
   </li>
@@ -21,10 +18,6 @@
         class="number"  />
     </div>
  </li>
- <!-- <li class="one" ><A routerLink="register">register</A></li> -->
-  
-
- 
 </ul>
 <h1 style="text-align: center; color: blue">WELCOME TO ROOMSTAY.COM</h1>
 

@@ -15,8 +15,7 @@ export class AppComponent implements OnInit {
 
     constructor(
      private router: Router,
-      private cartService: CartService,
-      private authservice:AuthService,
+      private cartService: CartService
 
   ) {  }
   showme: boolean = false;

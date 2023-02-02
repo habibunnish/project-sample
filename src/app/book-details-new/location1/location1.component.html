@@ -1,9 +1,8 @@
-<button (click)="GoBack()" class="btn btn-primary">bACK-TO-BOOKINGPAGE</button>
-<!-- <p (childMessage)="$event"></p> -->
+<button (click)="GoBack()" class="btn btn-primary">BACK-TO-BOOKINGPAGE</button>
+
 <div class="container">
-    
-  <div class="row" >
-    <ng-container *ngFor="let item of bookingList">
+    <div class="row" >
+      <ng-container *ngFor="let item of bookingList">
         <div class="card col-md-4">
         <img src="/assets/IMAGES/{{ item.image }}" alt="" />
         <h5>{{ item.tittle }}</h5>

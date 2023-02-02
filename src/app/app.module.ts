@@ -8,7 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AdminWorksModule } from './admin-works/admin-works.module';
+
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './services/guards/auth.guard';
@@ -17,6 +17,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 import { BookDetailsNewModule } from './book-details-new/book-details-new.module';
 import { UsersModule } from './users/users.module';
+import { AdminModule } from './admin/admin.module';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { UsersModule } from './users/users.module';
     FormsModule,
     HttpClientModule,
     NgbModule,
-    AdminWorksModule,
+    AdminModule,
     BookDetailsNewModule,
     UsersModule
   ],
