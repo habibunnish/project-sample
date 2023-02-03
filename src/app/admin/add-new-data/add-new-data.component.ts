@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { AddNewDataService } from '../../services/guards/add-new-data.service';
 import { AdminService } from '../../services/guards/admin.service';
 import { BookingService } from '../../services/guards/booking.service';
@@ -15,22 +16,25 @@ export class AddNewDataComponent implements OnInit {
  location:any;
   file: any;
   id: any;
+  chosenMod:any;
 
   locations=[
-    {name:''},
+   {name:''},
     {name:'chennai'},
     {name:'goa'},
     {name:'bangalore'},
     {name:'jammu and kashmir'}
 
   ]
+
   roomdetails = {
     id: 0,
     tittle: '',
-    location: '',
+    area: '',
     price: '',
     image: '',
     email: '',
+    location:''
   };
   constructor(
     private http: HttpClient,
@@ -71,6 +75,8 @@ export class AddNewDataComponent implements OnInit {
     console.log(roomdetails);
     console.log('addnewproduct()');
     console.log(this.location);
+    roomdetails.location=this.location;
+    console.log(this.location)
     if(this.location=='chennai'){
       this.bookingService.addProductsDetails(roomdetails).subscribe((res) => {
         console.log(res);
@@ -90,9 +96,15 @@ export class AddNewDataComponent implements OnInit {
     }
  }
 
- changed(a:any){
+ changedone(a:any){
   console.log(a)
   this.location=a.name;
+  console.log(this.location)
+
+  
+ }
+ modo(a:any){
+  console.log(this.chosenMod);
  }
 
   //post for showing in page

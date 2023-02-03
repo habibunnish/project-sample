@@ -2,10 +2,19 @@
   <div class="loginform">
     <form>
       <label>CHOOSE LOCATION</label>
-      <select >
-        <option (click)="changed(c)" *ngFor="let c of locations"  [ngValue]='c.name'>{{c.name}} </option>
-        
+      <div>
+        <select  >
+          <option (click)="changedone(c)" *ngFor="let c of locations" [value]="c.name">{{c.name}} </option>
+          
+        </select>
+      </div>
+      <!-- <div>
+      <select [ngModel]="chosenMod" (ngModelChange)="modo($event)" id="selectid" >
+        <option  *ngFor="let c of locations" value='c.name'>{{c.name}} </option>
+ 
       </select>
+      </div> -->
+     
 
       <pre></pre>
       <label for="ProductTitle">Tittle</label><br />
@@ -16,12 +25,12 @@
         [(ngModel)]="roomdetails.tittle" />
       <pre></pre>
 
-      <label for="Location">Location</label><br />
+      <label for="area">area</label><br />
       <input
         type="text"
-        name="location"
-        placeholder="Location"
-        [(ngModel)]="roomdetails.location"/>
+        name="area"
+        placeholder="area"
+        [(ngModel)]="roomdetails.area"/>
       <pre></pre>
 
       <label for="Price">Price</label><br />
