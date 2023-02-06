@@ -25,8 +25,9 @@ export class LoginFormComponent implements OnInit {
 
   onsubmit() {
     console.log('on submit');
-   this.childMessage.emit( this.router.navigate(['register-form']));
+   this.childMessage.emit( this.store());
   }
+
   admin: any;
   type: string = 'password';
   loginForm!: FormGroup;
@@ -71,6 +72,10 @@ export class LoginFormComponent implements OnInit {
       this.adminlogin();
      
   }
+  store(){
+    this.router.navigate(['register-form'])
+  }
+
   //storing oon local storage login data
   saveData() {
     console.log('localstorage');
@@ -94,7 +99,7 @@ export class LoginFormComponent implements OnInit {
     });
    }
 
-  //  adminsavedata(){
+  //  asavedata(){
   //   console.log('admin-localstorage');
   //   const adminData=[
   //   this.password=this.password,

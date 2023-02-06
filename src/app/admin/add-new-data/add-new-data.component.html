@@ -1,10 +1,10 @@
 <div class="wall">
   <div class="loginform">
-    <form>
+    <form  >
       <label>CHOOSE LOCATION</label>
       <div>
-        <select  >
-          <option (click)="changedone(c)" *ngFor="let c of locations" [value]="c.name">{{c.name}} </option>
+        <select (click)="modo($event)" >
+          <option  *ngFor="let c of locations" [value]="c.name">{{c.name}} </option>
           
         </select>
       </div>
@@ -48,7 +48,7 @@
         class="btn btn-primary"
         (click)="adding(roomdetails)"
         type="button"
-        value="Upload file" >
+        >
         ADD-PRODUCT
       </button>
       <span style="display: inline-block; width: 40px"></span>

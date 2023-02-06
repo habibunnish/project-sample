@@ -20,9 +20,7 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "types": [
-      // "@angular/localize",
-      // // "jest",
-      // "mocha"
+      "@angular/localize"
     ],
     "lib": [
       "ES2022",

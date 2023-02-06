@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { AddNewDataService } from '../../services/guards/add-new-data.service';
@@ -17,6 +17,8 @@ export class AddNewDataComponent implements OnInit {
   file: any;
   id: any;
   chosenMod:any;
+@Output()
+change=new EventEmitter()
 
   locations=[
    {name:''},
@@ -36,6 +38,7 @@ export class AddNewDataComponent implements OnInit {
     email: '',
     location:''
   };
+ 
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -51,6 +54,7 @@ export class AddNewDataComponent implements OnInit {
     if(this.id!=0)
     this.GetEdits();
     
+    
   }
   GetEdits() {
 
@@ -65,10 +69,9 @@ export class AddNewDataComponent implements OnInit {
   adding(roomdetails: any) {
     roomdetails.image = this.file.name;
     this.addnewproduct(roomdetails);
-    alert('product added successfully');
     this.addProduct(roomdetails);
    
-  }
+    }
 
   //post
   addnewproduct(roomdetails: any) {
@@ -97,14 +100,17 @@ export class AddNewDataComponent implements OnInit {
  }
 
  changedone(a:any){
+  console.log('method is run' );
   console.log(a)
-  this.location=a.name;
-  console.log(this.location)
+  this.location=a;
+  console.log(this.location);
+ 
 
   
  }
- modo(a:any){
-  console.log(this.chosenMod);
+ modo($event:any){
+  console.log("changing",$event.target.value);
+  this.changedone($event.target.value)
  }
 
   //post for showing in page

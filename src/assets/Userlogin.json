@@ -167,6 +167,74 @@
       "price": "3000",
       "image": "chennai6.jpg",
       "email": ""
+    },
+    {
+      "id": 19,
+      "tittle": "new",
+      "area": "siruser",
+      "price": "4800",
+      "image": "kash5.jpg",
+      "email": ""
+    },
+    {
+      "id": 20,
+      "tittle": "new",
+      "area": "siruser",
+      "price": "3000",
+      "image": "chennai3.jpg",
+      "email": ""
+    },
+    {
+      "id": 21,
+      "tittle": "new",
+      "area": "siruseri",
+      "price": "3000",
+      "image": "bang4.jpg",
+      "email": ""
+    },
+    {
+      "id": 22,
+      "tittle": "new",
+      "area": "siruser",
+      "price": "2800",
+      "image": "chennai7.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 23,
+      "tittle": "",
+      "area": "siruseri",
+      "price": "",
+      "image": "bang5.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 24,
+      "tittle": "new",
+      "area": "siruser",
+      "price": "2800",
+      "image": "goa8.jpg",
+      "email": ""
+    },
+    {
+      "id": 25,
+      "tittle": "new",
+      "area": "kovalam",
+      "price": "2800",
+      "image": "goa8.jpg",
+      "email": ""
+    },
+    {
+      "id": 26,
+      "tittle": "new",
+      "area": "kovalam",
+      "price": "2800",
+      "image": "goa7.jpg",
+      "email": "",
+      "location": "",
+      "are": "chennai"
     }
   ],
   "productdatachennai": [
@@ -250,6 +318,25 @@
       "price": "2000",
       "image": "kash1.jpg",
       "email": ""
+    },
+    {
+      "id": 18,
+      "tittle": "new",
+      "area": "siruser",
+      "price": "2800",
+      "image": "chennai7.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 19,
+      "tittle": "new",
+      "area": "kovalam",
+      "price": "2800",
+      "image": "goa7.jpg",
+      "email": "",
+      "location": "",
+      "are": "chennai"
     }
   ],
   "productdatabangaluru": [
@@ -660,6 +747,14 @@
       "location": "goa",
       "price": "4800",
       "image": "goa6.jpg",
+      "email": ""
+    },
+    {
+      "id": 17,
+      "tittle": "HOTEL MANOHAR INN PALACE",
+      "location": "Chennai",
+      "price": "3001",
+      "image": "chennai2.jpg",
       "email": ""
     }
   ]
