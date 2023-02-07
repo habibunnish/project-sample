@@ -13,7 +13,7 @@
     <tr>
       <th scope="col">id</th>
       <th scope="col">PRODUCTTITTLE</th>
-      <th scope="col">LOCATION</th>
+      <th scope="col">area</th>
       <th scope="col">PRICE</th>
       <th scope="col">IMAGE NAME</th>
       <th scope="col">FILE</th>
@@ -23,7 +23,7 @@
     <TR *ngFor="let product of ProductList; let i = index">
       <td>{{ i + 1 }}</td>
       <TD>{{ product.tittle }}</TD>
-      <TD>{{ product.location }}</TD>
+      <TD>{{ product.area }}</TD>
       <TD>{{ product.price }}</TD>
       <td>{{ product.image }}</td>
 

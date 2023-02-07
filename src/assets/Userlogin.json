@@ -25,54 +25,6 @@
   ],
   "product": [
     {
-      "id": 1,
-      "tittle": "HOTEL MANVAAR",
-      "location": "GEORGE TOWN",
-      "price": "2016",
-      "image": "chennai7.jpg",
-      "email": ""
-    },
-    {
-      "id": 2,
-      "tittle": "DNA HOTELS",
-      "location": "PALLIKARANI",
-      "price": "3001",
-      "image": "chennai6.jpg",
-      "email": ""
-    },
-    {
-      "id": 3,
-      "tittle": "HOTEL DHANS",
-      "location": "VELACHERRY",
-      "price": "3220",
-      "image": "chennai5.jpg",
-      "email": ""
-    },
-    {
-      "id": 4,
-      "tittle": "CHANDRAN HYLINE",
-      "location": "PERUMBAKKAM",
-      "price": "3400",
-      "image": "chennai4.jpg",
-      "email": ""
-    },
-    {
-      "id": 5,
-      "tittle": "PRIDE HOTEL",
-      "location": "RICHMAND HOTEL",
-      "price": "3500",
-      "image": "bang8.jpg",
-      "email": ""
-    },
-    {
-      "id": 6,
-      "tittle": "ALCHEMY SUITES",
-      "location": "KORAMANGALA",
-      "price": "2500",
-      "image": "bang7.jpg",
-      "email": ""
-    },
-    {
       "id": 7,
       "tittle": "CLARKS INN",
       "location": "KEMPOGWADA INTERNATIONAL AIRPORT NEAR",
@@ -121,30 +73,6 @@
       "email": ""
     },
     {
-      "id": 13,
-      "tittle": "THE UBE RESIDENCY",
-      "location": "BARAVALI ROAD",
-      "price": "2500",
-      "image": "kash6.jpg",
-      "email": ""
-    },
-    {
-      "id": 14,
-      "tittle": "THE BYKE DELOTEL",
-      "location": "GHATKAPUR ",
-      "price": "4100",
-      "image": "kash3.jpg",
-      "email": ""
-    },
-    {
-      "id": 15,
-      "tittle": "HOTEL TIP TOP RESIDENCY",
-      "location": "ASALPHA GALI",
-      "price": "4000",
-      "image": "kash2.jpg",
-      "email": ""
-    },
-    {
       "id": 16,
       "tittle": "HOTEL BETTER HOME",
       "location": "ANDHERI WALIYA",
@@ -161,80 +89,94 @@
       "email": ""
     },
     {
-      "id": 18,
-      "tittle": "Radha hometel sarovar hotel",
-      "location": "Chennai MANDAVELI",
-      "price": "3000",
-      "image": "chennai6.jpg",
-      "email": ""
-    },
-    {
-      "id": 19,
-      "tittle": "new",
-      "area": "siruser",
-      "price": "4800",
-      "image": "kash5.jpg",
-      "email": ""
-    },
-    {
-      "id": 20,
-      "tittle": "new",
-      "area": "siruser",
-      "price": "3000",
-      "image": "chennai3.jpg",
-      "email": ""
-    },
-    {
-      "id": 21,
+      "id": 28,
       "tittle": "new",
       "area": "siruseri",
-      "price": "3000",
-      "image": "bang4.jpg",
-      "email": ""
+      "price": "2800",
+      "image": "kash1.jpg",
+      "email": "",
+      "location": "chennai"
     },
     {
-      "id": 22,
-      "tittle": "new",
-      "area": "siruser",
-      "price": "2800",
+      "id": 29,
+      "tittle": "Hotel Prism",
+      "area": "chennai",
+      "price": "3000",
+      "image": "chennai5.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 30,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "central anna salai",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 31,
+      "tittle": "zidan hotel",
+      "area": "royapuram",
+      "price": "3500",
       "image": "chennai7.jpg",
       "email": "",
       "location": "chennai"
     },
     {
-      "id": 23,
-      "tittle": "",
-      "area": "siruseri",
-      "price": "",
-      "image": "bang5.jpg",
+      "id": 32,
+      "tittle": "testing",
+      "area": "royapuram",
+      "price": "4800",
+      "image": "goa9.jpg",
       "email": "",
-      "location": "chennai"
+      "location": "goa"
     },
     {
-      "id": 24,
-      "tittle": "new",
-      "area": "siruser",
+      "id": 33,
+      "tittle": "Hotel Prisms wondela",
+      "area": "kavalam",
       "price": "2800",
-      "image": "goa8.jpg",
-      "email": ""
-    },
-    {
-      "id": 25,
-      "tittle": "new",
-      "area": "kovalam",
-      "price": "2800",
-      "image": "goa8.jpg",
-      "email": ""
-    },
-    {
-      "id": 26,
-      "tittle": "new",
-      "area": "kovalam",
-      "price": "2800",
-      "image": "goa7.jpg",
+      "image": "bang7.jpg",
       "email": "",
-      "location": "",
-      "are": "chennai"
+      "location": "bangalore"
+    },
+    {
+      "id": 34,
+      "tittle": "new",
+      "area": "kavalam",
+      "price": "2800",
+      "image": "chennai3.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 35,
+      "tittle": "clarks inn hotel",
+      "area": "sanda road ",
+      "price": "3000",
+      "image": "bang7.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 36,
+      "tittle": "radha krishna hotel",
+      "area": "shimla nagar",
+      "price": "3900",
+      "image": "kash4.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 37,
+      "tittle": "manohar oyo hotel",
+      "area": "kaswadi street",
+      "price": "3807",
+      "image": "bang3.jpg",
+      "email": "",
+      "location": "Banguluru"
     }
   ],
   "productdatachennai": [
@@ -337,6 +279,69 @@
       "email": "",
       "location": "",
       "are": "chennai"
+    },
+    {
+      "id": 20,
+      "tittle": "",
+      "area": "siruseri",
+      "price": "",
+      "image": "goa5.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 21,
+      "tittle": "new",
+      "area": "siruseri",
+      "price": "2800",
+      "image": "kash1.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 22,
+      "tittle": "",
+      "area": "chennai",
+      "price": "",
+      "image": "kash1.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 23,
+      "tittle": "new",
+      "area": "siruseri",
+      "price": "",
+      "image": "kash2.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 24,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "central anna salai",
+      "price": "3000",
+      "image": "chennai2.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 25,
+      "tittle": "zidan hotel",
+      "area": "royapuram",
+      "price": "3500",
+      "image": "chennai7.jpg",
+      "email": "",
+      "location": "chennai"
+    },
+    {
+      "id": 26,
+      "tittle": "new",
+      "area": "kavalam",
+      "price": "2800",
+      "image": "chennai3.jpg",
+      "email": "",
+      "location": "Chennai"
     }
   ],
   "productdatabangaluru": [
@@ -403,6 +408,33 @@
       "price": "3222",
       "image": "bang7.jpg",
       "email": ""
+    },
+    {
+      "id": 11,
+      "tittle": "Hotel Prisms wondela",
+      "area": "kavalam",
+      "price": "2800",
+      "image": "bang7.jpg",
+      "email": "",
+      "location": "bangalore"
+    },
+    {
+      "id": 12,
+      "tittle": "clarks inn hotel",
+      "area": "sanda road ",
+      "price": "3000",
+      "image": "bang7.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 13,
+      "tittle": "manohar oyo hotel",
+      "area": "kaswadi street",
+      "price": "3807",
+      "image": "bang3.jpg",
+      "email": "",
+      "location": "Banguluru"
     }
   ],
   "royapuram": [
@@ -454,6 +486,24 @@
       "price": "1000",
       "image": "goa9.jpg",
       "id": 8
+    },
+    {
+      "id": 9,
+      "tittle": "Hotel Prism",
+      "area": "chennai",
+      "price": "3000",
+      "image": "chennai5.jpg",
+      "email": "",
+      "location": "goa"
+    },
+    {
+      "id": 10,
+      "tittle": "testing",
+      "area": "royapuram",
+      "price": "4800",
+      "image": "goa9.jpg",
+      "email": "",
+      "location": "goa"
     }
   ],
   "jammu": [
@@ -513,6 +563,15 @@
       "price": "yuio",
       "image": "kash6.jpg",
       "email": ""
+    },
+    {
+      "id": 10,
+      "tittle": "radha krishna hotel",
+      "area": "shimla nagar",
+      "price": "3900",
+      "image": "kash4.jpg",
+      "email": "",
+      "location": "Jammu"
     }
   ],
   "userbookeddetails": [
@@ -738,6 +797,15 @@
       "image": "goa6.jpg",
       "email": "habicute111@gmail.com",
       "id": 31
+    },
+    {
+      "tittle": "testing",
+      "area": "royapuram",
+      "price": "4800",
+      "image": "goa9.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "goa",
+      "id": 32
     }
   ],
   "cartstoreddatas": [
@@ -756,6 +824,15 @@
       "price": "3001",
       "image": "chennai2.jpg",
       "email": ""
+    },
+    {
+      "id": 32,
+      "tittle": "testing",
+      "area": "royapuram",
+      "price": "4800",
+      "image": "goa9.jpg",
+      "email": "",
+      "location": "goa"
     }
   ]
 }

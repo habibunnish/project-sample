@@ -22,10 +22,10 @@ change=new EventEmitter()
 
   locations=[
    {name:''},
-    {name:'chennai'},
+    {name:'Chennai'},
     {name:'goa'},
-    {name:'bangalore'},
-    {name:'jammu and kashmir'}
+    {name:'Banguluru'},
+    {name:'Jammu'}
 
   ]
 
@@ -80,11 +80,12 @@ change=new EventEmitter()
     console.log(this.location);
     roomdetails.location=this.location;
     console.log(this.location)
-    if(this.location=='chennai'){
+    console.log(this.roomdetails);
+    if(this.location=='Chennai'){
       this.bookingService.addProductsDetails(roomdetails).subscribe((res) => {
         console.log(res);
       });
-    }else if(this.location=='bangalore'){
+    }else if(this.location=='Banguluru'){
       this.bookingService.addProductsDetailsbangluru(roomdetails).subscribe(res=>{
           console.log(res);
         });
@@ -92,7 +93,7 @@ change=new EventEmitter()
       this.bookingService.addProductsDetailsroyapuram(roomdetails).subscribe(res=>{
       console.log(res);
     });
-    }else if(this.location=='jammu and kashmir'){
+    }else if(this.location=='Jammu'){
        this.bookingService.addProductsDetailsjammu(roomdetails).subscribe(res=>{
       console.log(res);
     });
@@ -116,6 +117,7 @@ change=new EventEmitter()
   //post for showing in page
   addProduct(roomdetails: any) {
     console.log('addproduct method calling');
+    // roomdetails.location=this.location;
     console.log(roomdetails);
     this.adminService.addProductDetails(roomdetails).subscribe((res) => {
       console.log(res);

@@ -14,8 +14,7 @@ import { LoginService } from '../../services/guards/login.service';
   styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent implements OnInit {
-  @Input()
-  message:any='';
+ 
   @Output()
   childMessage=new EventEmitter()
   emails: any;
@@ -47,7 +46,6 @@ export class LoginFormComponent implements OnInit {
     private http: HttpClient,
   ) {}
   addNewContact() {
-    console.log('adding');
     const newFormData = {
       password: this.password,
       email: this.email,

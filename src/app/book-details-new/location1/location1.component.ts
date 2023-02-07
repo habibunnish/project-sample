@@ -40,11 +40,10 @@ export class Location1Component implements OnInit  {
   }
 
   addto(item: any) {
-    console.log('adding');
-     this.addingindatabase(item);
-    console.log("addingin databse");
+    console.log("adding in");
+    this.addingindatabase(item);
     alert("ITEMA ADDED SUCCESSFULLY");
-    this.router.navigate(['add-to-cart'])
+    this.router.navigate(['add-to-cart']);
   }
   addingindatabase(item:any){
     this.cartService.postaddcartDetailsOfAllLocation(item).subscribe(data=>{

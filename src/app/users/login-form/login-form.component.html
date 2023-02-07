@@ -5,16 +5,7 @@
         <h1> Login Form</h1>
         <div align="left" class="container mb-3">
             <form [formGroup]="loginForm" (ngSubmit)="submit()">
-                <!-- <div class="form-group"><br>
-                    <label for="firstname">Firstname </label>
-                    <input formControlName="firstname" required type="text" class="focus"   name="firstname" [(ngModel)]="firstname" class="form-control" >
-
-                    <div *ngIf="loginForm.touched && loginForm.invalid" class="alert alert-danger">invalid  very short name minimum leter required is 4
-                      <p *ngIf="loginForm.errors ?.['minlength']"></p>
-                    </div>
-
-                </div>
-                <pre></pre> -->
+               
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input  id="password" type="text" formControlName="password" name="password" class="form-control" [(ngModel)]="password" required
@@ -30,7 +21,7 @@
                     <label for="email">Email </label>
                     <input  id="email" formControlName="email" type="email" name="email" [(ngModel)]="email"  class="form-control" required >
                 </div><br>
-                <button [disabled]="loginForm.invalid" (click)="submit()" class="btn btn-danger"  type="submit"> Submit</button>
+                <button [disabled]="loginForm.invalid" (click)="submit()" class="btn btn-danger"  type="submit" id="button"> Submit</button>
                     <span style="display: inline-block;width:200px"></span>
                 <button class="btn btn-danger"   (click)="onsubmit()">NewUserRegister</button>
             </form>

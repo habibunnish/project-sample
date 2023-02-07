@@ -6,10 +6,11 @@
         <div class="card col-md-4">
         <img src="/assets/IMAGES/{{ item.image }}" alt="" />
         <h5>{{ item.tittle }}</h5>
-        <p>{{ item.location }}</p>
+        <p> {{item.area}},{{ item.location }} </p>
+
         <p><strong>PRICE : </strong>$ {{ item.price }}</p>
         <button class="btn btn-primary" (click)="addto(item)">
-          ADD TO CART
+          ADD TO CART 1
         </button>
       </div>
     </ng-container>
