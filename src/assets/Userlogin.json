@@ -25,70 +25,6 @@
   ],
   "product": [
     {
-      "id": 7,
-      "tittle": "CLARKS INN",
-      "location": "KEMPOGWADA INTERNATIONAL AIRPORT NEAR",
-      "price": "3900",
-      "image": "bang5.jpg",
-      "email": ""
-    },
-    {
-      "id": 8,
-      "tittle": "COUNTRY INN AND SUITES BY RADISSAN",
-      "location": "NAGAWARA",
-      "price": "3700",
-      "image": "bang3.jpg",
-      "email": ""
-    },
-    {
-      "id": 9,
-      "tittle": "HOTEL SKY PALACE",
-      "location": "WADALA",
-      "price": "3000",
-      "image": "goa10.jpg",
-      "email": ""
-    },
-    {
-      "id": 10,
-      "tittle": "HOTEL AVENUE",
-      "location": "SAKINAKA ANDHERI",
-      "price": "3090",
-      "image": "goa8.jpg",
-      "email": ""
-    },
-    {
-      "id": 11,
-      "tittle": "HOTEL SAHARA",
-      "location": "MILRA ROAD",
-      "price": "3490",
-      "image": "goa7.jpg",
-      "email": ""
-    },
-    {
-      "id": 12,
-      "tittle": "HOTEL SILVER LAKE",
-      "location": "KURLA EAST",
-      "price": "3500",
-      "image": "goa6.jpg",
-      "email": ""
-    },
-    {
-      "id": 16,
-      "tittle": "HOTEL BETTER HOME",
-      "location": "ANDHERI WALIYA",
-      "price": "3010",
-      "image": "kash1.jpg",
-      "email": ""
-    },
-    {
-      "id": 17,
-      "tittle": "HOTEL MANOHAR INN PALACE",
-      "location": "Chennai",
-      "price": "3001",
-      "image": "chennai2.jpg",
-      "email": ""
-    },
-    {
       "id": 28,
       "tittle": "new",
       "area": "siruseri",
@@ -806,6 +742,24 @@
       "email": "habicute111@gmail.com",
       "location": "goa",
       "id": 32
+    },
+    {
+      "id": 36,
+      "tittle": "radha krishna hotel",
+      "area": "shimla nagar",
+      "price": "3900",
+      "image": "kash4.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Jammu"
+    },
+    {
+      "id": 37,
+      "tittle": "manohar oyo hotel",
+      "area": "kaswadi street",
+      "price": "3807",
+      "image": "bang3.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Banguluru"
     }
   ],
   "cartstoreddatas": [
@@ -833,6 +787,15 @@
       "image": "goa9.jpg",
       "email": "",
       "location": "goa"
+    },
+    {
+      "id": 36,
+      "tittle": "radha krishna hotel",
+      "area": "shimla nagar",
+      "price": "3900",
+      "image": "kash4.jpg",
+      "email": "",
+      "location": "Jammu"
     }
   ]
 }

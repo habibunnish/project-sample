@@ -1,9 +1,5 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from './services/guards/auth.service';
-// import { Observable } from 'rxjs';
-// import { AuthService} from './services/guards/AuthsService';
 import { CartService } from './services/guards/cart.service';
 
 @Component({
@@ -29,16 +25,13 @@ export class AppComponent implements OnInit {
     this.cartService.count()
   }
   
- 
-
   cart() {
     this.router.navigate(['add-to-cart']);
   }
+
    Homepage() {
     // alert(`🏨️ you need to login first if you are a existed user 
     // else please register to check room 🏨️`);
-   
-    
   }
   hotel() {
     console.log('helppage');

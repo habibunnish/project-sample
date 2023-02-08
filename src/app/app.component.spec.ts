@@ -1,23 +1,28 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 //x here means it will skip the test
 describe ('AppComponent', () => {
+ 
+  
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      providers:[HttpClient,HttpHandler],
+      providers:[HttpClient,HttpHandler,{provide:Router}],
       declarations: [AppComponent],
     }).compileComponents();
   });
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
+  
 
   //xit here means skipping this one test file not other files test
   it('should render title', () => {

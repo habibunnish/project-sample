@@ -10,8 +10,9 @@ import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-hi
   styleUrls: ['./add-to-cart.component.scss'],
 })
 export class AddToCartComponent implements OnInit {
+  // length:any;
   public product: any;
-  items:any;
+  items:any=[];
   ProductTitle: any;
   Email: any;
   Location: any;
@@ -27,7 +28,7 @@ export class AddToCartComponent implements OnInit {
   ) {}
   //post
   addProduct(item: any) {
-     delete item.id ;
+    //  delete item.id ;
 
     console.log('print', item);
     if (localStorage.getItem('userData') != null) {
@@ -44,7 +45,6 @@ export class AddToCartComponent implements OnInit {
    
   }
   book(item: any) {
-    alert('are you sure u want to book now press ok to book this room ');
     this.addProduct(item);
   }
   gotobooking(){
@@ -66,6 +66,7 @@ export class AddToCartComponent implements OnInit {
   }
 
   delete(item: any) {
+    //  delete item.id ;
     console.log('deleteitems', item.id);
     this.cartService.deleteAllCartLocation(item.id).subscribe(data=>{
       this.getalldetailsOfLocation();

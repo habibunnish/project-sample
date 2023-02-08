@@ -7,7 +7,7 @@
   </li>
   <li class="one" *ngIf="loggedin()"  (click)="BookDetailsNew()">HOTELS</li>
   <LI class="one" *ngIf="!loggedin()"><A routerLink="login-form">LOGIN</A></LI>
-  <li class="one" *ngIf="loggedin()"  (click)="onlogout()">
+  <li class="one" *ngIf="loggedin()" id="logout"  (click)="onlogout()">
     <a routerLink="home-page">LOGOUT</a>
   </li>
   <li class="two" *ngIf="loggedin()">

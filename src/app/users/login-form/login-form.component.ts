@@ -19,6 +19,7 @@ export class LoginFormComponent implements OnInit {
   childMessage=new EventEmitter()
   emails: any;
   passwords: any;
+  static loginForm: any;
  
  
 
