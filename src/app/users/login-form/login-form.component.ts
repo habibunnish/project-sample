@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component,EventEmitter,Input,OnInit, Output } from '@angular/core';
+import { Component,EventEmitter,OnInit, Output } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -27,7 +27,7 @@ export class LoginFormComponent implements OnInit {
     console.log('on submit');
    this.childMessage.emit( this.store());
   }
-
+users:any;
   admin: any;
   type: string = 'password';
   loginForm!: FormGroup;
@@ -47,6 +47,7 @@ export class LoginFormComponent implements OnInit {
     private http: HttpClient,
   ) {}
   addNewContact() {
+    console.log('addnewconctact()')
     const newFormData = {
       password: this.password,
       email: this.email,
@@ -54,23 +55,30 @@ export class LoginFormComponent implements OnInit {
     this.loginService.addNewContactUser(newFormData).subscribe((data) => {
       console.log(data);
     });
-  }
+  };
 
   submit() {
-    this.http
-      .get('http://localhost:3000/userRegister')
-      .subscribe((res: any) => {
-        console.log(res);
-        for (let user of res) {
-          if (user.email == this.loginForm.value.email) {
-            this.saveData();
-            this.router.navigate(['main-page']);
-          }
-        }  
-      });
+    this.loginService.userRegisterDetails().subscribe((res:any)=>{
+      console.log(res);
+      this.users=res;
+      console.log('hjk')
+      for (let user of this.users) {
+        console.log('users')
+        if (user.email == this.loginForm.value.email) {
+          this.saveData();
+          console.log('savedata')
+          // this.addNewContact();
+          // console.log('addnewcontact')
+          this.router.navigate(['main-page']);
+        }
+      }  
+      
+    });
+    // this.addNewContact();
       this.adminlogin();
      
-  }
+  };
+
   store(){
     this.router.navigate(['register-form'])
   }

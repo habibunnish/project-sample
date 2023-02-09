@@ -107,12 +107,21 @@
     },
     {
       "id": 37,
-      "tittle": "manohar oyo hotel",
+      "tittle": "Manohar Hotel",
       "area": "kaswadi street",
-      "price": "3807",
+      "price": "3417",
       "image": "bang3.jpg",
       "email": "",
       "location": "Banguluru"
+    },
+    {
+      "id": 38,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "tamabaram road",
+      "price": "3600",
+      "image": "chennai2.jpg",
+      "email": "",
+      "location": "Chennai"
     }
   ],
   "productdatachennai": [
@@ -276,6 +285,24 @@
       "area": "kavalam",
       "price": "2800",
       "image": "chennai3.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 37,
+      "tittle": "Manohar Hotel",
+      "area": "kaswadi street",
+      "price": "3417",
+      "image": "chennai4.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 38,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "tamabaram",
+      "price": "3900",
+      "image": "chennai2.jpg",
       "email": "",
       "location": "Chennai"
     }
@@ -760,6 +787,15 @@
       "image": "bang3.jpg",
       "email": "habicute111@gmail.com",
       "location": "Banguluru"
+    },
+    {
+      "id": 34,
+      "tittle": "new",
+      "area": "kavalam",
+      "price": "2800",
+      "image": "chennai3.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Chennai"
     }
   ],
   "cartstoreddatas": [
@@ -780,15 +816,6 @@
       "email": ""
     },
     {
-      "id": 32,
-      "tittle": "testing",
-      "area": "royapuram",
-      "price": "4800",
-      "image": "goa9.jpg",
-      "email": "",
-      "location": "goa"
-    },
-    {
       "id": 36,
       "tittle": "radha krishna hotel",
       "area": "shimla nagar",
@@ -796,6 +823,15 @@
       "image": "kash4.jpg",
       "email": "",
       "location": "Jammu"
+    },
+    {
+      "id": 34,
+      "tittle": "new",
+      "area": "kavalam",
+      "price": "2800",
+      "image": "chennai3.jpg",
+      "email": "",
+      "location": "Chennai"
     }
   ]
 }

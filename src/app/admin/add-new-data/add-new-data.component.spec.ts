@@ -1,5 +1,4 @@
 import { RouterTestingModule } from '@angular/router/testing';
-import { ActivatedRoute } from '@angular/router';
 import { AddNewDataComponent } from './add-new-data.component';
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
@@ -11,7 +10,7 @@ describe('AddNewDataComponent ', () => {
   let fixture: ComponentFixture<AddNewDataComponent>;
   
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports:[RouterTestingModule],
       declarations: [AddNewDataComponent],
@@ -20,7 +19,7 @@ describe('AddNewDataComponent ', () => {
      
     })
     .compileComponents();
-  }));
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AddNewDataComponent   );

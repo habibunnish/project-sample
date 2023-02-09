@@ -10,8 +10,8 @@ export class AdminService {
 
   //getProduct
   getProduct() {
+    console.log('getProduct method');
     const httpHeaders = new HttpHeaders();
-    
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.get('http://localhost:3000/product', {
       headers: httpHeaders,

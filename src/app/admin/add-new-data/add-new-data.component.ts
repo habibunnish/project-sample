@@ -117,7 +117,7 @@ change=new EventEmitter()
   //post for showing in page
   addProduct(roomdetails: any) {
     console.log('addproduct method calling');
-    // roomdetails.location=this.location;
+    roomdetails.location=this.location;
     console.log(roomdetails);
     this.adminService.addProductDetails(roomdetails).subscribe((res) => {
       console.log(res);

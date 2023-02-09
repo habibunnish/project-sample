@@ -1,10 +1,9 @@
-import { AddNewDataService } from './../../services/guards/add-new-data.service';
-// import { componentInstance } from '@angular/common/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { LoginFormComponent } from './login-form.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 describe('LoginFormComponent ', () => {
@@ -50,6 +49,10 @@ describe('LoginFormComponent ', () => {
             expect(componentInstance.loginForm.valid).toBeFalsy()
          })
       })
+  });
+  
+  it('should create', () => {
+    expect(componentInstance).toBeTruthy();
   });
 // it('check whther ng submit is called ',()=>{
 //   fixture.detectChanges();

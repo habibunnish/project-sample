@@ -1,4 +1,4 @@
-<button (click)="gotobooking()" class="btn btn-primary">BookingPage</button>
+<button  id="booking" (click)="gotobooking()" class="btn btn-primary">BookingPage</button>
 <ng-container *ngIf="items.length != 0">
   <div class="container">
     <div class="card-table">
@@ -53,7 +53,7 @@
       <img src="assets/IMAGES/cart.jpg" alt="cart" />
       <h4>your cart is empty</h4>
       <h6>add item to it now</h6>
-      <button class="btn btn-primary" (click)="goback()">SHOP NOW</button>
+      <button class="btn btn-primary" id="goback" (click)="goback()">SHOP NOW</button>
     </div>
   </div>
 </ng-container>
