@@ -63,6 +63,6 @@ export class RegisterFormComponent {
     alert(
       'you have successfully register please login to see Hotel-Rooms 🏨️🛌️'
     );
-    this.router.navigate(['login-form']);
+    this.router.navigate(['/login-form']);
   }
 }

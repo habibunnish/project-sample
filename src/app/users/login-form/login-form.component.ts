@@ -22,6 +22,7 @@ export class LoginFormComponent implements OnInit {
   static loginForm: any;
  
  
+ 
 
   onsubmit() {
     console.log('on submit');
@@ -44,7 +45,6 @@ users:any;
     private loginService: LoginService,
     private fb: FormBuilder,
     private router: Router,
-    private http: HttpClient,
   ) {}
   addNewContact() {
     console.log('addnewconctact()')
@@ -53,6 +53,7 @@ users:any;
       email: this.email,
     };
     this.loginService.addNewContactUser(newFormData).subscribe((data) => {
+     
       console.log(data);
     });
   };

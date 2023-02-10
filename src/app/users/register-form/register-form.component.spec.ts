@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { RegisterFormComponent } from './register-form.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
@@ -8,11 +9,14 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 describe('RegisterFormComponent ', () => {
   let component: RegisterFormComponent ;
   let fixture: ComponentFixture<RegisterFormComponent >;
+  const routerSpy=jasmine.createSpyObj('Router',['navigate']);
+
+
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ RegisterFormComponent ],
-      providers:[HttpClient,HttpHandler,FormBuilder],
+      providers:[HttpClient,HttpHandler,FormBuilder,{provide:Router, useValue:routerSpy}],
       schemas:[NO_ERRORS_SCHEMA]
      
     })
@@ -25,7 +29,10 @@ describe('RegisterFormComponent ', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should navigate to the login page', () => {
+    component.onSubmit();
+    const navArgs=routerSpy.navigate.calls.first().args[0];
+    expect(navArgs).toContain('/login-form');
     expect(component).toBeTruthy();
   });
 });

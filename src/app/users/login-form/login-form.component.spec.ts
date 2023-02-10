@@ -1,3 +1,4 @@
+import { LoginService } from './../../services/guards/login.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { LoginFormComponent } from './login-form.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
@@ -9,6 +10,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 describe('LoginFormComponent ', () => {
   let fixture: ComponentFixture<LoginFormComponent >;
   let componentInstance:LoginFormComponent;
+  let POSTS:any;
+  let mockPostService:any;
+  let loginspy
+
 //   let p:HTMLElement;
 
 
@@ -18,12 +23,27 @@ describe('LoginFormComponent ', () => {
     await TestBed.configureTestingModule({
       imports:[ReactiveFormsModule,RouterTestingModule, FormsModule],
       declarations: [ LoginFormComponent ],
-      providers:[HttpClient,HttpHandler],
+      providers:[HttpClient,HttpHandler,{provide:LoginService }],
      
     })
     .compileComponents();
     fixture = TestBed.createComponent(LoginFormComponent);
     componentInstance=fixture.componentInstance;
+
+    POSTS=[
+      {
+        id:1,
+        body:'body 1',
+        tittle:'title 1',
+      },
+      {
+        id:2,
+        body:'body 2',
+        tittle:'title 2',
+      }
+    ];
+    mockPostService=jasmine.createSpyObj(['addNewContact','adminlogin'])
+    // componentInstance=new LoginFormComponent(mockPostService);
   });
   it('should  emit onsubmit when its clicked',()=>{
     const onsubmit=spyOn(componentInstance.childMessage,'emit');

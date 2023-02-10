@@ -22,7 +22,9 @@ describe('GetProductComponent ', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it('should call alert', () => {
+    spyOn(window,'alert');
+    expect(window.alert).toHaveBeenCalled();
+    // expect(component).toBeTruthy();
+   });
 });
