@@ -8,13 +8,14 @@ import { CartService } from './services/guards/cart.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
+ 
 
     constructor(
      private router: Router,
       private cartService: CartService
 
   ) {  }
-  showme: boolean = false;
+  // showme: boolean = false;
   totalitem: any;  
 
   ngOnInit() {

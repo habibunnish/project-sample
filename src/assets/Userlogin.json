@@ -796,6 +796,15 @@
       "image": "chennai3.jpg",
       "email": "habicute111@gmail.com",
       "location": "Chennai"
+    },
+    {
+      "id": 38,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "tamabaram road",
+      "price": "3600",
+      "image": "chennai2.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Chennai"
     }
   ],
   "cartstoreddatas": [
@@ -830,6 +839,15 @@
       "area": "kavalam",
       "price": "2800",
       "image": "chennai3.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 38,
+      "tittle": "Radha hometel sarovar hotel",
+      "area": "tamabaram road",
+      "price": "3600",
+      "image": "chennai2.jpg",
       "email": "",
       "location": "Chennai"
     }
