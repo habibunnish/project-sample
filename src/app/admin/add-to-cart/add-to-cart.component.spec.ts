@@ -48,11 +48,6 @@ describe('AddToCartComponent ', () => {
     })
     
   });
-  //getalldetailsoflocation()
-it('should call  getalldetailsoflocation button and return list of res',()=>{
-  // const response:data=[];
-
-})
 
   it('should create', () => {
     expect(componentInstance).toBeTruthy();

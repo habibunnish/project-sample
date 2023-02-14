@@ -10,7 +10,7 @@ describe('AddNewDataComponent ', () => {
   let component:AddNewDataComponent   ;
   let fixture: ComponentFixture<AddNewDataComponent>;
   // let routingSpy=jasmine.createSpyObj('Router',['navigate']);
-
+  let roomdetails = {};
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports:[RouterTestingModule],
@@ -28,6 +28,9 @@ describe('AddNewDataComponent ', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+  xit('modo ',()=>{
+    component.addProduct(roomdetails)
+  })
 
   it('should navigate to the  get-product page', () => {
     // component.checkpage();
