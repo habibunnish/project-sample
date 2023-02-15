@@ -1,9 +1,8 @@
-import { CartService } from './../../services/guards/cart.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AddToCartComponent } from './add-to-cart.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
-import { inject } from '@angular/core';
+
 
 
 describe('AddToCartComponent ', () => {
@@ -12,9 +11,10 @@ describe('AddToCartComponent ', () => {
   let  CartService: any;
 
   beforeEach(() => {
+    // let httpClientSpyObj=jasmine.createSpyObj('HttpClient',['get']);
     TestBed.configureTestingModule({
       declarations: [AddToCartComponent  ],
-      providers:[HttpClient,HttpHandler,CartService],
+      providers:[{provide:HttpClient},HttpHandler],
       imports:[RouterTestingModule]
      
     })

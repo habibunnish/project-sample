@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from './services/guards/cart.service';
@@ -8,7 +9,6 @@ import { CartService } from './services/guards/cart.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
- 
 
     constructor(
      private router: Router,
@@ -34,6 +34,9 @@ export class AppComponent implements OnInit {
     // alert(`🏨️ you need to login first if you are a existed user 
     // else please register to check room 🏨️`);
   }
+  HOWITWORK() {
+    this.router.navigate(['how-it-work']);
+    }
   hotel() {
     console.log('helppage');
     this.router.navigate(['booking-page']);

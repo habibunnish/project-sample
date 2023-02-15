@@ -22,6 +22,18 @@ let Component:AppComponent;
    });
   
 
+  //  it('testing localstorage  of onlogout buton',()=>{
+  //   fixture.detectChanges();
+  //   fixture.whenStable().then(()=>{
+  //     const onlogout=spyOn(Component,'onlogout').and.callThrough();
+  //     const buttonElement:HTMLButtonElement=fixture.debugElement.nativeElement.querySelector('#logout');
+  //     buttonElement.click();
+  //     localStorage.removeItem('userData');
+  //     expect(onlogout).toBeFalsy();
+  //   })
+    
+  //  });
+
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
      const app = fixture.componentInstance;
@@ -29,17 +41,7 @@ let Component:AppComponent;
     expect(app).toBeTruthy();
   });
 
-   xit('testing localstorage  of onlogout buton',()=>{
-    fixture.detectChanges();
-    fixture.whenStable().then(()=>{
-      const onlogout=spyOn(Component,'onlogout').and.callThrough();
-      const buttonElement:HTMLButtonElement=fixture.debugElement.nativeElement.querySelector('#logout');
-      buttonElement.click();
-      localStorage.removeItem('userData');
-      expect(onlogout).toBeFalsy();
-    })
-    
-   });
+  
   
   
 

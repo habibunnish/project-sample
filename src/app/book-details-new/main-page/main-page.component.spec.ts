@@ -31,8 +31,8 @@ describe('MainPageComponent ', () => {
     fixture.detectChanges();
     spyOn(component,'chennai');
     
-    let buttonElement=fixture.debugElement.query(By.css('#c')).nativeElement;
-    buttonElement.click();
+    let buttElement=fixture.debugElement.query(By.css('#C')).nativeElement;
+    buttElement.click();
 
     fixture.detectChanges();
      fixture.whenStable().then(()=>{

@@ -28,9 +28,9 @@ describe('AddNewDataComponent ', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  xit('modo ',()=>{
-    component.addProduct(roomdetails)
-  })
+  // xit('modo ',()=>{
+  //   component.addProduct(roomdetails)
+  // })
 
   it('should navigate to the  get-product page', () => {
     // component.checkpage();

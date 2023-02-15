@@ -12,7 +12,7 @@ describe('LoginFormComponent ', () => {
   let componentInstance:LoginFormComponent;
   let POSTS:any;
   let mockPostService:any;
-  let loginspy
+  // let loginspy
 
 //   let p:HTMLElement;
 

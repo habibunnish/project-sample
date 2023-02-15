@@ -8,13 +8,14 @@ import { map } from 'rxjs';
 export class BookingService {
   constructor(private httpClient: HttpClient) {}
 
+  URL:String='http://localhost:3000/';
   //getProductchennai
   getProducts() {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.get('http://localhost:3000/productdatachennai', {
       headers: httpHeaders,
-    })
+    });
   }
 
   //post
