@@ -9,19 +9,19 @@ import { AppComponent } from './app.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './services/guards/auth.guard';
 import { AuthService } from './services/guards/auth.service';
-import { HomePageComponent } from './home-page/home-page.component';
-import { HowItWorkComponent } from './how-it-work/how-it-work.component';
+
 import { BookDetailsNewModule } from './book-details-new/book-details-new.module';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
 
-
 @NgModule({
-  declarations: [AppComponent,HomePageComponent,HowItWorkComponent, PageNotFoundComponent],
+  declarations: [
+    AppComponent,
+    PageNotFoundComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -31,10 +31,10 @@ import { AdminModule } from './admin/admin.module';
     NgbModule,
     AdminModule,
     BookDetailsNewModule,
-    UsersModule
+    UsersModule,
   ],
 
-  providers: [AuthGuard,AuthService],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
