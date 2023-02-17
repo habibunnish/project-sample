@@ -8,6 +8,9 @@ import {Router } from '@angular/router';
 })
 export class HowItWorkComponent {
   constructor(private router: Router) {}
+
+  //@ts-check
+  
   book() {
     this.router.navigate(['login-form']);
   }

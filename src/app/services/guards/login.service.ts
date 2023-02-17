@@ -55,13 +55,13 @@ export class LoginService {
       { headers: httpHeaders }
     );
   }
-  adminLoginDetailsPost(registerResource: any) {
-    const httpHeaders = new HttpHeaders();
-    httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.post(
-      'http://localhost:3000/adminLogin/',
-      registerResource,
-      { headers: httpHeaders }
-    );
-  }
+  // adminLoginDetailsPost(registerResource: any) {
+  //   const httpHeaders = new HttpHeaders();
+  //   httpHeaders.append('content-type', 'application/json');
+  //   return this.httpClient.post(
+  //     'http://localhost:3000/adminLogin/',
+  //     registerResource,
+  //     { headers: httpHeaders }
+  //   );
+  // }
 }

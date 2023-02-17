@@ -25,7 +25,11 @@ export class Location1Component implements OnInit  {
 
   ngOnInit() {
     this.state = this.activatedRoute.snapshot.params['state'];
+    this.noDuplication();
+   
+  }
 
+  noDuplication(){
     this.admin.getProduct().subscribe((res) => {
       this.bookingList = res;
     for(var i =0;i<this.bookingList.length;i++){
@@ -33,8 +37,8 @@ export class Location1Component implements OnInit  {
         this.duplicateLocationList.push(this.bookingList[i])
       }
     }
-     console.log(res);
-      console.log(this.duplicateLocationList);
+    //  console.log(res);
+     // console.log(this.duplicateLocationList);
       this.bookingList=this.duplicateLocationList;
     });
   }

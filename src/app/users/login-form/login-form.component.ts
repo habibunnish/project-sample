@@ -21,8 +21,8 @@ export class LoginFormComponent implements OnInit {
   passwords: any;
   static loginForm: any;
  
- 
- 
+ //@ts-check
+ //**@param {any[]} */
 
   onsubmit() {
     console.log('on submit');
@@ -47,14 +47,13 @@ users:any;
     private router: Router,
   ) {}
   addNewContact() {
-    console.log('addnewconctact()')
     const newFormData = {
       password: this.password,
       email: this.email,
     };
     this.loginService.addNewContactUser(newFormData).subscribe((data) => {
-     
       console.log(data);
+      
     });
   };
 
@@ -62,23 +61,31 @@ users:any;
     this.loginService.userRegisterDetails().subscribe((res:any)=>{
       console.log(res);
       this.users=res;
-      console.log('hjk')
+    
       for (let user of this.users) {
         console.log('users')
         if (user.email == this.loginForm.value.email) {
           this.saveData();
-          console.log('savedata')
-          // this.addNewContact();
-          // console.log('addnewcontact')
+          // console.log('savedata')
           this.router.navigate(['main-page']);
         }
       }  
       
     });
-    // this.addNewContact();
       this.adminlogin();
      
   };
+  adminlogin(){
+    this.loginService.adminLoginDetailsGet().subscribe((data)=>{
+      console.log(data);
+      this.admin=data;
+      for(let admindetails of this.admin){
+        if(admindetails.email==this.email && admindetails.password==this.password){
+         this.router.navigate(['get-product']);
+        }
+      }
+    });
+   }
 
   store(){
     this.router.navigate(['register-form'])
@@ -95,17 +102,7 @@ users:any;
    
   }
 
-  adminlogin(){
-    this.loginService.adminLoginDetailsGet().subscribe((data)=>{
-      console.log(data);
-      this.admin=data;
-      for(let admindetails of this.admin){
-        if(admindetails.email==this.email && admindetails.password==this.password){
-         this.router.navigate(['get-product']);
-        }
-      }
-    });
-   }
+ 
 
   //  asavedata(){
   //   console.log('admin-localstorage');

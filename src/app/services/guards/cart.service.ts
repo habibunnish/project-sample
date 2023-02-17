@@ -6,6 +6,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root',
 })
 export class CartService {
+  addingindatabse(item: { id: number; name: string; price: number; }) {
+    throw new Error('Method not implemented.');
+  }
   public cartItemList: any = [];
   public productList = new BehaviorSubject<any>([]);
   counts:any
@@ -22,21 +25,21 @@ export class CartService {
     console.log(this.cartItemList);
   }
 
-  removecartItem(item: any) {
-    this.cartItemList.map((a: any, index: any) => {
-      if (item.id === a.id) {
-        this.cartItemList.splice(index, 1);
-      }
-    });
-    this.productList.next(this.cartItemList);
-  }
+  // removecartItem(item: any) {
+  //   this.cartItemList.map((a: any, index: any) => {
+  //     if (item.id === a.id) {
+  //       this.cartItemList.splice(index, 1);
+  //     }
+  //   });
+  //   this.productList.next(this.cartItemList);
+  // }
 
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //new bangaluru
-  getProductbangluru() {
-    return this.productList.asObservable();
-  }
+  // getProductbangluru() {
+  //   return this.productList.asObservable();
+  // }
 
   addtoCartbangaluru(item: any) {
     this.cartItemList.push(item);
@@ -59,9 +62,9 @@ export class CartService {
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  getProductjammu() {
-    return this.productList.asObservable();
-  }
+  // getProductjammu() {
+  //   return this.productList.asObservable();
+  // }
 
   addtoCartsjammu(item: any) {
     this.cartItemList.push(item);
@@ -70,9 +73,9 @@ export class CartService {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //userBookinginstoring
-  getProductbangalurubookedpage() {
-    return this.productList.asObservable();
-  }
+  // getProductbangalurubookedpage() {
+  //   return this.productList.asObservable();
+  // }
 
   addtoCartbangalurubookedpage(item: any) {
     this.cartItemList.push(item);

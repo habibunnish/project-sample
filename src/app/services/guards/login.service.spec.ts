@@ -123,22 +123,22 @@ it('#post #addProductsDetailsjammu() ',(done:DoneFn)=>{
     expect(httpClientSpy.post).toHaveBeenCalled();
 });
 
-it('#post #addProductsDetailsjammu() ',(done:DoneFn)=>{
-    httpClientSpy.post;
-    loginService.adminLoginDetailsPost(ADMINDETAILS).subscribe({
-        next:(posts)=>{
-            expect(posts).toEqual(ADMINDETAILS);
-            done();
-        },
-        error:()=>{
-            done.fail
-        },
-    });
-    const req=httpsTestingController.expectOne('http://localhost:3000/');
-        expect(req.request.method).toEqual('POST');
-        expect(req.request.body).toEqual(ADMINDETAILS);
-    expect(httpClientSpy.post).toHaveBeenCalled();
-});
+// it('#post #addProductsDetailsjammu() ',(done:DoneFn)=>{
+//     httpClientSpy.post;
+//     loginService.adminLoginDetailsPost(ADMINDETAILS).subscribe({
+//         next:(posts)=>{
+//             expect(posts).toEqual(ADMINDETAILS);
+//             done();
+//         },
+//         error:()=>{
+//             done.fail
+//         },
+//     });
+//     const req=httpsTestingController.expectOne('http://localhost:3000/');
+//         expect(req.request.method).toEqual('POST');
+//         expect(req.request.body).toEqual(ADMINDETAILS);
+//     expect(httpClientSpy.post).toHaveBeenCalled();
+// });
 
 
 

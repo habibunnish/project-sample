@@ -25,15 +25,6 @@
   ],
   "product": [
     {
-      "id": 28,
-      "tittle": "new",
-      "area": "siruseri",
-      "price": "2800",
-      "image": "kash1.jpg",
-      "email": "",
-      "location": "chennai"
-    },
-    {
       "id": 29,
       "tittle": "Hotel Prism",
       "area": "chennai",
@@ -61,15 +52,6 @@
       "location": "chennai"
     },
     {
-      "id": 32,
-      "tittle": "testing",
-      "area": "royapuram",
-      "price": "4800",
-      "image": "goa9.jpg",
-      "email": "",
-      "location": "goa"
-    },
-    {
       "id": 33,
       "tittle": "Hotel Prisms wondela",
       "area": "kavalam",
@@ -77,15 +59,6 @@
       "image": "bang7.jpg",
       "email": "",
       "location": "bangalore"
-    },
-    {
-      "id": 34,
-      "tittle": "new",
-      "area": "kavalam",
-      "price": "2800",
-      "image": "chennai3.jpg",
-      "email": "",
-      "location": "Chennai"
     },
     {
       "id": 35,
@@ -120,6 +93,15 @@
       "area": "tamabaram road",
       "price": "3600",
       "image": "chennai2.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 39,
+      "tittle": "zidan saorvar hotel",
+      "area": "central ",
+      "price": "3000",
+      "image": "chennai6.jpg",
       "email": "",
       "location": "Chennai"
     }
@@ -303,6 +285,15 @@
       "area": "tamabaram",
       "price": "3900",
       "image": "chennai2.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 39,
+      "tittle": "zidan saorvar hotel",
+      "area": "central ",
+      "price": "3000",
+      "image": "chennai6.jpg",
       "email": "",
       "location": "Chennai"
     }
@@ -805,51 +796,16 @@
       "image": "chennai2.jpg",
       "email": "habicute111@gmail.com",
       "location": "Chennai"
+    },
+    {
+      "id": 39,
+      "tittle": "zidan saorvar hotel",
+      "area": "central ",
+      "price": "3000",
+      "image": "chennai6.jpg",
+      "email": "habicute111@gmail.com",
+      "location": "Chennai"
     }
   ],
-  "cartstoreddatas": [
-    {
-      "id": 27,
-      "tittle": "SAROVAR MAGIC HOTEL",
-      "location": "goa",
-      "price": "4800",
-      "image": "goa6.jpg",
-      "email": ""
-    },
-    {
-      "id": 17,
-      "tittle": "HOTEL MANOHAR INN PALACE",
-      "location": "Chennai",
-      "price": "3001",
-      "image": "chennai2.jpg",
-      "email": ""
-    },
-    {
-      "id": 36,
-      "tittle": "radha krishna hotel",
-      "area": "shimla nagar",
-      "price": "3900",
-      "image": "kash4.jpg",
-      "email": "",
-      "location": "Jammu"
-    },
-    {
-      "id": 34,
-      "tittle": "new",
-      "area": "kavalam",
-      "price": "2800",
-      "image": "chennai3.jpg",
-      "email": "",
-      "location": "Chennai"
-    },
-    {
-      "id": 38,
-      "tittle": "Radha hometel sarovar hotel",
-      "area": "tamabaram road",
-      "price": "3600",
-      "image": "chennai2.jpg",
-      "email": "",
-      "location": "Chennai"
-    }
-  ]
+  "cartstoreddatas": []
 }

@@ -10,13 +10,13 @@ export class BookingService {
 
   URL:String='http://localhost:3000/';
   //getProductchennai
-  getProducts() {
-    const httpHeaders = new HttpHeaders();
-    httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.get('http://localhost:3000/productdatachennai', {
-      headers: httpHeaders,
-    });
-  }
+  // getProducts() {
+  //   const httpHeaders = new HttpHeaders();
+  //   httpHeaders.append('content-type', 'application/json');
+  //   return this.httpClient.get('http://localhost:3000/productdatachennai', {
+  //     headers: httpHeaders,
+  //   });
+  // }
 
   //post
   addProductsDetails(createResource: any) {
@@ -29,19 +29,19 @@ export class BookingService {
     );
   }
   //put
-  putproductchennai(contactId: string, UpdatedBody: any) {
-    return this.httpClient.put(
-      'http:/localhost:3000/productdatachennai' + contactId,
-      UpdatedBody
-    );
-  }
+  // putproductchennai(contactId: string, UpdatedBody: any) {
+  //   return this.httpClient.put(
+  //     'http:/localhost:3000/productdatachennai' + contactId,
+  //     UpdatedBody
+  //   );
+  // }
   //delete
   deleteproductchennai(id: number) {
     return this.httpClient
       .delete('http://localhost:3000/productdatachennai/' + id)
       .pipe(
-        map((res: any) => {
-          return res;
+        map((response: any) => {
+          return response;
         })
       );
   }
@@ -49,13 +49,13 @@ export class BookingService {
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //getProduct
-  getProductbangluru() {
-    const httpHeaders = new HttpHeaders();
-    httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.get('http://localhost:3000/productdatabangaluru', {
-      headers: httpHeaders,
-    });
-  }
+  // getProductbangluru() {
+  //   const httpHeaders = new HttpHeaders();
+  //   httpHeaders.append('content-type', 'application/json');
+  //   return this.httpClient.get('http://localhost:3000/productdatabangaluru', {
+  //     headers: httpHeaders,
+  //   });
+  // }
 
   //post
   addProductsDetailsbangluru(createResource: any) {
@@ -71,13 +71,13 @@ export class BookingService {
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //royapuram
-  getProductroyapuram() {
-    const httpHeaders = new HttpHeaders();
-    httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.get('http://localhost:3000/royapuram', {
-      headers: httpHeaders,
-    });
-  }
+  // getProductroyapuram() {
+  //   const httpHeaders = new HttpHeaders();
+  //   httpHeaders.append('content-type', 'application/json');
+  //   return this.httpClient.get('http://localhost:3000/royapuram', {
+  //     headers: httpHeaders,
+  //   });
+  // }
 
   //post
   addProductsDetailsroyapuram(createResource: any) {
@@ -93,13 +93,13 @@ export class BookingService {
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //jammu
-  getProductjammu() {
-    const httpHeaders = new HttpHeaders();
-    httpHeaders.append('content-type', 'application/json');
-    return this.httpClient.get('http://localhost:3000/jammu', {
-      headers: httpHeaders,
-    });
-  }
+  // getProductjammu() {
+  //   const httpHeaders = new HttpHeaders();
+  //   httpHeaders.append('content-type', 'application/json');
+  //   return this.httpClient.get('http://localhost:3000/jammu', {
+  //     headers: httpHeaders,
+  //   });
+  // }
 
   //post
   addProductsDetailsjammu(createResource: any) {
