@@ -37,8 +37,8 @@ export class Location1Component implements OnInit  {
         this.duplicateLocationList.push(this.bookingList[i])
       }
     }
-    //  console.log(res);
-     // console.log(this.duplicateLocationList);
+     console.log(res);
+     console.log(this.duplicateLocationList);
       this.bookingList=this.duplicateLocationList;
     });
   }

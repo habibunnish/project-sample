@@ -22,7 +22,6 @@ export class LoginFormComponent implements OnInit {
   static loginForm: any;
  
  //@ts-check
- //**@param {any[]} */
 
   onsubmit() {
     console.log('on submit');
@@ -40,7 +39,7 @@ users:any;
   }
   password: any;
   email: any;
-  //post
+ 
   constructor(
     private loginService: LoginService,
     private fb: FormBuilder,
@@ -66,7 +65,7 @@ users:any;
         console.log('users')
         if (user.email == this.loginForm.value.email) {
           this.saveData();
-          // console.log('savedata')
+          console.log('savedata')
           this.router.navigate(['main-page']);
         }
       }  
@@ -91,7 +90,7 @@ users:any;
     this.router.navigate(['register-form'])
   }
 
-  //storing oon local storage login data
+
   saveData() {
     console.log('localstorage');
     const userData = {
@@ -101,17 +100,6 @@ users:any;
     localStorage.setItem('userData', JSON.stringify(userData));
    
   }
-
- 
-
-  //  asavedata(){
-  //   console.log('admin-localstorage');
-  //   const adminData=[
-  //   this.password=this.password,
-  //   this.email=this.email
-  //   ]
-  //   localStorage.setItem('adminData',JSON.stringify(adminData))
-  //  }
 }
 
 

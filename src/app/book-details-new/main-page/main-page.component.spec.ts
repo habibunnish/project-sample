@@ -27,19 +27,19 @@ describe('MainPageComponent ', () => {
   });
  
 
-  it('should click button with async',()=>{
-    fixture.detectChanges();
-    spyOn(component,'chennai');
+//  it('should click button with async',()=>{
+//     fixture.detectChanges();
+//     spyOn(component,'chennai');
     
-    let buttElement=fixture.debugElement.query(By.css('#C')).nativeElement;
-    buttElement.click();
+//     let buttElement=fixture.debugElement.query(By.css('#C')).nativeElement;
+//     buttElement.click();
 
-    fixture.detectChanges();
-     fixture.whenStable().then(()=>{
-    expect(component.chennai).toHaveBeenCalled();
-   })
+//     fixture.detectChanges();
+//      fixture.whenStable().then(()=>{
+//     expect(component.chennai).toHaveBeenCalled();
+//    })
    
-  });
+//   });
 
   it('should create', () => {
     expect(component).toBeTruthy();

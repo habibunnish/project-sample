@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
       private cartService: CartService
 
   ) {  }
-  // showme: boolean = false;
+ 
   totalitem: any;  
 
   ngOnInit() {
@@ -26,17 +26,7 @@ export class AppComponent implements OnInit {
     this.cartService.count()
   }
   
-  cart() {
-    this.router.navigate(['add-to-cart']);
-  }
-
-   Homepage() {
-    // alert(`🏨️ you need to login first if you are a existed user 
-    // else please register to check room 🏨️`);
-  }
-  HOWITWORK() {
-    this.router.navigate(['how-it-work']);
-    }
+ 
   hotel() {
     console.log('helppage');
     this.router.navigate(['booking-page']);
@@ -58,5 +48,6 @@ export class AppComponent implements OnInit {
   onadminlogout(){
     localStorage.removeItem('adminData');
   }
+ 
   
 }

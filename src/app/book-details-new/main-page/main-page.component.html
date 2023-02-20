@@ -1,7 +1,7 @@
 <div class="walpaper">
   <div class="flex-container">
     <div class="first">
-      <ngb-carousel>
+      <ngb-carousel >
         <ng-template ngbSlide>
           <img
             class="room"
@@ -10,11 +10,6 @@
           />
           <div class="carousel-caption">
             <p>This is chennai Taj Hotel room</p>
-          </div>
-          <div>
-            <button id="C"  (click)="chennai()" class="btn btn-primary">
-              Check This
-            </button>
           </div>
         </ng-template>
         <ng-template ngbSlide>
@@ -26,11 +21,6 @@
           <div class="carousel-caption">
             <p>This is chennai Taj Hotel room</p>
           </div>
-          <div>
-            <button  id="C" (click)="chennai()" class="btn btn-primary">
-              check this
-            </button>
-          </div>
         </ng-template>
         <ng-template ngbSlide>
           <img
@@ -40,11 +30,6 @@
           />
           <div class="carousel-caption">
             <p>This is chennai Taj Hotel room</p>
-          </div>
-          <div>
-            <button  id="C" (click)="chennai()" class="btn btn-primary">
-              check this
-            </button>
           </div>
         </ng-template>
         <ng-template ngbSlide>
@@ -56,13 +41,14 @@
           <div class="carousel-caption">
             <p>This is chennai Taj Hotel room</p>
           </div>
-          <div>
-            <button  id="C" (click)="chennai()" class="btn btn-primary">
-              check this
-            </button>
-          </div>
         </ng-template>
+        
       </ngb-carousel>
+      <div>
+        <button  id="C" (click)="location('Chennai')" class="btn btn-primary">
+          check this
+        </button>
+      </div>
     </div>
     <div class="second">
       <ngb-carousel>
@@ -75,9 +61,6 @@
           <div class="carousel-caption">
             <p>This is Goa Taj Hotel room</p>
           </div>
-          <div>
-            <button (click)="goa()" class="btn btn-primary">Check this</button>
-          </div>
         </ng-template>
         <ng-template ngbSlide>
           <img
@@ -87,9 +70,6 @@
           />
           <div class="carousel-caption">
             <p>This is Goa Taj Hotel room</p>
-          </div>
-          <div>
-            <button (click)="goa()" class="btn btn-primary">Check this</button>
           </div>
         </ng-template>
         <ng-template ngbSlide>
@@ -101,9 +81,6 @@
           <div class="carousel-caption">
             <p>This is Goa Taj Hotel room</p>
           </div>
-          <div>
-            <button (click)="goa()" class="btn btn-primary">Check this</button>
-          </div>
         </ng-template>
         <ng-template ngbSlide>
           <img
@@ -114,12 +91,13 @@
           <div class="carousel-caption">
             <p>This is Goa Taj Hotel room</p>
           </div>
-          <div>
-            <button (click)="goa()" class="btn btn-primary">Check this</button>
-          </div>
         </ng-template>
       </ngb-carousel>
+      <div>
+        <button (click)="location('goa')" class="btn btn-primary">Check this</button>
+      </div>
     </div>
+
     <div class="third">
       <ngb-carousel>
         <ng-template ngbSlide>
@@ -131,11 +109,6 @@
           <div class="carousel-caption">
             <p>This is Banguluru Hotel room</p>
           </div>
-          <div>
-            <button (click)="banguluru()" class="btn btn-primary">
-              Check this
-            </button>
-          </div>
         </ng-template>
         <ng-template ngbSlide>
           <img
@@ -145,11 +118,6 @@
           />
           <div class="carousel-caption">
             <p>This is Banguluru Hotel room</p>
-          </div>
-          <div>
-            <button (click)="banguluru()" class="btn btn-primary">
-              Check this
-            </button>
           </div>
         </ng-template>
         <ng-template ngbSlide>
@@ -161,11 +129,6 @@
           <div class="carousel-caption">
             <p>This is Banguluru Hotel elegant room</p>
           </div>
-          <div>
-            <button (click)="banguluru()" class="btn btn-primary">
-              Check this
-            </button>
-          </div>
         </ng-template>
         <ng-template ngbSlide>
           <img
@@ -176,13 +139,13 @@
           <div class="carousel-caption">
             <p>This is Banguluru Hotel elegant room</p>
           </div>
-          <div>
-            <button (click)="banguluru()" class="btn btn-primary">
-              Check this
-            </button>
-          </div>
         </ng-template>
       </ngb-carousel>
+      <div>
+        <button (click)="location('Banguluru')" class="btn btn-primary">
+          Check this
+        </button>
+      </div>
     </div>
 
     <div class="four">
@@ -196,11 +159,6 @@
           <div class="carousel-caption">
             <p>This is Jammu and Kashmir Hotel room</p>
           </div>
-          <div>
-            <button (click)="jammu()" class="btn btn-primary">
-              Check this
-            </button>
-          </div>
         </ng-template>
         <ng-template ngbSlide>
           <img
@@ -210,11 +168,6 @@
           />
           <div class="carousel-caption">
             <p>This is Jammu and Kashmir Hotel room</p>
-          </div>
-          <div>
-            <button (click)="jammu()" class="btn btn-primary">
-              Check this
-            </button>
           </div>
         </ng-template>
         <ng-template ngbSlide>
@@ -226,11 +179,6 @@
           <div class="carousel-caption">
             <p>This is Jammu and Kashmir Hotel room</p>
           </div>
-          <div>
-            <button (click)="jammu()" class="btn btn-primary">
-              Check this
-            </button>
-          </div>
         </ng-template>
         <ng-template ngbSlide>
           <img
@@ -241,13 +189,34 @@
           <div class="carousel-caption">
             <p>This is Jammu and Kashmir Hotel room</p>
           </div>
-          <div>
-            <button (click)="jammu()" class="btn btn-primary">
-              Check this
-            </button>
-          </div>
         </ng-template>
       </ngb-carousel>
+      <div>
+        <button (click)="location('Jammu')" class="btn btn-primary">
+          Check this
+        </button>
+      </div>
     </div>
   </div>
+</div>
+
+<div class="walpaper">
+<div class="flex-container">
+  <div class="first">
+    <ngb-carousel >
+      <ng-template ngbSlide  *ngFor="let item of locationList">
+        <img src="assets/IMAGES/{{item.image}}"/>
+        <div class="carousel-caption">
+          <p>{{item.para}}</p>
+          <h5>{{item.title}}</h5>
+        </div>
+       </ng-template>
+    </ngb-carousel>
+    <div>
+      <button class="btn btn-primary" (click)="location('Chennai')" >clickMe</button>
+    </div>
+   
+  </div>
+  
+</div>
 </div>

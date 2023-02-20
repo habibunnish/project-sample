@@ -10,8 +10,8 @@ import { UserBookedHistoryService } from 'src/app/services/guards/user-booked-hi
   styleUrls: ['./add-to-cart.component.scss'],
 })
 export class AddToCartComponent implements OnInit {
-  // length:any;
-  public product: any;
+ 
+  product: any;
   items:any=[];
   ProductTitle: any;
   Email: any;
@@ -46,6 +46,8 @@ export class AddToCartComponent implements OnInit {
   }
   book(item: any) {
     this.addProduct(item);
+    alert('product has been booked successfully')
+    this.router.navigate(['home-page']);
   }
   gotobooking(){
     this.router.navigate(['home-page']);

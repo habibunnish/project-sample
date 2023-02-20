@@ -21,9 +21,9 @@ describe('Location1Component ', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-        imports:[RouterTestingModule,HttpClientTestingModule],
+      imports:[RouterTestingModule,HttpClientTestingModule],
       declarations: [Location1Component],
-      providers:[HttpClient,HttpHandler,RouterTestingModule,{provide:AdminService,useValue:jasmine.createSpyObj('AdminService',['getProduct'])},{provide:ActivatedRoute, useValue:{snapshot:{params:{state:'ca'}}}}],
+      providers:[HttpClient,HttpHandler,RouterTestingModule,{provide:AdminService,useValue:jasmine.createSpyObj('AdminService',['getProduct'])},{provide:ActivatedRoute, useValue:{snapshot:{params:{state:'Chennai'}}}}],
       schemas:[NO_ERRORS_SCHEMA]
      
     })

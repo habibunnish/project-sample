@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuard } from './services/guards/auth.guard';
 import { AuthService } from './services/guards/auth.service';
 
@@ -20,7 +19,7 @@ import { AdminModule } from './admin/admin.module';
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
+    
   ],
   imports: [
     BrowserModule,

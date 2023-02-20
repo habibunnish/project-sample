@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 
@@ -15,4 +15,13 @@ export class AddNewDataService {
       })
     );
   }
+
+  mainPage(){
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'application/json');
+    return this.httpClient.get(`http://localhost:3000/mainpageChennai`,{
+      headers:httpHeaders
+    });
+  }
 }
+
