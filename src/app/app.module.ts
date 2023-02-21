@@ -10,17 +10,17 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AuthGuard } from './services/guards/auth.guard';
-import { AuthService } from './services/guards/auth.service';
 
 import { BookDetailsNewModule } from './book-details-new/book-details-new.module';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    
-  ],
+  declarations: [AppComponent, NavbarComponent, AdminNavbarComponent],
+  providers: [AuthGuard],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,8 +32,5 @@ import { AdminModule } from './admin/admin.module';
     BookDetailsNewModule,
     UsersModule,
   ],
-
-  providers: [AuthGuard, AuthService],
-  bootstrap: [AppComponent],
 })
 export class AppModule {}

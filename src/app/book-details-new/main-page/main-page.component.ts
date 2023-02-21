@@ -9,9 +9,12 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent implements OnInit {
-locationList: any=[];
-  
+List: any=[];
+List2: any=[];
+List3:any=[];
+List4:any=[];
 
+title='CHECK  THE BEST HOTEL IN INDIA'
 
   constructor(config: NgbCarouselConfig, private router: Router,private addnewService:AddNewDataService) {
     config.interval = 4000;
@@ -19,34 +22,53 @@ locationList: any=[];
     config.pauseOnHover = false;
   }
   ngOnInit(){
-    this.method()
+    this.method1();
+    this.next();
+    this.display();
+    this.show();
   }
-  // chennai() {
-  //   this.router.navigate(['location1/'+'Chennai'])
-  // }
-  // goa() {
-  //   this.router.navigate(['location1/'+'goa']);
-  // }
-  // banguluru() {
-  //   this.router.navigate(['location1/'+'Banguluru']);
-  // }
-  // jammu() {
-  //   this.router.navigate(['location1/'+'Jammu']);
-  //}
+ 
   
   location(data :any){
     console.log(data);
     this.router.navigate([`location1/${data}`])
   }
 
-  method(){
+  method1(){
      console.log('method to display');
     this.addnewService.mainPage().subscribe(data=>{
-      this.locationList=data;
-      console.log(this.locationList);
+      this.List=data;
+      console.log(this.List);
       console.log(data);
      })
-     
-  }
+   }
+
+   next(){
+    console.log('method to display');
+    this.addnewService.mainpageGoa().subscribe(data=>{
+      this.List2=data;
+      console.log(this.List2);
+      console.log(data);
+     })
+   }
+   
+   display(){
+    console.log('method to display');
+    this.addnewService.bangaluru().subscribe(data=>{
+      this.List3=data;
+      console.log(this.List3);
+      console.log(data);
+     })
+   }
+
+   show(){
+    console.log('method to display');
+    this.addnewService.jammu().subscribe(data=>{
+      this.List4=data;
+      console.log(this.List4);
+      console.log(data);
+     })
+   }
+
   
  }

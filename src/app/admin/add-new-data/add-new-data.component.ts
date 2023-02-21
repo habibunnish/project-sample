@@ -65,7 +65,6 @@ change=new EventEmitter()
     });
   }
 
-  //ADD BUTTON
   adding(roomdetails: any) {
     roomdetails.image = this.file.name;
     this.addnewproduct(roomdetails);
@@ -73,7 +72,7 @@ change=new EventEmitter()
    
     }
 
-  //post
+  /*@post*/
   addnewproduct(roomdetails: any) {
     console.log(roomdetails);
     console.log('addnewproduct()');
@@ -114,7 +113,7 @@ change=new EventEmitter()
   this.changedone($event.target.value)
  }
 
-  //post for showing in page
+  /*@post :for showing in page*/
   addProduct(roomdetails: any) {
     console.log('addproduct method calling');
     roomdetails.location=this.location;

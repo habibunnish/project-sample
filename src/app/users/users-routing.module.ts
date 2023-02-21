@@ -1,3 +1,4 @@
+import { AuthGuard } from './../services/guards/auth.guard';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -6,14 +7,23 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { HowItWorkComponent } from './how-it-work/how-it-work.component';
 
 const routes: Routes = [
-  {path:'login-form',component:LoginFormComponent},
-  {path:'register-form',component:RegisterFormComponent},
-  {path:'home-page',component:HomePageComponent},
-  {path:'how-it-work',component:HowItWorkComponent}
+  {
+    path: 'login-form',
+    component: LoginFormComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'register-form',
+    component: RegisterFormComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'home-page', component: HomePageComponent },
+  { path: 'how-it-work', component: HowItWorkComponent },
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class UsersRoutingModule { }
+export class UsersRoutingModule {}

@@ -25,6 +25,16 @@
       "zipcode": "600010",
       "email": "habicute111@gmai.com",
       "id": 10
+    },
+    {
+      "firstname": "Akash",
+      "lastname": "singh",
+      "street": "cross road street",
+      "city": "chennai",
+      "state": "Tamilnadu",
+      "zipcode": "600016",
+      "email": "akashsingh1306@gmail.com",
+      "id": 11
     }
   ],
   "adminLogin": [
@@ -1087,128 +1097,146 @@
       "image": "goa6.jpg",
       "email": "",
       "location": "goa"
+    },
+    {
+      "id": 15,
+      "tittle": "HOTEL PRUPEL WORLD",
+      "area": "WEST ANDHERI",
+      "price": "2964",
+      "image": "kash3.jpg",
+      "email": "",
+      "location": "Jammu"
+    },
+    {
+      "id": 11,
+      "tittle": "HotelGOLD",
+      "area": "VIJAY NAGAR",
+      "price": "3900",
+      "image": "bang2.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 10,
+      "tittle": "Hotel TRAVERSAL",
+      "area": "BAMALRI",
+      "price": "2900",
+      "image": "bang8.jpg",
+      "email": "",
+      "location": "Banguluru"
+    },
+    {
+      "id": 3,
+      "tittle": "HOTEL GRAY INTERNATIONAL",
+      "area": "ANNA SALAI",
+      "price": "2900",
+      "image": "bang8.jpg",
+      "email": "",
+      "location": "Chennai"
     }
   ],
-  "mainpageChennai":[
+  "mainpageChennai": [
     {
-      "id":1,
-      "title":"Chennai",
-      "image":"bang3.jpg",
-      "para":"This is chennai Taj Hotel room"
+      "id": 1,
+      "title": "Chennai",
+      "image": "bang3.jpg",
+      "para": "This is chennai Taj Hotel room"
     },
     {
-      "id":2,
-      "title":"Chennai",
-      "image":"bang2.jpg",
-      "para":"This is chennai Taj Hotel room"
+      "id": 2,
+      "title": "Chennai",
+      "image": "bang2.jpg",
+      "para": "This is chennai Taj Hotel room"
     },
     {
-      "id":3,
-      "title":"Chennai",
-      "image":"goa2.jpg",
-      "para":"This is chennai Taj Hotel room"
+      "id": 3,
+      "title": "Chennai",
+      "image": "goa2.jpg",
+      "para": "This is chennai Taj Hotel room"
     },
     {
-      "id":4,
-      "title":"Chennai",
-      "image":"jammu2.jpg",
-      "para":"This is chennai Taj Hotel room"
+      "id": 4,
+      "title": "Chennai",
+      "image": "jammu2.jpg",
+      "para": "This is chennai Taj Hotel room"
     }
   ],
-  "mainpagegoa":[
+  "mainpagegoa": [
     {
-      
-        "id":1,
-        "title":"goa",
-        "image":"goa2.jpg",
-        "para":"This is Goa  Hotel Room"
-      },
-      {
-
-        "id":2,
-        "title":"goa",
-        "image":"jammu2.jpg",
-        "para":"This is Goa  Hotel Room"
-      },
-      {
-
-        "id":3,
-        "title":"goa",
-        "image":"bang3.jpg",
-        "para":"This is Goa  Hotel Room"
-      },
-      {
-
-        "id":4,
-        "title":"goa",
-        "image":"bang5.jpg",
-        "para":"This is Goa  Hotel Room"
-      }
-    ],
-    "mainpagebangluru":[
-      {
-
-        "id":1,
-        "title":"Banguluru",
-        "image":"goa7.jpg",
-        "para":"This is Bangaluru  Hotel Room"
-      },
-      {
-
-        "id":2,
-        "title":"Banguluru",
-        "image":"goa2.jpg",
-        "para":"This is Bangaluru  Hotel Room"
-      },
-      {
-
-        "id":3,
-        "title":"Banguluru",
-        "image":"bang8.jpg",
-        "para":"This is Bangaluru   Hotel Room"
-      },
-      {
-
-        "id":4,
-        "title":"Banguluru",
-        "image":"bang7.jpg",
-        "para":"This is Bangaluru   Hotel Room"
-      }
-    ],
-    "mainpageJammu":[
-      {
-
-        "id":1,
-        "title":"jammu",
-        "image":"kash1.jpg",
-        "para":"This is JAMMU  Hotel Room"
-      },
-      {
-
-        "id":2,
-        "title":"jammu",
-        "image":"kash4.jpg",
-        "para":"This is  JAMMU  Hotel Room"
-      },
-      {
-
-        "id":3,
-        "title":"jammu",
-        "image":"kash5.jpg",
-        "para":"This is  JAMMU  Hotel Room"
-      },
-      {
-
-        "id":4,
-        "title":"jammu",
-        "image":"kash3.jpg",
-        "para":"This is  JAMMU Hotel Room"
-      }
-    ]
-
-
-    
-  
-
-  
+      "id": 1,
+      "title": "goa",
+      "image": "goa2.jpg",
+      "para": "This is Goa  Hotel Room"
+    },
+    {
+      "id": 2,
+      "title": "goa",
+      "image": "jammu2.jpg",
+      "para": "This is Goa  Hotel Room"
+    },
+    {
+      "id": 3,
+      "title": "goa",
+      "image": "bang3.jpg",
+      "para": "This is Goa  Hotel Room"
+    },
+    {
+      "id": 4,
+      "title": "goa",
+      "image": "bang1.jpg",
+      "para": "This is Goa  Hotel Room"
+    }
+  ],
+  "mainpagebangluru": [
+    {
+      "id": 1,
+      "title": "Banguluru",
+      "image": "goa7.jpg",
+      "para": "This is Bangaluru  Hotel Room"
+    },
+    {
+      "id": 2,
+      "title": "Banguluru",
+      "image": "goa2.jpg",
+      "para": "This is Bangaluru  Hotel Room"
+    },
+    {
+      "id": 3,
+      "title": "Banguluru",
+      "image": "bang7.jpg",
+      "para": "This is Bangaluru   Hotel Room"
+    },
+    {
+      "id": 4,
+      "title": "Banguluru",
+      "image": "bang7.jpg",
+      "para": "This is Bangaluru   Hotel Room"
+    }
+  ],
+  "mainpageJammu": [
+    {
+      "id": 1,
+      "title": "Jammu",
+      "image": "bang7.jpg",
+      "para": "This is JAMMU  Hotel Room"
+    },
+    {
+      "id": 2,
+      "title": "Jammu",
+      "image": "goa2.jpg",
+      "para": "This is  JAMMU  Hotel Room"
+    },
+    {
+      "id": 3,
+      "title": "Jammu",
+      "image": "jammu2.jpg",
+      "para": "This is  JAMMU  Hotel Room"
+    },
+    {
+      "id": 4,
+      "title": "Jammu",
+      "image": "goa6.jpg",
+      "para": "This is  JAMMU Hotel Room"
+    }
+  ]
 }

@@ -1,11 +1,11 @@
 <div class="move">
-  <button class="btn btn-primary mx-3" (click)="userbooked()">
+  <!-- <button class="btn btn-primary mx-3" (click)="userbooked()">
     User-Booked-Details
-  </button>
-  <button (click)="gotoaddnewpage()" class="btn btn-primary mx-3">
+  </button> -->
+  <!-- <button (click)="gotoaddnewpage()" class="btn btn-primary mx-3">
     Add-New-Data
-  </button>
-  <button (click)="gotobooking()" class="btn btn-primary mx-3">Booking-Page</button>
+  </button> -->
+  <!-- <button (click)="gotobooking()" class="btn btn-primary mx-3">Booking-Page</button> -->
 </div>
 
 <table class="table">
@@ -17,7 +17,15 @@
       <th scope="col">PRICE</th>
       <th scope="col">IMAGE NAME</th>
       <th scope="col">FILE</th>
+      <th><button (click)="gotobooking()" class="btn btn-primary mx-3">Booking-Page</button></th>
+      <th> <button (click)="gotoaddnewpage()" class="btn btn-primary mx-3">
+        Add-New-Data
+      </button></th>
+      <th> <button class="btn btn-primary mx-3" (click)="userbooked()">
+        User-Booked-Details
+      </button></th>
     </tr>
+
   </thead>
   <tbody>
     <TR *ngFor="let product of ProductList; let i = index">

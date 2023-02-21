@@ -47,7 +47,7 @@ export class AddToCartComponent implements OnInit {
   book(item: any) {
     this.addProduct(item);
     alert('product has been booked successfully')
-    this.router.navigate(['home-page']);
+    
   }
   gotobooking(){
     this.router.navigate(['home-page']);

@@ -23,5 +23,26 @@ export class AddNewDataService {
       headers:httpHeaders
     });
   }
+  mainpageGoa(){
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'application/json');
+    return this.httpClient.get(`http://localhost:3000/mainpagegoa`,{
+      headers:httpHeaders
+    });
+  }
+  bangaluru(){
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'application/json');
+    return this.httpClient.get(`http://localhost:3000/mainpagebangluru`,{
+      headers:httpHeaders
+    });
+  }
+  jammu(){
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type', 'application/json');
+    return this.httpClient.get(`http://localhost:3000/mainpageJammu`,{
+      headers:httpHeaders
+    });
+  }
 }
 

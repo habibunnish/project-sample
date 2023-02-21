@@ -34,20 +34,24 @@ export class Location1Component implements OnInit  {
       this.bookingList = res;
     for(var i =0;i<this.bookingList.length;i++){
       if(this.bookingList[i].location==this.state){
+       
         this.duplicateLocationList.push(this.bookingList[i])
+       
       }
     }
      console.log(res);
      console.log(this.duplicateLocationList);
       this.bookingList=this.duplicateLocationList;
+
     });
   }
 
   addto(item: any) {
     console.log("adding in");
     this.addingindatabase(item);
-    alert("ITEMA ADDED SUCCESSFULLY");
+    // alert("ITEMA ADDED SUCCESSFULLY");
     this.router.navigate(['add-to-cart']);
+    
   }
   addingindatabase(item:any){
     this.cartService.postaddcartDetailsOfAllLocation(item).subscribe(data=>{

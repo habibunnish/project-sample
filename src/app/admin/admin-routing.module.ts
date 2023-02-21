@@ -10,12 +10,10 @@ const routes: Routes = [
   { path: 'add-to-cart', component: AddToCartComponent },
   { path: 'add-new-data/:id', component: AddNewDataComponent },
   { path: 'user-booked-details', component: UserBookedDetailsComponent },
-
-
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule {}
