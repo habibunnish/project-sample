@@ -2,9 +2,9 @@
   <div class="loginform">
     <form  >
       <label>CHOOSE LOCATION</label>
-      <div>
-        <select (click)="modo($event)" >
-          <option  *ngFor="let c of locations" [value]="c.name">{{c.name}} </option>
+      <div >
+        <select (click)="modo($event)"  >
+          <option  *ngFor="let c of locations" [value]="c.name">{{c.name}}  </option>
           
         </select>
       </div>
@@ -12,6 +12,7 @@
       <pre></pre>
       <label for="ProductTitle">Tittle</label><br />
       <input
+        class="form-control"
         type="text"
         name="productTitle"
         placeholder="ProductTittle"
@@ -20,6 +21,7 @@
 
       <label for="area">area</label><br />
       <input
+        class="form-control"
         type="text"
         name="area"
         placeholder="area"
@@ -28,6 +30,7 @@
 
       <label for="Price">Price</label><br />
       <input
+        class="form-control"
         type="text"
         name="price"
         placeholder="Price"

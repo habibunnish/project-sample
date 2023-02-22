@@ -8,14 +8,13 @@ import { AddNewDataComponent } from './add-new-data/add-new-data.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
-  declarations: [GetProductComponent,UserBookedDetailsComponent,AddNewDataComponent,AddToCartComponent],
-  imports: [
-    CommonModule,
-    AdminRoutingModule,
-    FormsModule, 
-    ReactiveFormsModule,
-  ]
+  declarations: [
+    GetProductComponent,
+    UserBookedDetailsComponent,
+    AddNewDataComponent,
+    AddToCartComponent,
+  ],
+  imports: [CommonModule, AdminRoutingModule, FormsModule, ReactiveFormsModule],
 })
-export class AdminModule { }
+export class AdminModule {}

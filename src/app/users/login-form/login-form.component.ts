@@ -66,7 +66,7 @@ users:any;
         if (user.email == this.loginForm.value.email) {
           this.saveData();
           console.log('savedata')
-          this.router.navigate(['main-page']);
+          this.router.navigate(['home-page']);
         }
       }  
       

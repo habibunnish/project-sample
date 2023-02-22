@@ -1,9 +1,9 @@
-<!-- <ul class="navigation">
+<ul class="navigation">
 
   <div style="flex-grow: 1">
     <img src="assets/IMAGES/logo.jpeg" />
   </div>
-  <li class="one"  >
+  <li class="one" *ngIf="loggedin()" >
     <a routerLink="home-page">HOMEPAGE</a>
   </li>
   <li class="one" >
@@ -13,7 +13,7 @@
   <li class="one" *ngIf="adminloggedin()"><a routerLink="get-product">DATABASE</a></li>
   <LI class="one" *ngIf="!loggedin()"><A routerLink="login-form">LOGIN</A></LI>
   <li class="one" *ngIf="loggedin()||onadminlogout()" id="logout"  (click)="onlogout()">
-    <a routerLink="home-page">LOGOUT</a>
+    <a routerLink="how-it-work">LOGOUT</a>
   </li>
   <li class="two" *ngIf="loggedin()">
     <div >
@@ -23,9 +23,9 @@
         class="number"  />
     </div>
  </li>
-</ul> -->
+</ul>
 <!-- <h1 style="text-align: center; color: blue">WELCOME TO ROOMSTAY.COM</h1> -->
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar> -->
 <!-- <app-admin-navbar  *ngIf="!adminloggedin()"  ></app-admin-navbar> -->
 <router-outlet></router-outlet>
 

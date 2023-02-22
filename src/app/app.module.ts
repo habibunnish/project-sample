@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+import { AdminGuard } from './services/guards/admin.guard';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,12 +15,10 @@ import { AuthGuard } from './services/guards/auth.guard';
 import { BookDetailsNewModule } from './book-details-new/book-details-new.module';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
-import { NavbarComponent } from './navbar/navbar.component';
-import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, AdminNavbarComponent],
-  providers: [AuthGuard],
+  declarations: [AppComponent, ],
+  providers: [AuthGuard,AdminGuard],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
@@ -32,5 +31,6 @@ import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
     BookDetailsNewModule,
     UsersModule,
   ],
+ 
 })
 export class AppModule {}

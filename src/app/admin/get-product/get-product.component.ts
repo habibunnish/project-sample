@@ -46,4 +46,7 @@ export class GetProductComponent implements OnInit {
   gotobooking(){
     this.router.navigate(['main-page']);
   }
+  logout(){
+    this.router.navigate(['how-it-work']);
+  }
 }

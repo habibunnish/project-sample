@@ -1,11 +1,8 @@
-import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-
 const routes: Routes = [
-  { path: '', redirectTo: 'home-page', pathMatch: 'full' },
-  {path:'admin-navbar',component:AdminNavbarComponent},
+  { path: '', redirectTo: 'how-it-work', pathMatch: 'full' },
   {
     path: 'admin',
     loadChildren: () =>

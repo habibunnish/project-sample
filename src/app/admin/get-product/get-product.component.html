@@ -1,29 +1,20 @@
-<div class="move">
-  <!-- <button class="btn btn-primary mx-3" (click)="userbooked()">
-    User-Booked-Details
-  </button> -->
-  <!-- <button (click)="gotoaddnewpage()" class="btn btn-primary mx-3">
-    Add-New-Data
-  </button> -->
-  <!-- <button (click)="gotobooking()" class="btn btn-primary mx-3">Booking-Page</button> -->
-</div>
-
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">id</th>
+      <th scope="col">ID</th>
       <th scope="col">PRODUCTTITTLE</th>
-      <th scope="col">area</th>
+      <th scope="col">AREA</th>
       <th scope="col">PRICE</th>
       <th scope="col">IMAGE NAME</th>
       <th scope="col">FILE</th>
-      <th><button (click)="gotobooking()" class="btn btn-primary mx-3">Booking-Page</button></th>
-      <th> <button (click)="gotoaddnewpage()" class="btn btn-primary mx-3">
+      <th scope="col"><button (click)="gotobooking()"  class="book">Booking-Page</button></th>
+      <th scope="col"> <button (click)="gotoaddnewpage()" class="adddata">
         Add-New-Data
       </button></th>
-      <th> <button class="btn btn-primary mx-3" (click)="userbooked()">
+      <th scope="col"> <button class="userbooked" (click)="userbooked()">
         User-Booked-Details
       </button></th>
+      <th scope="col"><button class="logout" (click)="logout()">LogOut</button></th>
     </tr>
 
   </thead>
@@ -41,7 +32,7 @@
           src="/assets/IMAGES/{{ product.image }}"
           alt="IMAGE" />
       </TD>
-      <td>
+      <td >
         <button class="btn btn-info" (click)="edit(product.id)">
           EDIT-PRODUCT
         </button>
