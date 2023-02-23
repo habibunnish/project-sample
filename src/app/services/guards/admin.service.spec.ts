@@ -63,7 +63,7 @@ describe(' CartService ', () => {
      });
 
      it('#put putproductchennai()',(done:DoneFn)=>{
-        adminService.putproductchennai(id,PRODUCTSDETAILS).subscribe((data:any)=>{
+        adminService.putproduct(id,PRODUCTSDETAILS).subscribe((data:any)=>{
             expect(data).toEqual(PRODUCTSDETAILS);
             done();
         });

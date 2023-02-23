@@ -1,4 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { identifierName } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 
@@ -45,6 +46,12 @@ export class BookingService {
         })
       );
   }
+  // putforAll(createResource:any,id:any){
+  //   return this.httpClient.put('http://localhost:3000/productdatachennai/',id,createResource).
+  //   pipe(map((response:any)=>{
+  //     return response;
+  //   }))
+  // }
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

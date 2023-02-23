@@ -136,7 +136,7 @@ describe('service: bookingService',()=>{
         });
 
         it('#post #addProductsDetailsroyapuram() ',(done:DoneFn)=>{
-            httpClientSpy.post;
+          spyOn(httpClientSpy,'post');
             bookingService.addProductsDetailsroyapuram(POSTS).subscribe({
                 next:(posts)=>{
                     expect(posts).toEqual(POSTS);
@@ -185,7 +185,7 @@ describe('service: bookingService',()=>{
                
             });
             const req=httpTestingController.expectOne(`http://localhost:3000/productdatachennai/${id}`);
-            expect(req.request.method).toBe('DELETE');
+            expect(req.request.method).toBe("DELETE");
             req.flush(mockProduct);
             
         });        

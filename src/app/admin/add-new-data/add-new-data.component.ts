@@ -17,8 +17,8 @@ export class AddNewDataComponent implements OnInit {
   file: any;
   id: any;
   chosenMod:any;
-@Output()
-change=new EventEmitter()
+  @Output()
+  change=new EventEmitter()
 
   locations=[
    {name:''},
@@ -55,6 +55,7 @@ change=new EventEmitter()
     this.GetEdits();
     
     
+    
   }
   GetEdits() {
 
@@ -69,14 +70,15 @@ change=new EventEmitter()
     roomdetails.image = this.file.name;
     this.addnewproduct(roomdetails);
     this.addProduct(roomdetails);
+
    
     }
 
   /*@post*/
   addnewproduct(roomdetails: any) {
     console.log(roomdetails);
-    console.log('addnewproduct()');
-    console.log(this.location);
+    // console.log('addnewproduct()');
+    // console.log(this.location);
     roomdetails.location=this.location;
     console.log(this.location)
     console.log(this.roomdetails);
@@ -116,7 +118,8 @@ change=new EventEmitter()
   /*@post :for showing in page*/
   addProduct(roomdetails: any) {
     console.log('addproduct method calling');
-    roomdetails.location=this.location;
+    //changed did here down
+    roomdetails.locations=this.locations;
     console.log(roomdetails);
     this.adminService.addProductDetails(roomdetails).subscribe((res) => {
       console.log(res);
@@ -130,14 +133,23 @@ change=new EventEmitter()
   }
   //put
   UpdateputProduct() {
-    console.log(this.roomdetails);
+    console.log(this.roomdetails,this.roomdetails.id);
     this.adminService
-      .putproductchennai(this.roomdetails.id, this.roomdetails)
-      .subscribe((data) => {
+      .putproduct(this.roomdetails.id, this.roomdetails)
+      .subscribe((data:any) => {
         console.log(data);
         alert('product edited successfully');
       });
   }
+  
+  // UpdateputProduct() {
+  //   console.log('put is calling',this.roomdetails)
+  //    this.roomdetails.location=this.location;
+  //   this.bookingService.putforAll(this.roomdetails.id,this.roomdetails).subscribe((res)=>{
+  //     console.log(res);
+  //     alert('product edited successfully');
+  //   })
+  // }
 
   //delete
   deletedata(data: any) {

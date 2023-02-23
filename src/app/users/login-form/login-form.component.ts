@@ -81,6 +81,7 @@ users:any;
       for(let admindetails of this.admin){
         if(admindetails.email==this.email && admindetails.password==this.password){
          this.router.navigate(['get-product']);
+        //  localStorage.setItem('adminData', JSON.stringify());
         }
       }
     });
@@ -89,6 +90,15 @@ users:any;
   store(){
     this.router.navigate(['register-form'])
   }
+  // adminsavedata(){
+  //   console.log('localstorage');
+  //   const adminData = {
+  //     password: this.password,
+  //     email: this.email,
+  //   };   
+  //   localStorage.setItem('adminData', JSON.stringify(adminData));
+    
+  // }
 
 
   saveData() {
@@ -100,6 +110,7 @@ users:any;
     localStorage.setItem('userData', JSON.stringify(userData));
    
   }
+
 }
 
 

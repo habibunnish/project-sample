@@ -63,15 +63,6 @@
       "location": "Chennai"
     },
     {
-      "id": 3,
-      "tittle": "HOTEL GRAY INTERNATIONAL",
-      "area": "ANNA SALAI",
-      "price": "2900",
-      "image": "bang8.jpg",
-      "email": "",
-      "location": "Chennai"
-    },
-    {
       "id": 4,
       "tittle": "HOTEL SILVER",
       "area": "PALLAVAN SALALI",
@@ -126,15 +117,6 @@
       "location": "Banguluru"
     },
     {
-      "id": 10,
-      "tittle": "Hotel TRAVERSAL",
-      "area": "BAMALRI",
-      "price": "2900",
-      "image": "bang8.jpg",
-      "email": "",
-      "location": "Banguluru"
-    },
-    {
       "id": 11,
       "tittle": "HotelGOLD",
       "area": "VIJAY NAGAR",
@@ -167,15 +149,6 @@
       "area": "ANDHERI",
       "price": "3964",
       "image": "kash1.jpg",
-      "email": "",
-      "location": "Jammu"
-    },
-    {
-      "id": 15,
-      "tittle": "HOTEL PRUPEL WORLD",
-      "area": "WEST ANDHERI",
-      "price": "2964",
-      "image": "kash3.jpg",
       "email": "",
       "location": "Jammu"
     },
@@ -422,6 +395,15 @@
       "area": "PALLAVAN SALALI",
       "price": "2970",
       "image": "kash6.jpg",
+      "email": "",
+      "location": "Chennai"
+    },
+    {
+      "id": 3,
+      "tittle": "HOTEL GRAY INTERNATIONAL",
+      "area": "ANNA SALAI",
+      "price": "2900",
+      "image": "newpic.jpg",
       "email": "",
       "location": "Chennai"
     }

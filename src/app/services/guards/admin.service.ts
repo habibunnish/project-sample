@@ -27,7 +27,7 @@ export class AdminService {
       { headers: httpHeaders }
     );
   }
-  putproductchennai(id: any, UpdatedBody: any) {
+  putproduct(id: any, UpdatedBody: any) {
     const httpHeaders = new HttpHeaders();
     httpHeaders.append('content-type', 'application/json');
     return this.httpClient.put(

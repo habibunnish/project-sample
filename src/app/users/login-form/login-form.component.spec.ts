@@ -62,19 +62,7 @@ describe('LoginFormComponent ', () => {
     expect(onsubmit).toHaveBeenCalled();
   });
 
-it('should navigaet to main-page if user is found',()=>{
-  // const mockvalue=[{
-  //   email:'habi@123',
-  //   password:'Habi$%6789'
-  // }];
-  // const loginService=TestBed.inject(LoginService);
-  // spyOn(loginService,'userRegisterDetails').and.returnValue(of(mockvalue));
-  // const router=TestBed.inject(Router);
-  // const navigateSpy=spyOn(router,'navigate');
-  // componentInstance.submit();
-  // expect(navigateSpy).toHaveBeenCalledWith(['main-page']);
 
-})
 
   it('should navigate to get-product when admin credential are valid',()=>{
     const mockAdmin={
