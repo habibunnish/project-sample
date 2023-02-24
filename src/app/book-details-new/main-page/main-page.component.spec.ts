@@ -12,8 +12,9 @@ describe('MainPageComponent ', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports:[RouterTestingModule],
       declarations: [MainPageComponent],
-      providers:[HttpClient,HttpHandler,RouterTestingModule],
+      providers:[HttpClient,HttpHandler],
       schemas:[CUSTOM_ELEMENTS_SCHEMA]
      
     })

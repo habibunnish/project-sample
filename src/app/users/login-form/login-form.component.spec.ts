@@ -3,15 +3,19 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { LoginFormComponent } from './login-form.component';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { of } from 'rxjs';
 
-
+class RouterStub{
+  navigate(url:any[]){
+    return url;
+  }
+}
 
 describe('LoginFormComponent ', () => {
   let fixture: ComponentFixture<LoginFormComponent >;
-  let componentInstance:LoginFormComponent;
+  let component:LoginFormComponent;
   let mockPostService:any;
   let loginService:LoginService;
   let router:Router;
@@ -23,12 +27,12 @@ describe('LoginFormComponent ', () => {
     await TestBed.configureTestingModule({
       imports:[ReactiveFormsModule,RouterTestingModule, FormsModule],
       declarations: [ LoginFormComponent ],
-      providers:[HttpClient,HttpHandler,LoginService,FormBuilder,Router],
+      providers:[HttpClient,HttpHandler,LoginService,FormBuilder,{provide:Router,useClass:RouterStub}],
      
     })
     .compileComponents();
     fixture = TestBed.createComponent(LoginFormComponent);
-    componentInstance=fixture.componentInstance;
+    component=fixture.componentInstance;
     loginService=TestBed.inject(LoginService);
     router=TestBed.inject(Router);
    
@@ -42,6 +46,22 @@ describe('LoginFormComponent ', () => {
     mockPostService=jasmine.createSpyObj(['addNewContact','adminlogin'])
    
   });
+
+  beforeEach(()=>{
+    component.users=[{email:'dsfghjk@1234',password:'password1'},{email: 'user2@example.com', password: 'password2'}];
+    component.loginForm=new FormGroup({
+      email:new FormControl('')
+    });
+  });
+
+  it('should save data and navigate to homepage when email is found in users',()=>{
+    const email='dsfghjk@1234';
+    component.loginForm.controls['email'].setValue(email);
+    spyOn(component,'saveData').and.callFake(()=>{});
+    // spyOn(component.Router,'navigate')
+  })
+
+ 
  
   it('should send a post request to the server',()=>{
     const newFormData={
@@ -49,15 +69,17 @@ describe('LoginFormComponent ', () => {
       passwords:'user%45678'
     };
     spyOn(loginService,'addNewContactUser').and.returnValue(of(newFormData));
-    componentInstance.password=newFormData.passwords;
-    componentInstance.email=newFormData.emails;
-    componentInstance.addNewContact();
+    component.password=newFormData.passwords;
+    component.email=newFormData.emails;
+    component.addNewContact();
     expect(loginService.addNewContactUser);
    
   });
 
+
+
   it('should  emit onsubmit when its clicked',()=>{
-    const onsubmit=spyOn(componentInstance.childMessage,'emit');
+    const onsubmit=spyOn(component.childMessage,'emit');
     fixture.nativeElement.querySelector('#buttononsubmit').click();
     expect(onsubmit).toHaveBeenCalled();
   });
@@ -72,9 +94,9 @@ describe('LoginFormComponent ', () => {
     const mockadminResponse=[mockAdmin];
     spyOn(loginService,'adminLoginDetailsGet').and.returnValue(of(mockadminResponse));
     spyOn(router,'navigate');
-    componentInstance.email='admini#23456';
-    componentInstance.password='admin@1223';
-    componentInstance.adminlogin();
+    component.email='admini#23456';
+    component.password='admin@1223';
+    component.adminlogin();
     expect(router.navigate).toHaveBeenCalledWith(['get-product']);
 
   });
@@ -86,9 +108,9 @@ describe('LoginFormComponent ', () => {
     const mockadminResponse=[mockAdmin];
     spyOn(loginService,'adminLoginDetailsGet').and.returnValue(of(mockadminResponse));
     spyOn(router,'navigate');
-    componentInstance.email='admini#23456';
-    componentInstance.password='invalidpassword';
-    componentInstance.adminlogin();
+    component.email='admini#23456';
+    component.password='invalidpassword';
+    component.adminlogin();
     expect(router.navigate).toHaveBeenCalledWith(['get-product']);
 
   });
@@ -98,9 +120,9 @@ describe('LoginFormComponent ', () => {
       email:'user@123',
       password:'user%45678'
     };
-    componentInstance.email=mockUser.email;
-    componentInstance.password=mockUser.password;
-    componentInstance.saveData();
+    component.email=mockUser.email;
+    component.password=mockUser.password;
+    component.saveData();
     expect(localStorage.getItem('userData')).toEqual(JSON.stringify(mockUser));
   })
 
@@ -118,13 +140,15 @@ describe('LoginFormComponent ', () => {
 
         fixture.detectChanges();
         fixture.whenStable().then(()=>{
-            expect(componentInstance.loginForm.valid).toBeFalsy()
+            expect(component.loginForm.valid).toBeFalsy()
          })
       })
   });
+
+
   
   it('should create', () => {
-    expect(componentInstance).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
 

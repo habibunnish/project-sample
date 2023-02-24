@@ -68,7 +68,7 @@ users:any;
           console.log('savedata')
           this.router.navigate(['home-page']);
         }
-      }  
+      }  ;
       
     });
       this.adminlogin();

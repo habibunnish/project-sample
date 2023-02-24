@@ -2,19 +2,17 @@ import { BookingService } from './../../services/guards/booking.service';
 import { AddNewDataService } from './../../services/guards/add-new-data.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AddNewDataComponent } from './add-new-data.component';
-import { ComponentFixture, TestBed, async } from '@angular/core/testing';
+import { ComponentFixture, TestBed} from '@angular/core/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
-import { NO_ERRORS_SCHEMA, Component } from '@angular/core';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { Router } from '@angular/router';
 import { of } from 'rxjs';
 import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
-import { Expansion } from '@angular/compiler';
 
 
 describe('AddNewDataComponent ', () => {
   let component:AddNewDataComponent   ;
   let fixture: ComponentFixture<AddNewDataComponent>;
-  // let routingSpy=jasmine.createSpyObj('Router',['navigate']);
   let roomdetails = {};
   let addnewdataService:AddNewDataService;
   let geteditspy:jasmine.Spy;
@@ -29,7 +27,6 @@ describe('AddNewDataComponent ', () => {
       imports:[RouterTestingModule,HttpClientTestingModule],
       declarations: [AddNewDataComponent],
       providers:[HttpClient,HttpHandler,BookingService,AddNewDataService,{provide:Router}],
-      //provide:Router ,useValue:routingSpy
       schemas:[NO_ERRORS_SCHEMA]
      
     })

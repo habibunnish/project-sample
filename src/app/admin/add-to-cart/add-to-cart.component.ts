@@ -49,9 +49,9 @@ export class AddToCartComponent implements OnInit {
     alert('product has been booked successfully')
     
   }
-  gotobooking(){
-    this.router.navigate(['home-page']);
-  }
+  // gotobooking(){
+  //   this.router.navigate(['home-page']);
+  // }
 
   ngOnInit() {
    this.getalldetailsOfLocation();

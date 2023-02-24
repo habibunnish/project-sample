@@ -16,8 +16,9 @@ describe('HowItWorkComponent ', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports:[RouterTestingModule ],
       declarations: [ HowItWorkComponent],
-      providers:[HttpClient,HttpHandler,RouterTestingModule ],
+      providers:[HttpClient,HttpHandler],
      
     })
     .compileComponents();

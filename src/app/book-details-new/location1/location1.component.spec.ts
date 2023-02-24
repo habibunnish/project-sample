@@ -7,7 +7,11 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { HttpClient, HttpHandler } from '@angular/common/http';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { of } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, convertToParamMap } from '@angular/router';
+
+class ActivatedRouteStub{
+  paramMap=of(convertToParamMap({}))
+}
 
 
 describe('Location1Component ', () => {
@@ -23,7 +27,7 @@ describe('Location1Component ', () => {
     TestBed.configureTestingModule({
       imports:[RouterTestingModule,HttpClientTestingModule],
       declarations: [Location1Component],
-      providers:[HttpClient,HttpHandler,RouterTestingModule,{provide:AdminService,useValue:jasmine.createSpyObj('AdminService',['getProduct'])},{provide:ActivatedRoute, useValue:{snapshot:{params:{state:'Chennai'}}}}],
+      providers:[HttpClient,HttpHandler,AdminService,CartService,{provide:ActivatedRoute,useClass:ActivatedRouteStub},],
       schemas:[NO_ERRORS_SCHEMA]
      
     })
@@ -32,33 +36,28 @@ describe('Location1Component ', () => {
   beforeEach(async()=>{
     fixture = TestBed.createComponent(Location1Component);
     component = fixture.componentInstance;
-    component=TestBed.inject(Location1Component);
     adminService=TestBed.inject(AdminService);
-    activatedRoute=TestBed.inject(ActivatedRoute);
+    // activatedRoute=TestBed.inject(ActivatedRoute);
     cartService=TestBed.inject(CartService);
     httptestingController=TestBed.inject(HttpTestingController);
 
-    // spyOn(adminService, 'getProduct').and.returnValue(of([
-    //   { id: 1, location: 'test' },
-    //   { id: 2, location: 'other' },
-    //   { id: 3, location: 'test' }
-    // ]));
    
   });
-
-  // afterEach(()=>{
-  //   httptestingController.verify();
-  // });
+  // it('should set state and call no duplicatiiion oninit',()=>{
+  //   const state='Chennai';
+  //   const activatedRouteStub={snapshot:{params:{state:state}}};
+  //   const noDuplicationSpy=spyOn(component,'noDuplication');
+  //   TestBed.overrideProvider(activatedRoute,{useValue:activatedRouteStub});
+  //   fixture.detectChanges();
+  //   expect(component.state).toEqual(state);
+  //   expect(noDuplicationSpy).toHaveBeenCalled();
+  // })
 
   it('should filter',()=>{
     const mockBokkinhlist=[
       { 
       id: 39,
-      tittle: "zidan saorvar hotel",
-      area: "central",
-      price: "3000",
-      image: "chennai6.jpg",
-      email: "habi@1234",
+      body:'place',
       location: "Chennai"
       }
   ]
@@ -68,59 +67,6 @@ describe('Location1Component ', () => {
   expect(component.bookingList).toEqual(mockBokkinhlist);
  
 });
-
-  // it('should initaialize component',()=>{
-  //   spyOn(component,'noDuplication');
-  //   component.ngOnInit();
-  //   expect(component.state).toBe('test');
-  //   expect(component.noDuplication).toHaveBeenCalled();
-  // });
-
-
-
-  // it('should filter booking list by state', () => {
-  //   component.state = 'test';
-  //   component.noDuplication();
-  //   expect(component.duplicateLocationList).toEqual([
-  //     { id: 1, location: 'test' },
-  //     { id: 3, location: 'test' }
-  //   ]);
-  //   expect(component.bookingList).toEqual(component.duplicateLocationList);
-  // });
-
-  // it('set state property',()=>{
-  //   const product=[{id:1,location:'ca'},{id:2,location:'ab'}];
-  //   adminServices.getProduct.and.returnValue(of(product));
-  //   spyOn(component,'noDuplication').and.callThrough();
-  //   fixture.detectChanges();
-  //   expect(component.state).toEqual('ca');
-  //   expect(adminService.getProduct).toHaveBeenCalled();
-  //   expect(component.noDuplication).toHaveBeenCalled();
-  //   expect(component.bookingList).toEqual([
-  //     {id:1,location:'ca'}
-  //   ]);
-    
-  // });
-
-  // it('should filter the list by location and set booking list to the filtered list ',()=>{
-  //   const products=[{id:1,location:'a'},{id:2,location:'b'}];
-  //   spyOn(adminService,'getProduct').and.returnValue(of(products));
-  //   component.state='a';
-  //   component.noDuplication();
-  //   expect(adminService.getProduct).toHaveBeenCalled();
-  //   expect(component.bookingList).toEqual([
-  //     {id:1,location:'a'},
-  //     {id:2,location:'b'}
-  //   ]);
-  // });
-  // it('should not set if doesnot match',()=>{
-  //   const products=[{id:1,location:'a'},{id:2,location:'b'}];
-  //   spyOn(adminService,'getProduct').and.returnValue(of(products));
-  //   component.state='c';
-  //   component.noDuplication();
-  //   expect(adminService.getProduct).toHaveBeenCalled();
-  //   expect(component.bookingList).toEqual([]);
-  // })
 
 
   it('should add item to cart in database',()=>{
@@ -133,7 +79,7 @@ describe('Location1Component ', () => {
     req.flush({status:'success'});
     expect(console.log).toHaveBeenCalledWith({status:'success'});
   });
-
+ 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
