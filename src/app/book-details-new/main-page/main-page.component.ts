@@ -22,7 +22,7 @@ title='CHECK  THE BEST HOTEL IN INDIA'
     config.pauseOnHover = false;
   }
   ngOnInit(){
-    this.method1();
+    this.dynamic();
     this.next();
     this.display();
     this.show();
@@ -34,7 +34,7 @@ title='CHECK  THE BEST HOTEL IN INDIA'
     this.router.navigate([`location1/${data}`])
   }
 
-  method1(){
+  dynamic(){
      console.log('method to display');
     this.addnewService.mainPage().subscribe(data=>{
       this.List=data;

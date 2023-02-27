@@ -9,18 +9,20 @@ import { AuthService } from './auth.service';
 export class AuthGuard implements CanActivate {
  constructor(private router:Router){}
  
- canActivate() {
  
+ canActivate(): | Observable<boolean | UrlTree>| Promise<boolean | UrlTree>| boolean| UrlTree {
    const users=localStorage.getItem("userData");
-   const admins=localStorage.getItem("adminData");
+   console.log("kjhgfyu");
    if(users!=null ){
+    console.log('auth');
     alert("already loged in")
     this.router.navigate(['home-page'])
     return false;
     
    }
    else{
-    return true;
+    console.log('else auth');
+        return true;
    }
  }
  

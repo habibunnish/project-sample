@@ -10,12 +10,12 @@ const routes: Routes = [
   {
     path: 'login-form',
     component: LoginFormComponent,
-    canActivate: [AuthGuard],
+   
   },
   {
     path: 'register-form',
     component: RegisterFormComponent,
-    canActivate: [AuthGuard],
+    
   },
   { path: 'home-page', component: HomePageComponent },
   { path: 'how-it-work', component: HowItWorkComponent },

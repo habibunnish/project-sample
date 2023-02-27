@@ -54,6 +54,7 @@ describe('LoginFormComponent ', () => {
     });
   });
 
+  
   it('should save data and navigate to homepage when email is found in users',()=>{
     const email='dsfghjk@1234';
     component.loginForm.controls['email'].setValue(email);

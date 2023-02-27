@@ -5,7 +5,7 @@ import { Location1Component } from './location1/location1.component';
 import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
-  {path:'location1/:state',component:Location1Component,canActivate:[AuthGuard]},
+  {path:'location1/:state',component:Location1Component,},
   {path:'main-page',component:MainPageComponent,}
 ];
 

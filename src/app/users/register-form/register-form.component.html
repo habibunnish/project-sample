@@ -9,7 +9,7 @@
     <input
       id="firstname"
       type="text"
-      formControlName="firstName" [(ngModel)]="firstname"
+      formControlName="firstName" [(ngModel)]="firstname" minlength="4"
       required />
       <div *ngIf="profileForm.touched && profileForm.invalid" class="alert alert-danger">invalid  very short name minimum leter required is 4
         <p *ngIf="profileForm.errors ?.['minlength']"></p>

@@ -11,14 +11,15 @@
                 <pre></pre>
                 <pre></pre>
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input  id="password" type="text" formControlName="password" name="password" class="form-control" [(ngModel)]="password" required
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$" >
+                    <label for="password">Password</label>  <span class="eyeicon" (click)="viewpass()"><i [ngClass]="visible?'fa fa-eye':'fa fa-eye-slash'" ></i></span>
+                    <input  id="password" [type]="changetype?'password':'text'" formControlName="password" name="password" class="form-control" [(ngModel)]="password" required
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,}$"  >
                       <div>
 
                     <p *ngIf="loginForm.touched && loginForm.invalid"  class="alert alert-danger">invalid pattern required use small case , uppercase and one special character to</p>
                         <p *ngIf="loginForm.errors ?.['pattern']"> </p>
                   </div>
+                
                 </div>
                 <pre></pre>
                 <pre></pre>
@@ -30,5 +31,3 @@
     </div>
 
 </div>
-
-

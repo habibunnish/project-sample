@@ -34,8 +34,7 @@ export class Location1Component implements OnInit  {
       this.bookingList = res;
     for(var i =0;i<this.bookingList.length;i++){
       if(this.bookingList[i].location==this.state){
-       
-        this.duplicateLocationList.push(this.bookingList[i])
+       this.duplicateLocationList.push(this.bookingList[i])
        
       }
     }

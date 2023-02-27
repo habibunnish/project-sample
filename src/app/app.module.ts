@@ -15,6 +15,7 @@ import { AuthGuard } from './services/guards/auth.guard';
 import { BookDetailsNewModule } from './book-details-new/book-details-new.module';
 import { UsersModule } from './users/users.module';
 import { AdminModule } from './admin/admin.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, ],
@@ -30,6 +31,7 @@ import { AdminModule } from './admin/admin.module';
     AdminModule,
     BookDetailsNewModule,
     UsersModule,
+    FontAwesomeModule,
   ],
  
 })

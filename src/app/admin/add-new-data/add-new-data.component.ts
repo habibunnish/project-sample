@@ -9,25 +9,25 @@ import { BookingService } from '../../services/guards/booking.service';
 @Component({
   selector: 'app-add-new-data',
   templateUrl: './add-new-data.component.html',
-  styleUrls: ['./add-new-data.component.scss']
- 
+  styleUrls: ['./add-new-data.component.scss'],
 })
 export class AddNewDataComponent implements OnInit {
- location:any;
+  
+  location: any;
   file: any;
   id: any;
-  chosenMod:any;
+  chosenMod: any;
+
   @Output()
-  change=new EventEmitter()
+  change = new EventEmitter();
 
-  locations=[
-   {name:''},
-    {name:'Chennai'},
-    {name:'goa'},
-    {name:'Banguluru'},
-    {name:'Jammu'}
-
-  ]
+  locations = [
+    { name: '' },
+    { name: 'Chennai' },
+    { name: 'goa' },
+    { name: 'Banguluru' },
+    { name: 'Jammu' },
+  ];
 
   roomdetails = {
     id: 0,
@@ -36,9 +36,9 @@ export class AddNewDataComponent implements OnInit {
     price: '',
     image: '',
     email: '',
-    location:''
+    location: '',
   };
- 
+
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -47,22 +47,15 @@ export class AddNewDataComponent implements OnInit {
     private addnewdataService: AddNewDataService,
     private activatedRoute: ActivatedRoute
   ) {}
- 
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.params['id'];
-    if(this.id!=0)
-    this.GetEdits();
-    
-    
-    
+    if (this.id != 0) this.GetEdits();
   }
   GetEdits() {
-
     this.addnewdataService.getedit(this.id).subscribe((data) => {
       console.log(data);
       this.roomdetails = data;
-     
     });
   }
 
@@ -70,88 +63,77 @@ export class AddNewDataComponent implements OnInit {
     roomdetails.image = this.file.name;
     this.addnewproduct(roomdetails);
     this.addProduct(roomdetails);
-
-   
-    }
+  }
 
   /*@post*/
   addnewproduct(roomdetails: any) {
     console.log(roomdetails);
-    // console.log('addnewproduct()');
-    // console.log(this.location);
-    roomdetails.location=this.location;
-    console.log(this.location)
+    console.log(this.location);
+    roomdetails.location = this.location;
+    console.log(this.location);
     console.log(this.roomdetails);
-    if(this.location=='Chennai'){
+    if (this.location == 'Chennai') {
       this.bookingService.addProductsDetails(roomdetails).subscribe((res) => {
         console.log(res);
       });
-    }else if(this.location=='Banguluru'){
-      this.bookingService.addProductsDetailsbangluru(roomdetails).subscribe(res=>{
+    } else if (this.location == 'Banguluru') {
+      this.bookingService
+        .addProductsDetailsbangluru(roomdetails)
+        .subscribe((res) => {
           console.log(res);
         });
-    }else if(this.location=='goa'){
-      this.bookingService.addProductsDetailsroyapuram(roomdetails).subscribe(res=>{
-      console.log(res);
-    });
-    }else if(this.location=='Jammu'){
-       this.bookingService.addProductsDetailsjammu(roomdetails).subscribe(res=>{
-      console.log(res);
-    });
+    } else if (this.location == 'goa') {
+      this.bookingService
+        .addProductsDetailsroyapuram(roomdetails)
+        .subscribe((res) => {
+          console.log(res);
+        });
+    } else if (this.location == 'Jammu') {
+      this.bookingService
+        .addProductsDetailsjammu(roomdetails)
+        .subscribe((res) => {
+          console.log(res);
+        });
     }
- }
+  }
 
- changedone(a:any){
-  console.log('method is run' );
-  console.log(a)
-  this.location=a;
-  console.log(this.location);
- 
-
-  
- }
- modo($event:any){
-  console.log("changing",$event.target.value);
-  this.changedone($event.target.value)
- }
+  changedone(a: any) {
+    console.log('method is run');
+    console.log(a);
+    this.location = a;
+    console.log(this.location);
+  }
+  modo($event: any) {
+    console.log('changing', $event.target.value);
+    this.changedone($event.target.value);
+  }
 
   /*@post :for showing in page*/
   addProduct(roomdetails: any) {
     console.log('addproduct method calling');
-    //changed did here down
-    roomdetails.locations=this.locations;
+    roomdetails.locations = this.locations;
     console.log(roomdetails);
     this.adminService.addProductDetails(roomdetails).subscribe((res) => {
       console.log(res);
       alert('product added successfully');
     });
-   
   }
 
   putting() {
     this.UpdateputProduct();
   }
-  //put
+  /*put:to edit details */
   UpdateputProduct() {
-    console.log(this.roomdetails,this.roomdetails.id);
+    console.log(this.roomdetails, this.roomdetails.id);
+    console.log(this.roomdetails);
     this.adminService
       .putproduct(this.roomdetails.id, this.roomdetails)
-      .subscribe((data:any) => {
+      .subscribe((data: any) => {
         console.log(data);
         alert('product edited successfully');
       });
   }
-  
-  // UpdateputProduct() {
-  //   console.log('put is calling',this.roomdetails)
-  //    this.roomdetails.location=this.location;
-  //   this.bookingService.putforAll(this.roomdetails.id,this.roomdetails).subscribe((res)=>{
-  //     console.log(res);
-  //     alert('product edited successfully');
-  //   })
-  // }
 
-  //delete
   deletedata(data: any) {
     console.log('delete data() calling ', data.id);
     this.bookingService.deleteproductchennai(data.id).subscribe((res) => {
@@ -160,19 +142,18 @@ export class AddNewDataComponent implements OnInit {
     alert('deleted this details');
   }
 
-  //fileuploading
   getFile(event: any) {
     this.file = event.target.files[0];
     console.log('file', this.file.name);
+    this.roomdetails.image = this.file.name;
+    console.log('getfile');
   }
   submitData() {
     let formData = new FormData();
     formData.set('file', this.file);
-    this.http
-      .post('http://localhost:3000/product', formData)
-      .subscribe((res) => {
-        console.log(res);
-      });
+    this.http.post('http://localhost:3000/product', formData).subscribe((res) => {
+      console.log(res);
+    });
   }
   checkpage() {
     this.router.navigate(['get-product']);

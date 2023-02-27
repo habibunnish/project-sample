@@ -15,6 +15,9 @@ import { LoginService } from '../../services/guards/login.service';
 })
 export class LoginFormComponent implements OnInit {
  
+  visible:boolean=true;
+  changetype:boolean=true;
+
   @Output()
   childMessage=new EventEmitter()
   emails: any;
@@ -23,6 +26,10 @@ export class LoginFormComponent implements OnInit {
  
  //@ts-check
 
+ viewpass(){
+this.visible=!this.visible;
+this.changetype=!this.changetype;
+ }
   onsubmit() {
     console.log('on submit');
    this.childMessage.emit( this.store());
@@ -57,6 +64,7 @@ users:any;
   };
 
   submit() {
+    
     this.loginService.userRegisterDetails().subscribe((res:any)=>{
       console.log(res);
       this.users=res;
